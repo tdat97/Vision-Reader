@@ -1,0 +1,24 @@
+numpy
+opencv-python
+pyserial
+pillow
+tqdm
+scikit-learn
+matplotlib
+argparse
+
+# Cam
+pypylon
+
+# OCR
+tensorflow
+
+# DB
+PyMySQL
+cryptography
+
+# crypto
+pycryptodome
+
+# Dev
+jupyterlab
