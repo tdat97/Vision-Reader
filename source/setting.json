@@ -1,0 +1,22 @@
+{
+  "alram" : false
+
+  ,"nodb_mode" : true
+  ,"hand_mode" : true
+  ,"debug_mode" : true
+
+  ,"thread_cycle" : 0.05
+  ,"update_cycle" : 10
+
+  ,"cam_exp_time" : 25000
+
+  ,"serial_port" : "COM7"
+  ,"on_off_time" : {"red":3, "yellow":2, "green":1, "sol":1}
+
+  ,"max_recode_num" : 500
+  ,"font_size_factor" : 1080
+
+
+  ,"brightness" : 80
+
+}
