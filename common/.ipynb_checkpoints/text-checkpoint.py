@@ -38,6 +38,8 @@ BYTES_DIC = {"light_on"   : b'\x0500WSS0106%DW0140001\x04',
              "green_off"  : b'\x0500WSS0106%DW0120000\x04',
              "sound_on"   : b'\x0500WSS0106%DW0130001\x04',
              "sound_off"  : b'\x0500WSS0106%DW0130000\x04',
+             "sol_on"     : b'\x0500WSS0106%DW0150001\x04',
+             "sol_off"    : b'\x0500WSS0106%DW0150000\x04',
              "get_sensor1": b'\x0500RSS0106%PX000\x04',
              "get_sensor2": b'\x0500RSS0106%PX001\x04',}
 

@@ -15,10 +15,10 @@ class PLCManager:
                     timeout=0.1
                     )
         
-    def write(self, cmd):
+    def write(self, cmd, read_num=13):
         self.thr_lock.acquire()
         self.ser.write(self.cmd_dic[cmd])
-        time.sleep(0.05)
+        self.ser.read(7)
         self.thr_lock.release()
     
     def read(self, cmd, read_num=13):
@@ -39,4 +39,4 @@ class DummyPLC:
         return 0
     
     def read(self, *args, **kargs):
-        return b'00\x03'
+        return 0

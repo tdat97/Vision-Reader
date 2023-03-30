@@ -76,6 +76,13 @@ def fix_ratio_resize_img(img, size, target='w'):
     else:             resized_img = cv2.resize(img, dsize=(int(size / ratio), size))
     return resized_img
 
+def fit_img(img, size, margin=15):
+    wh, ww = size
+    wh, ww = wh-margin, ww-margin
+    h, w = img.shape[:2]
+    magnf_value = min(wh/h, ww/w)
+    new_img = cv2.resize(img, dsize=(0,0), fx=magnf_value, fy=magnf_value)
+    return new_img, magnf_value
 ##########################################################################
 def clear_Q(Q):
     with Q.mutex:

@@ -21,6 +21,7 @@ from tkinter import messagebox as mb
 
 from collections import defaultdict
 from threading import Thread, Lock
+from PIL import ImageTk, Image
 from queue import Queue
 from glob import glob
 import numpy as np
@@ -55,7 +56,7 @@ class MainWindow(tk.Tk):
         self.win_factor = self.winfo_screenheight() / font_size_factor
         
         # 디자인
-        self.logo_img = tk.PhotoImage(file=LOGO_PATH)
+        self.logo_img_pil = Image.open(LOGO_PATH)
         self.__configure()
         self.set_bind()
         
@@ -90,6 +91,7 @@ class MainWindow(tk.Tk):
             self.cam = BaslerCam(ExposureTime=ExposureTime, logger=logger, gray_scale=False)
             logger.info("카메라 로드됨")
         except:
+            logger.error(traceback.format_exc())
             logger.error("카메라 로딩 실패")
             mb.showwarning(title="", message="카메라 로딩 실패")
             self.cam = None
@@ -101,9 +103,10 @@ class MainWindow(tk.Tk):
                 self.plc_mng = DummyPLC()
                 self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
             else:
-                self.plc_mng = PLCManager(port=port, command_dic=BYTES_DIC)
+                self.plc_mng = PLCManager(port=port, cmd_dic=BYTES_DIC)
                 logger.info("PLC 로드됨")
         except:
+            logger.error(traceback.format_exc())
             logger.warn("PLC 로딩 실패")
             mb.showwarning(title="", message="PLC 로딩 실패...\n수동 트리거 버튼 생성")
             self.plc_mng= None
@@ -121,6 +124,7 @@ class MainWindow(tk.Tk):
                 self.db_mng = NODBManager(NODB_PATH)
                 logger.error(traceback.format_exc())
             except:
+                logger.error(traceback.format_exc())
                 logger.warn("DB 로드 실패")
                 mb.showwarning(title="", message="DB 로드 실패...\n테스트 DB로 전환.")
                 self.db_mng = NODBManager(NODB_PATH)
@@ -152,8 +156,18 @@ class MainWindow(tk.Tk):
         
         # 자동 DB, GUI 업데이트
         Thread(target=self.auto_update, args=(), daemon=True).start()
+        Thread(target=self.attach_logo, args=(), daemon=True).start()
         
     #######################################################################
+    def attach_logo(self):
+        wh, ww = self.logo_label.winfo_height(), self.logo_label.winfo_width()
+        w, h = self.logo_img_pil.size
+        magnf_value = min(wh/h, ww/w)
+        
+        self.logo_img_pil = self.logo_img_pil.resize((int(w*magnf_value), int(h*magnf_value)), Image.LANCZOS)
+        self.logo_img_tk = ImageTk.PhotoImage(self.logo_img_pil)
+        self.logo_label.configure(image=self.logo_img_tk)
+    
     def load_ocr(self, model_path):
         try:
             self.ocr_engine = OcrEngine(model_path)
@@ -285,7 +299,7 @@ class MainWindow(tk.Tk):
         Thread(target=process.image_eater, args=(self, image_frame_list, image_label_list), daemon=True).start()
         Thread(target=process.data_eater, args=(self,), daemon=True).start()
         Thread(target=process.sensor_listener, args=(self,), daemon=True).start()
-        Thread(target=process.sensor_listener2, args=(self,), daemon=True).start()
+        # Thread(target=process.sensor_listener2, args=(self,), daemon=True).start()
         Thread(target=process.snaper, args=(self,), daemon=True).start()
         Thread(target=process.read, args=(self,), daemon=True).start()
         Thread(target=process.analysis, args=(self,), daemon=True).start()
@@ -307,6 +321,7 @@ class MainWindow(tk.Tk):
         self.plc_mng.write("green_off")
         self.plc_mng.write("light_off")
         self.plc_mng.write("sol_off")
+        # self.plc_mng.write("sound_off")
             
         # GUI 초기화
         self.start_button.configure(text="...", command=lambda:time.sleep(0.1))
@@ -342,7 +357,7 @@ class MainWindow(tk.Tk):
         
         # 새창 띄우기
         self.label_win = LabelWindow(code, name, self.cam, self.plc_mng, self.setting_dic, 
-                                     callback=self.complete_apply)
+                                     callback=self.complete_apply, logo_img_tk=self.logo_img_tk)
     
     def complete_apply(self, code): # 등록하고 나올때
         # poly 판독자 업데이트
@@ -424,7 +439,7 @@ class MainWindow(tk.Tk):
         self.title_label.configure(text='머신비전 판독기', bg='#26262F', fg="#A6A6A6", anchor='center')
         self.logo_label = tk.Label(self, bd=0, relief="solid") # "solid"
         self.logo_label.place(relx=0.0, rely=0.0, relwidth=0.1, relheight=0.1)
-        self.logo_label.configure(image=self.logo_img, bg="#26262F")
+        self.logo_label.configure(image=None, bg="#26262F")
         
         # 상단프레임
         self.top_frame = tk.Frame(self, bd=1, relief="solid", bg=bg_color)

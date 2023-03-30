@@ -18,7 +18,7 @@ from common.text import *
 from utils import process
 
 class LabelWindow(tk.Toplevel):
-    def __init__(self, code, name, cam, plc_mng, setting_dic, *args, callback=None, **kwargs):
+    def __init__(self, code, name, cam, plc_mng, setting_dic, *args, logo_img_tk=None, callback=None, **kwargs):
         super().__init__(*args, **kwargs)
         self.win_factor = self.winfo_screenheight() / 1080
         self.geometry(f'{self.winfo_screenwidth()}x{self.winfo_screenheight()}')
@@ -33,6 +33,7 @@ class LabelWindow(tk.Toplevel):
         self.plc_mng = plc_mng
         self.setting_dic = setting_dic
         self.callback = callback
+        self.logo_img_tk = logo_img_tk
         
         self.current_origin_image = None # 등록할때 보관용
         self.current_origin_poly = None
@@ -40,7 +41,6 @@ class LabelWindow(tk.Toplevel):
         self.auto_stopper = process.Stopper()
         
         # GUI 및 bind
-        self.logo_img = tk.PhotoImage(file=LOGO_PATH)
         self.__configure()
         self.set_bind()
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
@@ -174,7 +174,7 @@ class LabelWindow(tk.Toplevel):
         self.title_label.configure(text='등록화면', bg='#26262F', fg="#A6A6A6", anchor='center')
         self.logo_label = tk.Label(self, bd=0, relief="solid") # "solid"
         self.logo_label.place(relx=0.0, rely=0.0, relwidth=0.1, relheight=0.1)
-        self.logo_label.configure(image=self.logo_img, bg="#26262F")
+        self.logo_label.configure(image=self.logo_img_tk, bg="#26262F")
         self.back_btn = tk.Button(self, bd=1, text="뒤로\n가기", command=self.on_closing)
         self.back_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
         self.back_btn['font'] = font.Font(family='Helvetica', size=int(25*self.win_factor), weight='bold')

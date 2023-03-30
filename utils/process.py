@@ -117,8 +117,14 @@ def data_eater(self):
 #######################################################################
 def sensor_listener(self, mini_stopper=None):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
+    trigger1_time_gap = self.setting_dic["trigger1_time_gap"] if "trigger1_time_gap" in self.setting_dic else 0.00
+    trigger2_time_gap = self.setting_dic["trigger2_time_gap"] if "trigger2_time_gap" in self.setting_dic else 3.0
     value_Q = [0]*3 # 센서 안정성을 위한것
     sensor_lock = False
+    
+    def trig_after_time(Q, gap):
+        time.sleep(gap)
+        Q.put(1)
     
     while not self.stop_signal:
         time.sleep(thread_cycle)
@@ -130,7 +136,8 @@ def sensor_listener(self, mini_stopper=None):
         
         # 잠금이 풀려있고 센서 감지 됐을 경우
         if not sensor_lock and sum(value_Q):
-            self.trigger_Q.put(1)
+            Thread(target=trig_after_time, args=(self.trigger_Q, trigger1_time_gap), daemon=True).start()
+            Thread(target=trig_after_time, args=(self.trigger2_Q, trigger2_time_gap), daemon=True).start()
             sensor_lock = True
         elif sum(value_Q) == 0:
             sensor_lock = False
@@ -139,6 +146,8 @@ def sensor_listener(self, mini_stopper=None):
 def snaper(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     hand_mode = self.setting_dic["hand_mode"] if "hand_mode" in self.setting_dic else False
+    cut_width = self.setting_dic["cut_width"] if "cut_width" in self.setting_dic else [0,2600]
+    x0, x1 = cut_width
     
     while not self.stop_signal:
         time.sleep(thread_cycle)
@@ -147,20 +156,23 @@ def snaper(self):
         # 트리거 받으면 촬영
         self.trigger_Q.get()
         self.plc_mng.write("light_on")
-        time.sleep(0.02)
+        time.sleep(0.05)
         img = self.cam.get_image()
         self.plc_mng.write("light_off")
+        
+        # 이미지 자르기
+        img = img[:, x0:x1]
         self.raw_Q.put(img)
         
 #######################################################################
-def raw_Q2image_Q(self): # 촬영모드 전용
-    thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
+# def raw_Q2image_Q(self): # 촬영모드 전용
+#     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     
-    while not self.stop_signal:
-        time.sleep(thread_cycle)
+#     while not self.stop_signal:
+#         time.sleep(thread_cycle)
         
-        if self.raw_Q.empty(): continue
-        self.image_Q.put(self.raw_Q.get())
+#         if self.raw_Q.empty(): continue
+#         self.image_Q.put(self.raw_Q.get())
         
 #######################################################################
 def read(self):
@@ -191,6 +203,9 @@ def read(self):
 #######################################################################
 def policy_check(text, today):
     assert type(text) == str
+    
+    # 공백 제거
+    text = re.sub("\s", "", text)
     
     # 6글자 보다 작으면 NG
     if len(text) < 6: return False
@@ -284,24 +299,24 @@ def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1, "soun
         self.stop_signal = True
         
 #######################################################################
-def sensor_listener2(self):
-    thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
-    value_Q = [0]*3 # 센서 안정성을 위한것
-    sensor_lock = False
+# def sensor_listener2(self):
+#     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
+#     value_Q = [0]*3 # 센서 안정성을 위한것
+#     sensor_lock = False
     
-    while not self.stop_signal:
-        time.sleep(thread_cycle)
+#     while not self.stop_signal:
+#         time.sleep(thread_cycle)
         
-        # 센서 값 읽기
-        value = self.plc_mng.write("get_sensor2") # True or False
-        value_Q = value_Q[1:] + [value]
+#         # 센서 값 읽기
+#         value = self.plc_mng.read("get_sensor2") # True or False
+#         value_Q = value_Q[1:] + [value]
         
-        # 잠금이 풀려있고 센서 감지 됐을 경우
-        if not sensor_lock and sum(value_Q):
-            self.trigger2_Q.put(1)
-            sensor_lock = True
-        elif sum(value_Q) == 0:
-            sensor_lock = False
+#         # 잠금이 풀려있고 센서 감지 됐을 경우
+#         if not sensor_lock and sum(value_Q):
+#             self.trigger2_Q.put(1)
+#             sensor_lock = True
+#         elif sum(value_Q) == 0:
+#             sensor_lock = False
 
 def solenoid(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
@@ -315,6 +330,8 @@ def solenoid(self):
         
         if not isok:
             self.control_Q.put("sol")
+            
+        logger.info("sol : " + "OK!" if isok else "NG!")
     
 #######################################################################
 def draw(self):
@@ -353,10 +370,10 @@ def draw(self):
             
             # draw number
             for dst_poly in dst_polys:
-                cv2.putText(img, "1", dst_poly[0], font_cv, fontScale=2, thickness=2, color=(255,0,255))
-                cv2.putText(img, "2", dst_poly[1], font_cv, fontScale=2, thickness=2, color=(255,0,255))
-                cv2.putText(img, "3", dst_poly[2], font_cv, fontScale=2, thickness=2, color=(255,0,255))
-                cv2.putText(img, "4", dst_poly[3], font_cv, fontScale=2, thickness=2, color=(255,0,255))
+                cv2.putText(img, "1", dst_poly[0], font_cv, fontScale=5, thickness=2, color=(255,0,255))
+                cv2.putText(img, "2", dst_poly[1], font_cv, fontScale=5, thickness=2, color=(255,0,255))
+                cv2.putText(img, "3", dst_poly[2], font_cv, fontScale=5, thickness=2, color=(255,0,255))
+                cv2.putText(img, "4", dst_poly[3], font_cv, fontScale=5, thickness=2, color=(255,0,255))
             
             # ndarr -> pil
             img_pil = Image.fromarray(img)
@@ -487,10 +504,10 @@ def add_processing(self):
             # 그리기
             clock_poly = tool.poly2clock(poly)
             cv2.polylines(img_copy, [clock_poly], True, (255,255,255), thickness=5)
-            cv2.putText(img_copy, '1', clock_poly[0], font, fontScale=2, thickness=2, color=(255,0,255))
-            cv2.putText(img_copy, '2', clock_poly[1], font, fontScale=2, thickness=2, color=(255,0,255))
-            cv2.putText(img_copy, '3', clock_poly[2], font, fontScale=2, thickness=2, color=(255,0,255))
-            cv2.putText(img_copy, '4', clock_poly[3], font, fontScale=2, thickness=2, color=(255,0,255))
+            cv2.putText(img_copy, '1', clock_poly[0], font, fontScale=5, thickness=2, color=(255,0,255))
+            cv2.putText(img_copy, '2', clock_poly[1], font, fontScale=5, thickness=2, color=(255,0,255))
+            cv2.putText(img_copy, '3', clock_poly[2], font, fontScale=5, thickness=2, color=(255,0,255))
+            cv2.putText(img_copy, '4', clock_poly[3], font, fontScale=5, thickness=2, color=(255,0,255))
         
             self.image_Q.put([img_copy])
             
