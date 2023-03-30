@@ -117,7 +117,7 @@ def data_eater(self):
 #######################################################################
 def sensor_listener(self, mini_stopper=None):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
-    value_Q = [False]*4 # 센서 안정성을 위한것
+    value_Q = [0]*3 # 센서 안정성을 위한것
     sensor_lock = False
     
     while not self.stop_signal:
@@ -125,7 +125,7 @@ def sensor_listener(self, mini_stopper=None):
         if mini_stopper and mini_stopper.stop_signal: break
         
         # 센서 값 읽기
-        value = self.plc_mng.write("get_sensor1") # True or False
+        value = self.plc_mng.read("get_sensor1") # 1 or 0
         value_Q = value_Q[1:] + [value]
         
         # 잠금이 풀려있고 센서 감지 됐을 경우
@@ -147,7 +147,7 @@ def snaper(self):
         # 트리거 받으면 촬영
         self.trigger_Q.get()
         self.plc_mng.write("light_on")
-        time.sleep(0.07)
+        time.sleep(0.02)
         img = self.cam.get_image()
         self.plc_mng.write("light_off")
         self.raw_Q.put(img)
@@ -236,7 +236,9 @@ def analysis(self):
                 
             # 경광등
             if isok: self.control_Q.put("green")
-            else: self.control_Q.put("red")
+            else:
+                self.control_Q.put("red")
+                # self.control_Q.put("sound")
             
             code = best_obj.name if best_obj else None
             
@@ -250,7 +252,7 @@ def analysis(self):
         self.stop_signal = True
         
 #######################################################################
-def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1}):
+def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1, "sound":3}):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     on_off_time = self.setting_dic["on_off_time"] if "on_off_time" in self.setting_dic else on_off_time
     
@@ -284,7 +286,7 @@ def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1}):
 #######################################################################
 def sensor_listener2(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
-    value_Q = [False]*4 # 센서 안정성을 위한것
+    value_Q = [0]*3 # 센서 안정성을 위한것
     sensor_lock = False
     
     while not self.stop_signal:

@@ -101,7 +101,7 @@ class MainWindow(tk.Tk):
                 self.plc_mng = DummyPLC()
                 self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
             else:
-                self.plc_mng = PLCManager(port=port, command_dic=BYTES_DIC, sound=False)
+                self.plc_mng = PLCManager(port=port, command_dic=BYTES_DIC)
                 logger.info("PLC 로드됨")
         except:
             logger.warn("PLC 로딩 실패")

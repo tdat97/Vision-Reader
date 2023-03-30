@@ -27,21 +27,19 @@ SAVE_NG_IMG_DIR = "./recode/NG"
 SAVE_DEBUG_IMG_DIR = "./recode/debug"
 
 # Serial
-SERIAL_PORT = "COM7"
-BYTES_DIC = {"light_on"   : bytes([0xA0, 0x00, 0x01, 0xA0 ^ 0x00 ^ 0x01]),
-             "light_off"  : bytes([0xA0, 0x00, 0x00, 0xA0 ^ 0x00 ^ 0x00]),
-             "green_on"   : bytes([0xA0, 0x01, 0x01, 0xA0 ^ 0x01 ^ 0x01]),
-             "green_off"  : bytes([0xA0, 0x01, 0x00, 0xA0 ^ 0x01 ^ 0x00]),
-             "yellow_on"  : bytes([0xA0, 0x02, 0x01, 0xA0 ^ 0x02 ^ 0x01]),
-             "yellow_off" : bytes([0xA0, 0x02, 0x00, 0xA0 ^ 0x02 ^ 0x00]),
-             "red_on"     : bytes([0xA0, 0x01, 0x01, 0xA0 ^ 0x01 ^ 0x01]),
-             "red_off"    : bytes([0xA0, 0x01, 0x00, 0xA0 ^ 0x01 ^ 0x00]),
-             "get_sensor1": bytes([0xB0, 0x00, 0x00, 0xB0 ^ 0x00 ^ 0x00]),
-             "get_sensor2": bytes([0xB0, 0x01, 0x00, 0xB0 ^ 0x01 ^ 0x00]),}
-# ex) 0xB0 0x01 0x00 0xB1 -> get input-pin-1 sensor value
-# ex) 0xC0 0x01 0x01 0xC0 -> reply (input-pin-1 is HIGH)
-# ex) 0xA0 0x02 0x01 0xA3 -> turn on output-pin-2 
-# ex) 0xFF 0x00 0x00 0xFF -> Incorrect validation.
+SERIAL_PORT = "COM6"
+BYTES_DIC = {"light_on"   : b'\x0500WSS0106%DW0140001\x04',
+             "light_off"  : b'\x0500WSS0106%DW0140000\x04',
+             "red_on"     : b'\x0500WSS0106%DW0100001\x04',
+             "red_off"    : b'\x0500WSS0106%DW0100000\x04',
+             "yellow_on"  : b'\x0500WSS0106%DW0110001\x04',
+             "yellow_off" : b'\x0500WSS0106%DW0110000\x04',
+             "green_on"   : b'\x0500WSS0106%DW0120001\x04',
+             "green_off"  : b'\x0500WSS0106%DW0120000\x04',
+             "sound_on"   : b'\x0500WSS0106%DW0130001\x04',
+             "sound_off"  : b'\x0500WSS0106%DW0130000\x04',
+             "get_sensor1": b'\x0500RSS0106%PX000\x04',
+             "get_sensor2": b'\x0500RSS0106%PX001\x04',}
 
 # Cam
 EXPOSURE_TIME = 2500
