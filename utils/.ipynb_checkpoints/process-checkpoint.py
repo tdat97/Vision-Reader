@@ -253,7 +253,9 @@ def analysis(self):
             if isok: self.control_Q.put("green")
             else:
                 self.control_Q.put("red")
-                # self.control_Q.put("sound")
+                if use_alram:
+                    # self.control_Q.put("sound")
+                    pass
             
             code = best_obj.name if best_obj else None
             
@@ -320,6 +322,7 @@ def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1, "soun
 
 def solenoid(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
+    use_solenoid = self.setting_dic["use_solenoid"] if "use_solenoid" in self.setting_dic else False
     
     while not self.stop_signal:
         time.sleep(thread_cycle)
@@ -328,7 +331,7 @@ def solenoid(self):
         isok = self.OKNG_Q.get()
         self.trigger2_Q.get()
         
-        if not isok:
+        if use_solenoid and not isok:
             self.control_Q.put("sol")
             
         logger.info("sol : " + "OK!" if isok else "NG!")
@@ -472,10 +475,9 @@ def recode(self):
         tool.manage_file_num(dir_path, max_size=max_recode_num)
         
 #######################################################################
-def add_processing(self):
+def find_poly_thread(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     brightness = self.setting_dic["brightness"] if "brightness" in self.setting_dic else 60
-    font = cv2.FONT_HERSHEY_SIMPLEX
     kernel = np.ones((3,3))
     
     try:
@@ -486,7 +488,6 @@ def add_processing(self):
             # get image
             img = self.raw_Q.get()
             if img is None: continue
-            img_copy = img.copy()
             
             # Detect Polys
             img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -496,39 +497,62 @@ def add_processing(self):
             self.recode_Q.put([img_mask, 'debug', '']) # debug save
             polys = tool.find_polys_in_img(img_mask)
             if polys is None:
-                self.image_Q.put([img_copy])
-                self.current_origin_poly = None
+                self.poly1 = np.array([[0,0], [50,0], [50,50], [0,50]])
+                self.poly2 = np.array([[0,0], [50,0], [50,50], [0,50]]) if self.poly2 is not None else None
+                self.image1 = img
+                self.image_update()
                 continue
-            poly = polys[0]
-            
-            # 그리기
-            clock_poly = tool.poly2clock(poly)
-            cv2.polylines(img_copy, [clock_poly], True, (255,255,255), thickness=5)
-            cv2.putText(img_copy, '1', clock_poly[0], font, fontScale=5, thickness=2, color=(255,0,255))
-            cv2.putText(img_copy, '2', clock_poly[1], font, fontScale=5, thickness=2, color=(255,0,255))
-            cv2.putText(img_copy, '3', clock_poly[2], font, fontScale=5, thickness=2, color=(255,0,255))
-            cv2.putText(img_copy, '4', clock_poly[3], font, fontScale=5, thickness=2, color=(255,0,255))
-        
-            self.image_Q.put([img_copy])
-            
-            # Canvas에 그리기
-            crop_img, M = tool.get_crop_img_and_M(img, clock_poly)
-            self.canv.apply_img(crop_img)
+                
+            # 저장
+            self.poly1 = polys[0]
+            self.poly2 = np.array([[0,0], [50,0], [50,50], [0,50]]) if self.poly2 is not None else None
+            self.image1 = img
+            self.image_update()
             
             # 자동촬영 스위치 끄기
             self.auto_stopper.stop_signal = True
             self.bf_btn2.switch_on = False
             self.bf_btn2.configure(bg="#393945", fg="#A6A6A6")
             
-            # 저장
-            self.current_origin_image = img # 저장할 때를 위해
-            self.current_origin_poly = clock_poly
-            self.current_M = M
-            
     except Exception as e:
-        logger.error("an error in [add_processing]")
+        logger.error("an error in [find_poly_thread]")
         logger.error(traceback.format_exc())
         self.stop_signal = True
+            
+# def draw_number_thread(self):
+#     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
+#     font = cv2.FONT_HERSHEY_SIMPLEX
+            
+#     try:
+#         while not self.stop_signal:
+#             time.sleep(thread_cycle)
+#             if self.draw_Q.empty(): continue
+#             self.draw_Q.get()
+            
+#             # 그리기
+#             clock_poly = tool.poly2clock(poly)
+#             cv2.polylines(img_copy, [clock_poly], True, (255,255,255), thickness=5)
+#             cv2.putText(img_copy, '1', clock_poly[0], font, fontScale=5, thickness=2, color=(255,0,255))
+#             cv2.putText(img_copy, '2', clock_poly[1], font, fontScale=5, thickness=2, color=(255,0,255))
+#             cv2.putText(img_copy, '3', clock_poly[2], font, fontScale=5, thickness=2, color=(255,0,255))
+#             cv2.putText(img_copy, '4', clock_poly[3], font, fontScale=5, thickness=2, color=(255,0,255))
+
+#             self.image_Q.put([img_copy])
+
+#             # Canvas에 그리기
+#             crop_img, M = tool.get_crop_img_and_M(img, clock_poly)
+#             self.canv.apply_img(crop_img)
+
+#             # 자동촬영 스위치 끄기
+#             self.auto_stopper.stop_signal = True
+#             self.bf_btn2.switch_on = False
+#             self.bf_btn2.configure(bg="#393945", fg="#A6A6A6")
+
+#             # 저장
+#             self.image1 = img # 저장할 때를 위해
+#             self.poly1 = clock_poly
+#             self.M1 = M
+            
         
 
 #######################################################################

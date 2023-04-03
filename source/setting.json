@@ -1,8 +1,9 @@
 {
   "alram" : false
+  ,"use_solenoid" : false
 
   ,"nodb_mode" : true
-  ,"hand_mode" : false
+  ,"hand_mode" : true
   ,"debug_mode" : true
 
   ,"thread_cycle" : 0.05

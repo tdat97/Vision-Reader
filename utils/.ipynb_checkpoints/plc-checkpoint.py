@@ -15,6 +15,12 @@ class PLCManager:
                     timeout=0.1
                     )
         
+        # 테스트
+        self.ser.write(b'\x0500RSS0106%PX000\x04')
+        read_out = self.ser.read(13)
+        if read_out == b'':
+            raise Exception("Failed to load PLC.")
+        
     def write(self, cmd, read_num=13):
         self.thr_lock.acquire()
         self.ser.write(self.cmd_dic[cmd])

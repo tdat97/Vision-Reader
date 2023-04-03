@@ -47,7 +47,7 @@ class NODBManager():
         self.update_order_today()
         
     def update_order_today(self):
-        with open(self.nodb_path, 'r', encoding="utf-8") as f:
+        with open(self.nodb_path, 'r', encoding="utf-8-sig") as f:
             code2name = json.load(f)
         self.code2name = code2name
         self.name2code = dict(zip(self.code2name.values(), self.code2name.keys()))

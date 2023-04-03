@@ -157,7 +157,7 @@ def find_polys_in_img(img, min_area=0.03, max_area=0.7, scale=0.1):
     rects = list(map(cv2.minAreaRect, contours))
     polys = list(map(lambda x:cv2.boxPoints(x), rects))
     polys = list(filter(lambda poly:min_area < cv2.contourArea(poly) < max_area, polys))
-    polys = np.stack(polys).astype(np.int32) if polys else None
+    polys = np.stack(polys) if polys else None
     
     return polys
     

@@ -1,6 +1,5 @@
 from common.text import *
 from common.logger import logger
-# from common.table import TableManager
 from common import tool
 
 from utils.camera import BaslerCam
@@ -10,8 +9,8 @@ from utils.poly import MultiPolyDetector
 from utils.plc import PLCManager, DummyPLC
 from utils import process
 
-from gui.showwin import ShowWindow
 from gui.labelwin import LabelWindow
+from gui.addwin import AddWindow
 
 import tkinter as tk
 import tkinter.ttk as ttk
@@ -45,8 +44,15 @@ class MainWindow(tk.Tk):
         self.minsize(self.winfo_screenwidth()//5*2, self.winfo_screenheight()//5*2)
         
         # 셋팅값 가져오기
-        with open(SETTING_PATH, "r", encoding='utf-8') as f:
-            self.setting_dic = json.load(f)
+        self.setting_dic = DEFAULT_SETTING_DIC
+        try:
+            with open(SETTING_PATH, "r", encoding='utf-8') as f:
+                self.setting_dic = json.load(f)
+        except:
+            logger.error(traceback.format_exc())
+            logger.warn("설정값 로딩 실패")
+            mb.showwarning(title="", message="설정값 로딩 실패")
+            
         
         nodb = self.setting_dic["nodb_mode"] if "nodb_mode" in self.setting_dic else nodb
         hand = self.setting_dic["hand_mode"] if "hand_mode" in self.setting_dic else hand
@@ -145,7 +151,9 @@ class MainWindow(tk.Tk):
         print(self.poly_detector.names)
         
         
-        # self.label_win = LabelWindow("141592", self.db_mng.code2name["141592"], self.cam, self.plc_mng, 
+        # self.label_win = LabelWindow("33333", self.db_mng.code2name["33333"], self.cam, self.plc_mng, 
+        #                              self.setting_dic, callback=self.complete_apply)################
+        # self.add_win = AddWindow("33333", self.db_mng.code2name["33333"], self.cam, self.plc_mng, 
         #                              self.setting_dic, callback=self.complete_apply)################
         # return
         # 오래걸리는 로딩
@@ -356,8 +364,10 @@ class MainWindow(tk.Tk):
         if answer == "no": return
         
         # 새창 띄우기
-        self.label_win = LabelWindow(code, name, self.cam, self.plc_mng, self.setting_dic, 
-                                     callback=self.complete_apply, logo_img_tk=self.logo_img_tk)
+        # self.label_win = LabelWindow(code, name, self.cam, self.plc_mng, self.setting_dic, 
+        #                              callback=self.complete_apply, logo_img_tk=self.logo_img_tk)
+        self.add_win = AddWindow(code, name, self.cam, self.plc_mng, 
+                                 self.setting_dic, callback=self.complete_apply, logo_img_tk=self.logo_img_tk)
     
     def complete_apply(self, code): # 등록하고 나올때
         # poly 판독자 업데이트

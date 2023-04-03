@@ -2,10 +2,11 @@ from collections import namedtuple
 from PIL import ImageTk, Image
 import tkinter as tk
 import numpy as np
+import time
 import cv2
 
 class LabelCanvas(tk.Canvas):
-    def __init__(self, *args, img_arr=None, isrect=True, **kwargs):
+    def __init__(self, *args, isrect=True, **kwargs):
         super().__init__(*args, **kwargs)
         self.pack(pady=20)
         
@@ -22,7 +23,7 @@ class LabelCanvas(tk.Canvas):
         self.rotate_num = 0
         
         # image
-        self.origin_img = img_arr
+        self.origin_img = None
         self.origin_img_pil = None
         self.img_pil = None
         self.img_tk = None
@@ -31,7 +32,13 @@ class LabelCanvas(tk.Canvas):
         
         # make
         self.create_items()
-        self.apply_img(img_arr)
+        
+        # self.apply_points()
+        
+        # apply
+        # if points is not None:
+        #     self.put_canv_poly(points)
+        #     self.apply_points()
     
     def create_items(self):
         self.points = np.array([[250,250], [400,250], [400,400], [250,400]])
@@ -70,6 +77,14 @@ class LabelCanvas(tk.Canvas):
                 self.pick_id, self.pick_idx, min_dist = _id, i, dist
                 
 ############################################################################################
+    def init_canv(self, img, poly):
+        time.sleep(0.1)
+        self.apply_img(img)
+        if poly is not None:
+            self.put_canv_poly(poly)
+            self.apply_points()
+
+############################################################################################
     def moving_limit(self):
         right__limit = min(self.points[[1,2], 0])
         left___limit = max(self.points[[0,3], 0])
@@ -101,7 +116,7 @@ class LabelCanvas(tk.Canvas):
         
         # update
         self.points[self.pick_idx] += np.array([dx,dy])
-        self.moving_limit()
+        # self.moving_limit()
         
         # rect일 경우 같이 이동
         if self.isrect:
@@ -242,7 +257,7 @@ class LabelCanvas(tk.Canvas):
     
 ############################################################################################
     def reset_items(self):
-        self.points = np.array([[250,250], [400,250], [400,400], [250,400]])
+        self.points = np.array([[0,0], [50,0], [50,50], [0,50]])
         self.apply_points()
         
         self.origin_img = None
@@ -271,7 +286,13 @@ class LabelCanvas(tk.Canvas):
             
         return points
 
-    def get_points_with_img(self):
+    def put_canv_poly(self, real_poly):
+        # 좌표변환
+        self.points = real_poly * np.array(self.img_pil.size) / np.array(self.origin_img_pil.size)
+        # 좌표이동
+        self.points = self.points + self.img_xy
+    
+    def get_real_poly(self):
         if self.origin_img_pil is None: return None
     
         # 홀수 회전되 있는 경우
@@ -292,7 +313,15 @@ class LabelCanvas(tk.Canvas):
         # 좌표변환
         points = points / np.array(img_pil_size) * np.array(self.origin_img_pil.size)
         
-        return points
+        # poly2clock
+        poly = points
+        centroid = np.mean(poly, axis=0) # (2,)
+        new_poly = poly - centroid # (n, 2)
+        rad = list(map(lambda x:np.arctan2(*x), new_poly[:,::-1])) # xy -> yx
+        idxs = np.argsort(rad)
+        return poly[idxs]
+        
+        # return points
         # rect이면 좌상단,우하단만
         # if self.isrect: return points[[0,2]]
         # return points
