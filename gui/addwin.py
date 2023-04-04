@@ -56,6 +56,7 @@ class AddWindow(tk.Toplevel):
         # 항상 실행
         self.stop_signal = False
         self.trigger_Q = Queue()
+        self.trigger2_Q = Queue() # 에러방지용
         self.raw_Q = Queue()
         self.image_Q = Queue()
         self.recode_Q = Queue()

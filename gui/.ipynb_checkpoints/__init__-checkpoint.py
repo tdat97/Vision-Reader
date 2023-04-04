@@ -220,10 +220,9 @@ class MainWindow(tk.Tk):
             
     #######################################################################
     def auto_update(self):
-        update_cycle = self.setting_dic["update_cycle"] if "update_cycle" in self.setting_dic else 10
-        
         while True:
-            time.sleep(update_cycle)
+            if "update_cycle" in self.setting_dic: time.sleep(self.setting_dic["update_cycle"])
+            else: time.sleep(10)
             logger.info("Auto Update!")
             
             # DB, poly reload
@@ -649,7 +648,7 @@ class MainWindow(tk.Tk):
         self.tf_btn2.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.5)
         self.tf_btn3 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='설정')
         self.tf_btn3.place(relx=0.0, rely=0.5, relwidth=0.5, relheight=0.5)
-        self.tf_btn4 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='개발자\n설정')
+        self.tf_btn4 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='고급\n설정')
         self.tf_btn4.place(relx=0.5, rely=0.5, relwidth=0.5, relheight=0.5)
         for btn in [self.tf_btn1, self.tf_btn2, self.tf_btn3, self.tf_btn4]:
             btn['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
@@ -866,7 +865,7 @@ class MainWindow(tk.Tk):
         self.snap_time_label['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.snap_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
         self.snap_time_scale = tk.Scale(self.snap_time_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
-                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0, resolution=0.1)
         self.snap_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
         self.snap_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
         self.snap_time_scale['font'] = font.Font(family='Helvetica', size=int(15*self.win_factor), weight='bold')
@@ -881,7 +880,7 @@ class MainWindow(tk.Tk):
         self.reject_time_label['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.reject_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
         self.reject_time_scale = tk.Scale(self.reject_time_frame, bg=bg_color, fg="#FFF",activebackground="#4472C4",
-                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0, resolution=0.1)
         self.reject_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
         self.reject_time_scale.configure(from_=0.0, to=5.0, orient='horizontal')
         self.reject_time_scale['font'] = font.Font(family='Helvetica', size=int(15*self.win_factor), weight='bold')

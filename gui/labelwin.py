@@ -89,7 +89,7 @@ class LabelWindow(tk.Toplevel):
         self.title_label = tk.Label(self, bd=0, relief="solid") # "solid"
         self.title_label.place(relx=0.0, rely=0.0, relwidth=1, relheight=0.1)
         self.title_label['font'] = font.Font(family='Helvetica', size=int(50*self.win_factor), weight='bold')
-        self.title_label.configure(text='등록화면', bg='#26262F', fg="#A6A6A6", anchor='center')
+        self.title_label.configure(text='수정화면', bg='#26262F', fg="#A6A6A6", anchor='center')
         self.logo_label = tk.Label(self, bd=0, relief="solid") # "solid"
         self.logo_label.place(relx=0.0, rely=0.0, relwidth=0.1, relheight=0.1)
         self.logo_label.configure(image=self.logo_img_tk, bg="#26262F")
@@ -100,11 +100,11 @@ class LabelWindow(tk.Toplevel):
         
         # Canvas
         self.canv = LabelCanvas(self, bg='gray', isrect=False)
-        self.canv.place(relx=0.0, rely=0.0, relwidth=0.7, relheight=1)
+        self.canv.place(relx=0.0, rely=0.1, relwidth=0.7, relheight=0.9)
         
         # 우측 프레임
         self.right_frame = tk.Frame(self, bd=0, relief="solid", bg=bg_color)
-        self.right_frame.place(relx=0.7, rely=0.4, relwidth=0.3, relheight=0.2)
+        self.right_frame.place(relx=0.7, rely=0.4, relwidth=0.3, relheight=0.3)
         
         # 우측 프레임 - 버튼들
         self.br_btn1 = tk.Label(self.right_frame, bd=1, relief="solid", anchor='center', text='축소')

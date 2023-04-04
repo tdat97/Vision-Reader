@@ -6,7 +6,7 @@ TITLE = "Machine Vision System"
 OCR_MODEL_PATH = "./resource/date_ocr.h5"
 LOGO_PATH = "./resource/smlogo_white.png"
 ICON_PATH = "./resource/eye.ico"
-FONT_PATH = "./resource/NanumGothic.ttf"
+FONT_PATH = "./resource/NanumGothicBold.ttf"
 
 # source
 IMG_DIR_PATH = "./source/image"

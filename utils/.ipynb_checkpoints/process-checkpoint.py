@@ -221,10 +221,10 @@ def policy_check(text, today):
     if not date: return False
 
     # 현재 날짜보다 과거이면 False
-    date = date[0]
-    date = re.sub(r'[^0-9]', '', date)
-    today = re.sub(r'[^0-9]', '', today)[2:]
-    if today > date: return False
+    # date = date[0]
+    # date = re.sub(r'[^0-9]', '', date)
+    # today = re.sub(r'[^0-9]', '', today)[2:]
+    # if today > date: return False
     
     return True
     
@@ -351,7 +351,7 @@ def draw(self):
     colors = [(fc(50,255), fc(50,255), fc(0,150)) for _ in range(len(self.poly_detector.names))]
     color_dic = dict(zip(self.poly_detector.names, colors))
     font_cv = cv2.FONT_HERSHEY_SIMPLEX
-    font_pil = ImageFont.truetype(FONT_PATH, 40)
+    font_pil = ImageFont.truetype(FONT_PATH, 100)
     
     try:
         while not self.stop_signal:
@@ -379,10 +379,10 @@ def draw(self):
             
             # draw number
             for dst_poly in dst_polys:
-                cv2.putText(img, "1", dst_poly[0], font_cv, fontScale=5, thickness=2, color=(255,0,255))
-                cv2.putText(img, "2", dst_poly[1], font_cv, fontScale=5, thickness=2, color=(255,0,255))
-                cv2.putText(img, "3", dst_poly[2], font_cv, fontScale=5, thickness=2, color=(255,0,255))
-                cv2.putText(img, "4", dst_poly[3], font_cv, fontScale=5, thickness=2, color=(255,0,255))
+                cv2.putText(img, "1", dst_poly[0], font_cv, fontScale=3, thickness=10, color=(255,0,255))
+                cv2.putText(img, "2", dst_poly[1], font_cv, fontScale=3, thickness=10, color=(255,0,255))
+                cv2.putText(img, "3", dst_poly[2], font_cv, fontScale=3, thickness=10, color=(255,0,255))
+                cv2.putText(img, "4", dst_poly[3], font_cv, fontScale=3, thickness=10, color=(255,0,255))
             
             # ndarr -> pil
             img_pil = Image.fromarray(img)
@@ -502,15 +502,8 @@ def find_poly_thread(self):
             img_mask = cv2.dilate(img_mask, kernel, iterations=3)
             self.recode_Q.put([img_mask, 'debug', '']) # debug save
             polys = tool.find_polys_in_img(img_mask)
-            if polys is None:
-                self.poly1 = np.array([[0,0], [50,0], [50,50], [0,50]])
-                self.poly2 = np.array([[0,0], [50,0], [50,50], [0,50]]) if self.poly2 is not None else None
-                self.image1 = img
-                self.image_update()
-                continue
-                
-            # 저장
-            self.poly1 = polys[0]
+            
+            self.poly1 = np.array([[0,0], [50,0], [50,50], [0,50]]) if polys is None else polys[0]
             self.poly2 = np.array([[0,0], [50,0], [50,50], [0,50]]) if self.poly2 is not None else None
             self.image1 = img
             self.image_update()
