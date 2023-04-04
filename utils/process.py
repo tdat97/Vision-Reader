@@ -146,8 +146,13 @@ def sensor_listener(self, mini_stopper=None):
 def snaper(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     hand_mode = self.setting_dic["hand_mode"] if "hand_mode" in self.setting_dic else False
+    ExposureTime = self.setting_dic["cam_exp_time"] if "cam_exp_time" in self.setting_dic else 2500
     cut_width = self.setting_dic["cut_width"] if "cut_width" in self.setting_dic else [0,2600]
+    
     x0, x1 = cut_width
+    x1 = x1 if x1 else None # x1이 0일 경우 
+    if hand_mode: ExposureTime = 25000
+    self.cam.set_exposure(ExposureTime)
     
     while not self.stop_signal:
         time.sleep(thread_cycle)
@@ -161,7 +166,7 @@ def snaper(self):
         self.plc_mng.write("light_off")
         
         # 이미지 자르기
-        img = img[:, x0:x1]
+        img = img[:, x0:-x1]
         self.raw_Q.put(img)
         
 #######################################################################
@@ -186,6 +191,7 @@ def read(self):
             # get image
             img = self.raw_Q.get()
             if img is None: self.analy_Q.put([None, None, None, None])
+            if img is not None: self.recode_Q.put([img, 'raw', None])
             
             # Detect Polys
             start_time = time.time()
@@ -273,7 +279,7 @@ def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1, "soun
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     on_off_time = self.setting_dic["on_off_time"] if "on_off_time" in self.setting_dic else on_off_time
     
-    tps = int(1/thread_cycle)
+    tps = 1/thread_cycle
     time_value_dic = {name:0 for name in on_off_time}
     try:
         while not self.stop_signal:
@@ -293,7 +299,7 @@ def controller(self, on_off_time={"red":3, "yellow":2, "green":1, "sol":1, "soun
             # 켜고, 시간 조정
             name = self.control_Q.get() # red, yellow, green
             self.plc_mng.write(f"{name}_on")
-            time_value_dic[name] = on_off_time[name] * tps
+            time_value_dic[name] = max(int(on_off_time[name] * tps), 1)
     
     except Exception as e:
         logger.error("an error in [controller]")

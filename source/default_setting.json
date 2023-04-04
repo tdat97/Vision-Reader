@@ -1,0 +1,26 @@
+{
+  "alram" : false
+  ,"use_solenoid" : true
+
+  ,"nodb_mode" : true
+  ,"hand_mode" : true
+  ,"debug_mode" : true
+
+  ,"thread_cycle" : 0.05
+  ,"update_cycle" : 10
+
+  ,"trigger1_time_gap" : 0.0
+  ,"trigger2_time_gap" : 3.0
+
+  ,"cam_exp_time" : 25000
+  ,"cut_width" : [300,300]
+
+  ,"serial_port" : "COM6"
+  ,"on_off_time" : {"red":3, "yellow":2, "green":1, "sol":1, "sound":3}
+
+  ,"max_recode_num" : 500
+  ,"font_size_factor" : 1080
+
+
+  ,"brightness" : 80
+}

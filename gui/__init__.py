@@ -21,6 +21,7 @@ from tkinter import messagebox as mb
 from collections import defaultdict
 from threading import Thread, Lock
 from PIL import ImageTk, Image
+from copy import deepcopy
 from queue import Queue
 from glob import glob
 import numpy as np
@@ -44,7 +45,7 @@ class MainWindow(tk.Tk):
         self.minsize(self.winfo_screenwidth()//5*2, self.winfo_screenheight()//5*2)
         
         # 셋팅값 가져오기
-        self.setting_dic = DEFAULT_SETTING_DIC
+        self.setting_dic = deepcopy(DEFAULT_SETTING_DIC)
         try:
             with open(SETTING_PATH, "r", encoding='utf-8') as f:
                 self.setting_dic = json.load(f)
@@ -53,20 +54,12 @@ class MainWindow(tk.Tk):
             logger.warn("설정값 로딩 실패")
             mb.showwarning(title="", message="설정값 로딩 실패")
             
-        
         nodb = self.setting_dic["nodb_mode"] if "nodb_mode" in self.setting_dic else nodb
         hand = self.setting_dic["hand_mode"] if "hand_mode" in self.setting_dic else hand
         font_size_factor = self.setting_dic["font_size_factor"] if "font_size_factor" in self.setting_dic else 1080
         
         # 글자크기 조정
         self.win_factor = self.winfo_screenheight() / font_size_factor
-        
-        # 디자인
-        self.logo_img_pil = Image.open(LOGO_PATH)
-        self.__configure()
-        self.set_bind()
-        
-        self.start_button.configure(text="..", command=lambda:time.sleep(0.1))
         
         # 쓰레드 통신용
         self.stop_signal = True
@@ -83,6 +76,12 @@ class MainWindow(tk.Tk):
         self.recode_Q = Queue()
         self.thr_lock = Lock() # for serial
         
+        # 디자인
+        self.logo_img_pil = Image.open(LOGO_PATH)
+        self.__configure()
+        self.set_bind()
+        self.start_button.configure(text="..", command=lambda:time.sleep(0.1))
+        
         # 기타
         self.today = tool.get_time_str(day=True)
         self.make_recode_dir()
@@ -91,10 +90,8 @@ class MainWindow(tk.Tk):
             mb.showwarning(title="", message="수동모드 활성화\n카메라 노출시간 증가\nPLC 비활성화\nDB비활성화")
         
         # 카메라 로드
-        ExposureTime = self.setting_dic["cam_exp_time"] if "cam_exp_time" in self.setting_dic else EXPOSURE_TIME
         try:
-            if hand: ExposureTime = 25000
-            self.cam = BaslerCam(ExposureTime=ExposureTime, logger=logger, gray_scale=False)
+            self.cam = BaslerCam(ExposureTime=2500, logger=logger, gray_scale=False)
             logger.info("카메라 로드됨")
         except:
             logger.error(traceback.format_exc())
@@ -283,7 +280,18 @@ class MainWindow(tk.Tk):
         if not self.load_check_stop:
             logger.error("로드 안됐는데 시작 버튼 눌림.")
             return
-
+        
+        self.tf_btn1.configure(bg="#0153B0", fg="#FFFFFF")
+        self.tf_btn2.configure(bg="#393945", fg="#A6A6A6")
+        self.tf_btn3.configure(bg="#393945", fg="#A6A6A6")
+        self.tf_btn4.configure(bg="#393945", fg="#A6A6A6")
+        
+        self.bottom_frame1.place_forget()
+        self.bottom_frame2.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
+        self.bottom_frame3.place_forget()
+        self.bottom_frame4.place_forget()
+        self.bottom_frame5.place_forget()
+        
         # 시작
         self.stop_signal = False
         Thread(target=self.read_thread, args=(), daemon=True).start()
@@ -336,6 +344,10 @@ class MainWindow(tk.Tk):
         time.sleep(0.3)
         self.start_button.configure(text="▶시작", bg="#334B35", fg="#D9D9D9", command=self.read_mode)
         self.ok_label.configure(text='', bg="#181B34", anchor='center')
+        
+        # 설정 활성화
+        self.snap_time_scale['state'] = 'normal'
+        self.reject_time_scale['state'] = 'normal'
         
     #######################################################################
     def add_mode(self, event):
@@ -408,11 +420,46 @@ class MainWindow(tk.Tk):
         if os.path.isdir(path): os.startfile(path)
     
     #######################################################################
+    def reset_setting(self):
+        answer = mb.askquestion("설정초기화", "모든 설정을 기본값으로\n초기화 하시겠습니까?")
+        if answer == "no": return
+        
+        self.setting_dic = deepcopy(DEFAULT_SETTING_DIC)
+        
+        self.red_time_scale.set(self.setting_dic["on_off_time"]['red'])
+        self.yel_time_scale.set(self.setting_dic["on_off_time"]['yellow'])
+        self.gre_time_scale.set(self.setting_dic["on_off_time"]['green'])
+        self.rej_time_scale.set(self.setting_dic["on_off_time"]['sol'])
+        self.sou_time_scale.set(self.setting_dic["on_off_time"]['sound'])
+        self.exp_time_scale.set(self.setting_dic["cam_exp_time"])
+        self.dbu_time_scale.set(self.setting_dic["update_cycle"])
+        self.max_file_scale.set(self.setting_dic["max_recode_num"])
+        self.le_range_scale.set(self.setting_dic["cut_width"][0])
+        self.ri_range_scale.set(self.setting_dic["cut_width"][1])
+        self.brt_thrs_scale.set(self.setting_dic["brightness"])
+        
+        self.red_time_label['text'] = f"현재값 : {self.setting_dic['on_off_time']['red']}s"
+        self.yel_time_label['text'] = f"현재값 : {self.setting_dic['on_off_time']['yellow']}s"
+        self.gre_time_label['text'] = f"현재값 : {self.setting_dic['on_off_time']['green']}s"
+        self.rej_time_label['text'] = f"현재값 : {self.setting_dic['on_off_time']['sol']}s"
+        self.sou_time_label['text'] = f"현재값 : {self.setting_dic['on_off_time']['sound']}s"
+        self.exp_time_label['text'] = f"현재값 : {self.setting_dic['cam_exp_time']}us"
+        self.dbu_time_label['text'] = f"현재값 : {self.setting_dic['update_cycle']}s"
+        self.max_file_label['text'] = f"현재값 : {self.setting_dic['max_recode_num']}"
+        self.le_range_label['text'] = f"현재값 : {self.setting_dic['cut_width'][0]}px"
+        self.ri_range_label['text'] = f"현재값 : {self.setting_dic['cut_width'][1]}px"
+        self.brt_thrs_label['text'] = f"현재값 : {self.setting_dic['brightness']}"
+        
+    #######################################################################
     def set_bind(self):
         btn_list = [self.tf_btn1, self.tf_btn2, self.tf_btn3, self.tf_btn4, ]
-        frame_list = [self.bottom_frame2, self.bottom_frame3, self.bottom_frame4]
+        frame_list = [self.bottom_frame2, self.bottom_frame3, self.bottom_frame4, self.bottom_frame5]
         
-        def switch(event, i):
+        def select(event, i):
+            if not self.stop_signal and (i==2 or i==3):
+                mb.showinfo(title="", message="■중지 버튼을 먼저 눌러주세요.")
+                return
+            
             # 버튼 외관 변경
             for btn in btn_list: btn.configure(bg="#393945", fg="#A6A6A6")
             btn_list[i].configure(bg="#0153B0", fg="#FFFFFF")
@@ -421,11 +468,11 @@ class MainWindow(tk.Tk):
             for frame in frame_list: frame.place_forget()
             frame_list[i].place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
         
-        
-        self.tf_btn1.bind("<Button-1>", lambda _:switch(_, 0)) # 판독영상
-        self.tf_btn2.bind("<Button-1>", lambda _:switch(_, 1)) # 집계
-        self.tf_btn3.bind("<Button-1>", lambda _:switch(_, 2)) # 설정
-        # self.tf_btn4.bind("<Button-1>", self.add_mode) # 등록
+        # 선택 부여
+        self.tf_btn1.bind("<Button-1>", lambda _:select(_, 0)) # 판독영상
+        self.tf_btn2.bind("<Button-1>", lambda _:select(_, 1)) # 집계
+        self.tf_btn3.bind("<Button-1>", lambda _:select(_, 2)) # 설정
+        self.tf_btn4.bind("<Button-1>", lambda _:select(_, 3)) # 개발자설정
         
         self.listbox4.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=True))
         self.listbox5.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=False))
@@ -433,9 +480,145 @@ class MainWindow(tk.Tk):
         
         self.trigger_btn.configure(command=lambda:self.trigger_Q.put(1))
         
-        # self.listbox1.bind("<Button-1>", self.select_code)
-        # self.listbox3.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=True))
-        # self.listbox4.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=False))
+        ##### 설정
+        def switch(event, text=False):
+            if not hasattr(event.widget, 'switch_on'): return
+            if not hasattr(event.widget, 'do_switch_func'): return
+        
+            # 스위치
+            event.widget.switch_on ^= True
+            if text: event.widget['text'] = "ON" if event.widget.switch_on else "OFF"
+            
+            # 켜져 있다면
+            if event.widget.switch_on:
+                event.widget.configure(bg="#0153B0", fg="#FFFFFF")
+                event.widget.do_switch_func(event.widget.switch_on)
+            else:
+                event.widget.configure(bg="#393945", fg="#A6A6A6")
+                event.widget.do_switch_func(event.widget.switch_on)
+                
+        
+        def set_alram(switch_on):
+            self.setting_dic["alram"] = switch_on
+        def set_reject(switch_on):
+            self.setting_dic["use_solenoid"] = switch_on
+        
+        # 알람소리 스위칭 기능
+        self.alram_label.bind("<Button-1>", lambda e:switch(e, text=True))
+        self.alram_label.switch_on = self.setting_dic["alram"] ##
+        self.alram_label.do_switch_func = set_alram
+        self.alram_label.do_switch_func(self.alram_label.switch_on)
+        self.alram_label['text'] = "ON" if self.alram_label.switch_on else "OFF"
+        if self.alram_label.switch_on:
+            self.alram_label.configure(bg="#0153B0", fg="#FFFFFF")
+        else:self.alram_label.configure(bg="#393945", fg="#A6A6A6")
+        
+        # 리젝터동작 스위칭 기능
+        self.reject_label.bind("<Button-1>", lambda e:switch(e, text=True))
+        self.reject_label.switch_on = self.setting_dic["use_solenoid"]
+        self.reject_label.do_switch_func = set_reject
+        self.reject_label.do_switch_func(self.reject_label.switch_on)
+        self.reject_label['text'] = "ON" if self.reject_label.switch_on else "OFF"
+        if self.reject_label.switch_on:
+            self.reject_label.configure(bg="#0153B0", fg="#FFFFFF")
+        else:self.reject_label.configure(bg="#393945", fg="#A6A6A6")
+        
+        def set_snap_time(event):
+            self.setting_dic["trigger1_time_gap"] = self.snap_time_scale.get()
+            self.snap_time_label['text'] = f"현재값 : {self.setting_dic['trigger1_time_gap']}초"
+        def set_reject_time(event):
+            self.setting_dic["trigger2_time_gap"] = self.reject_time_scale.get()
+            self.reject_time_label['text'] = f"현재값 : {self.setting_dic['trigger2_time_gap']}초"
+        
+        # 촬영 타이밍
+        self.snap_time_scale.set(self.setting_dic["trigger1_time_gap"])
+        self.snap_time_label['text'] = f"현재값 : {self.snap_time_scale.get()}초"
+        self.snap_time_scale['command'] = set_snap_time
+        
+        # 리젝터 타이밍
+        self.reject_time_scale.set(self.setting_dic["trigger2_time_gap"])
+        self.reject_time_label['text'] = f"현재값 : {self.reject_time_scale.get()}초"
+        self.reject_time_scale['command'] = set_reject_time
+        
+        def save_setting():
+            with open(SETTING_PATH, 'w', encoding='utf-8') as f:
+                json.dump(self.setting_dic, f, indent=2)
+            mb.showinfo(title="", message="설정이 저장되었습니다.")
+        
+        # 설정저장
+        self.apply_setting_btn['command'] = save_setting
+        
+        ##### 개발자설정
+        self.apply_setting_btn2['command'] = save_setting
+        self.setting_reset_btn['command'] = self.reset_setting
+        
+        self.red_time_scale.configure(from_=1.0, to=10.0, orient='horizontal', tickinterval=0, resolution=0.5)
+        self.yel_time_scale.configure(from_=1.0, to=10.0, orient='horizontal', tickinterval=0, resolution=0.5)
+        self.gre_time_scale.configure(from_=1.0, to=10.0, orient='horizontal', tickinterval=0, resolution=0.5)
+        self.rej_time_scale.configure(from_=1.0, to=10.0, orient='horizontal', tickinterval=0, resolution=0.5)
+        self.sou_time_scale.configure(from_=1.0, to=10.0, orient='horizontal', tickinterval=0, resolution=0.5)
+        
+        self.exp_time_scale.configure(from_=500, to=30000, orient='horizontal', tickinterval=0, resolution=100)
+        self.dbu_time_scale.configure(from_=10, to=600, orient='horizontal', tickinterval=0, resolution=10)
+        self.max_file_scale.configure(from_=100, to=2000, orient='horizontal', tickinterval=0, resolution=100)
+        self.le_range_scale.configure(from_=0, to=600, orient='horizontal', tickinterval=0, resolution=50)
+        self.ri_range_scale.configure(from_=0, to=600, orient='horizontal', tickinterval=0, resolution=50)
+        self.brt_thrs_scale.configure(from_=0, to=255, orient='horizontal', tickinterval=0, resolution=5)
+        
+        def set_setting_value(event, scale, label, key, key2='', tail='s'):
+            if key2 == '':
+                self.setting_dic[key] = scale.get()
+                label['text'] = f"현재값 : {self.setting_dic[key]}{tail}"
+            else:
+                self.setting_dic[key][key2] = scale.get()
+                label['text'] = f"현재값 : {self.setting_dic[key][key2]}{tail}"
+            
+        func = lambda e:set_setting_value(e, self.red_time_scale, self.red_time_label, "on_off_time", key2="red")
+        self.red_time_scale.set(self.setting_dic["on_off_time"]['red'])
+        self.red_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.yel_time_scale, self.yel_time_label, "on_off_time", key2="yellow")
+        self.yel_time_scale.set(self.setting_dic["on_off_time"]['yellow'])
+        self.yel_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.gre_time_scale, self.gre_time_label, "on_off_time", key2="green")
+        self.gre_time_scale.set(self.setting_dic["on_off_time"]['green'])
+        self.gre_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.rej_time_scale, self.rej_time_label, "on_off_time", key2="sol")
+        self.rej_time_scale.set(self.setting_dic["on_off_time"]['sol'])
+        self.rej_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.sou_time_scale, self.sou_time_label, "on_off_time", key2="sound")
+        self.sou_time_scale.set(self.setting_dic["on_off_time"]['sound'])
+        self.sou_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.exp_time_scale, self.exp_time_label, "cam_exp_time", tail='us')
+        self.exp_time_scale.set(self.setting_dic["cam_exp_time"])
+        self.exp_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.dbu_time_scale, self.dbu_time_label, "update_cycle")
+        self.dbu_time_scale.set(self.setting_dic["update_cycle"])
+        self.dbu_time_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.max_file_scale, self.max_file_label, "max_recode_num", tail='개')
+        self.max_file_scale.set(self.setting_dic["max_recode_num"])
+        self.max_file_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.le_range_scale, self.le_range_label, "cut_width",key2=0,tail='px')
+        self.le_range_scale.set(self.setting_dic["cut_width"][0])
+        self.le_range_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.ri_range_scale, self.ri_range_label, "cut_width",key2=1,tail='px')
+        self.ri_range_scale.set(self.setting_dic["cut_width"][1])
+        self.ri_range_scale['command'] = func
+        func(None)
+        func = lambda e:set_setting_value(e, self.brt_thrs_scale, self.brt_thrs_label, "brightness", tail='')
+        self.brt_thrs_scale.set(self.setting_dic["brightness"])
+        self.brt_thrs_scale['command'] = func
+        func(None)
+        
+        
     #######################################################################
     def __configure(self):
         # 배경
@@ -466,7 +649,7 @@ class MainWindow(tk.Tk):
         self.tf_btn2.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.5)
         self.tf_btn3 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='설정')
         self.tf_btn3.place(relx=0.0, rely=0.5, relwidth=0.5, relheight=0.5)
-        self.tf_btn4 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='')
+        self.tf_btn4 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='개발자\n설정')
         self.tf_btn4.place(relx=0.5, rely=0.5, relwidth=0.5, relheight=0.5)
         for btn in [self.tf_btn1, self.tf_btn2, self.tf_btn3, self.tf_btn4]:
             btn['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
@@ -547,16 +730,6 @@ class MainWindow(tk.Tk):
         self.bottom_frame2.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
         self.bottom_frame2.place_forget()
         
-        # 하단프레임2(집계)
-        self.bottom_frame3 = tk.Frame(self, bd=20, relief=None, bg=bg_color)
-        self.bottom_frame3.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
-        self.bottom_frame3.place_forget()
-        
-        # 하단프레임3(설정)
-        self.bottom_frame4 = tk.Frame(self, bd=1, relief="solid", bg=bg_color)
-        self.bottom_frame4.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
-        self.bottom_frame4.place_forget()
-        
         # 하단프레임1(판독영상) - 이미지프레임1
         self.image_frame1 = tk.Frame(self.bottom_frame2, bd=1, relief="solid") # "solid"
         self.image_frame1.place(relx=0.0, rely=0.0, relwidth=0.55, relheight=1)
@@ -595,6 +768,12 @@ class MainWindow(tk.Tk):
         self.image_label3.configure(fg="#fff", bg=bg_color)
         self.image_label3.pack(expand=True, fill="both")
         self.image_label3.pack_forget()
+        
+        
+        # 하단프레임2(집계)
+        self.bottom_frame3 = tk.Frame(self, bd=20, relief=None, bg=bg_color)
+        self.bottom_frame3.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
+        self.bottom_frame3.place_forget()
         
         # 하단프레임2(집계) - columns 이름들
         self.detail_col_frame = tk.Frame(self.bottom_frame3, bd=0, relief="solid", bg="#2F324E")
@@ -658,17 +837,12 @@ class MainWindow(tk.Tk):
         self.scrollbar = tk.Scrollbar(self.list_frame, orient=tk.VERTICAL)
         self.scrollbar.pack(side="right", fill="y")
         
-        
         func = lambda *args:(self.listbox1.yview(*args), self.listbox2.yview(*args), 
                              self.listbox3.yview(*args), self.listbox4.yview(*args), 
                              self.listbox5.yview(*args), self.listbox6.yview(*args), )
         self.scrollbar.config(command=func)
         
-#         self.listbox1.bind("<Button-1>", self.select_code)
-        
-#         self.image_label.bind("<Double-Button-1>", self.popup_show_win)
-        
-#         # test
+        # test
         for i in range(20):
             self.listbox1.insert(tk.END, f"사과{i:02d}")
             self.listbox2.insert(tk.END, f"{i:02d}")
@@ -676,6 +850,255 @@ class MainWindow(tk.Tk):
             # self.listbox4.insert(tk.END, f"{i:02d}")
             # self.listbox5.insert(tk.END, f"{i:02d}")
             
+            
+        # 하단프레임3(설정)
+        self.bottom_frame4 = tk.Frame(self, bd=1, relief="solid", bg=bg_color)
+        self.bottom_frame4.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
+        self.bottom_frame4.place_forget()
+        
+        # 하단프레임3(설정) - 촬영타이밍
+        self.snap_time_frame = tk.Frame(self.bottom_frame4, bd=0, relief="solid", bg=bg_color)
+        self.snap_time_frame.place(relx=0.0, rely=0.1, relwidth=0.5, relheight=0.3)
+        self.temp = tk.Label(self.snap_time_frame, text="촬영 타이밍", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.snap_time_label = tk.Label(self.snap_time_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.snap_time_label['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
+        self.snap_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.snap_time_scale = tk.Scale(self.snap_time_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.snap_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.snap_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.snap_time_scale['font'] = font.Font(family='Helvetica', size=int(15*self.win_factor), weight='bold')
+        
+        # 하단프레임3(설정) - 리젝터타이밍
+        self.reject_time_frame = tk.Frame(self.bottom_frame4, bd=0, relief="solid", bg=bg_color)
+        self.reject_time_frame.place(relx=0.0, rely=0.5, relwidth=0.5, relheight=0.3)
+        self.temp = tk.Label(self.reject_time_frame, text="리젝터 타이밍", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.reject_time_label = tk.Label(self.reject_time_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.reject_time_label['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
+        self.reject_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.reject_time_scale = tk.Scale(self.reject_time_frame, bg=bg_color, fg="#FFF",activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.reject_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.reject_time_scale.configure(from_=0.0, to=5.0, orient='horizontal')
+        self.reject_time_scale['font'] = font.Font(family='Helvetica', size=int(15*self.win_factor), weight='bold')
+        
+        # 하단프레임3(설정) - 알람 소리
+        self.alram_frame = tk.Frame(self.bottom_frame4, bd=0, relief="solid", bg=bg_color)
+        self.alram_frame.place(relx=0.55, rely=0.1, relwidth=0.2, relheight=0.3)
+        self.temp = tk.Label(self.alram_frame, text="알람 소리", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=1, relheight=0.3)
+        self.alram_label = tk.Label(self.alram_frame, bd=1, text="OFF", bg="#393945", fg="#A6A6A6")
+        self.alram_label.place(relx=0.3, rely=0.3, relwidth=0.4, relheight=0.7)
+        self.alram_label['font'] = font.Font(family='Helvetica', size=int(35*self.win_factor), weight='bold')
+        
+        # 하단프레임3(설정) - 리젝터 동작
+        self.reject_frame = tk.Frame(self.bottom_frame4, bd=0, relief="solid", bg=bg_color)
+        self.reject_frame.place(relx=0.8, rely=0.1, relwidth=0.2, relheight=0.3)
+        self.temp = tk.Label(self.reject_frame, text="리젝터 동작", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=1, relheight=0.3)
+        self.reject_label = tk.Label(self.reject_frame, bd=1, text="OFF", bg="#393945", fg="#A6A6A6")
+        self.reject_label.place(relx=0.3, rely=0.3, relwidth=0.4, relheight=0.7)
+        self.reject_label['font'] = font.Font(family='Helvetica', size=int(35*self.win_factor), weight='bold')
+        
+        # 하단프레임3(설정) - 설정저장
+        self.apply_setting_btn = tk.Button(self.bottom_frame4, bd=1, text="설정저장", bg="#393945", fg="#A6A6A6", 
+                                           activebackground="#0153B0", activeforeground="#FFF")
+        self.apply_setting_btn.place(relx=0.8, rely=0.8, relwidth=0.2, relheight=0.2)
+        self.apply_setting_btn['font'] = font.Font(family='Helvetica', size=int(35*self.win_factor), weight='bold')
+            
+        
+        # 하단프레임4(개발자설정)
+        self.bottom_frame5 = tk.Frame(self, bd=1, relief="solid", bg=bg_color)
+        self.bottom_frame5.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
+        self.bottom_frame5.place_forget()
+        
+        # 하단프레임4(설정) - 적색점등시간
+        self.dev_set1_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set1_frame.place(relx=0.0, rely=0.0, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set1_frame, text="적색점등시간", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.red_time_label = tk.Label(self.dev_set1_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.red_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.red_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.red_time_scale = tk.Scale(self.dev_set1_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.red_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.red_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.red_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 황색점등시간
+        self.dev_set2_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set2_frame.place(relx=0.0, rely=0.2, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set2_frame, text="황색점등시간", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.yel_time_label = tk.Label(self.dev_set2_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.yel_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.yel_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.yel_time_scale = tk.Scale(self.dev_set2_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.yel_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.yel_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.yel_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 녹색점등시간
+        self.dev_set3_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set3_frame.place(relx=0.0, rely=0.4, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set3_frame, text="녹색점등시간", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.gre_time_label = tk.Label(self.dev_set3_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.gre_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.gre_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.gre_time_scale = tk.Scale(self.dev_set3_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.gre_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.gre_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.gre_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 리젝터동작시간
+        self.dev_set4_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set4_frame.place(relx=0.0, rely=0.6, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set4_frame, text="리젝터동작시간", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.rej_time_label = tk.Label(self.dev_set4_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.rej_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.rej_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.rej_time_scale = tk.Scale(self.dev_set4_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.rej_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.rej_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.rej_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 소리지속시간
+        self.dev_set5_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set5_frame.place(relx=0.0, rely=0.8, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set5_frame, text="소리지속시간", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.sou_time_label = tk.Label(self.dev_set5_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.sou_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.sou_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.sou_time_scale = tk.Scale(self.dev_set5_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.sou_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.sou_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.sou_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 카메라노출시간
+        self.dev_set6_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set6_frame.place(relx=0.33, rely=0.0, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set6_frame, text="카메라노출시간", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.exp_time_label = tk.Label(self.dev_set6_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.exp_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.exp_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.exp_time_scale = tk.Scale(self.dev_set6_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.exp_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.exp_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.exp_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - DB업데이트주기
+        self.dev_set7_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set7_frame.place(relx=0.33, rely=0.2, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set7_frame, text="DB업데이트주기", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.dbu_time_label = tk.Label(self.dev_set7_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.dbu_time_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.dbu_time_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.dbu_time_scale = tk.Scale(self.dev_set7_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.dbu_time_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.dbu_time_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.dbu_time_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 폴더별파일최대갯수
+        self.dev_set8_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set8_frame.place(relx=0.33, rely=0.4, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set8_frame, text="최대저장개수", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.max_file_label = tk.Label(self.dev_set8_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.max_file_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.max_file_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.max_file_scale = tk.Scale(self.dev_set8_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.max_file_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.max_file_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.max_file_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 이미지좌측범위
+        self.dev_set9_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set9_frame.place(relx=0.66, rely=0.0, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set9_frame, text="이미지좌측범위", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.le_range_label = tk.Label(self.dev_set9_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.le_range_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.le_range_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.le_range_scale = tk.Scale(self.dev_set9_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.le_range_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.le_range_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.le_range_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 이미지우측범위
+        self.dev_set10_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set10_frame.place(relx=0.66, rely=0.2, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set10_frame, text="이미지우측범위", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.ri_range_label = tk.Label(self.dev_set10_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.ri_range_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.ri_range_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.ri_range_scale = tk.Scale(self.dev_set10_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.ri_range_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.ri_range_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.ri_range_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 오토라벨임계값
+        self.dev_set11_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
+        self.dev_set11_frame.place(relx=0.66, rely=0.4, relwidth=0.33, relheight=0.2)
+        self.temp = tk.Label(self.dev_set11_frame, text="오토라벨임계값", bg="#2B2A38", fg="#fff")
+        self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.brt_thrs_label = tk.Label(self.dev_set11_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
+        self.brt_thrs_label['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
+        self.brt_thrs_label.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.33)
+        self.brt_thrs_scale = tk.Scale(self.dev_set11_frame, bg=bg_color, fg="#FFF", activebackground="#4472C4",
+                                        showvalue=True, width=50, sliderlength=50, tickinterval=0.5, resolution=0.1)
+        self.brt_thrs_scale.place(relx=0.0, rely=0.33, relwidth=1, relheight=0.67)
+        self.brt_thrs_scale.configure(from_=0.0, to=2.0, orient='horizontal')
+        self.brt_thrs_scale['font'] = font.Font(family='Helvetica', size=int(10*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 초기화
+        self.setting_reset_btn = tk.Button(self.bottom_frame5, bd=1, text="설정초기화", bg="#393945", fg="#A6A6A6", 
+                                           activebackground="#0153B0", activeforeground="#FFF")
+        self.setting_reset_btn.place(relx=0.6, rely=0.8, relwidth=0.2, relheight=0.2)
+        self.setting_reset_btn['font'] = font.Font(family='Helvetica', size=int(35*self.win_factor), weight='bold')
+        
+        # 하단프레임4(설정) - 설정저장
+        self.apply_setting_btn2 = tk.Button(self.bottom_frame5, bd=1, text="설정저장", bg="#393945", fg="#A6A6A6", 
+                                           activebackground="#0153B0", activeforeground="#FFF")
+        self.apply_setting_btn2.place(relx=0.8, rely=0.8, relwidth=0.2, relheight=0.2)
+        self.apply_setting_btn2['font'] = font.Font(family='Helvetica', size=int(35*self.win_factor), weight='bold')
+        
+        
+        
+        
+             
         # 수동 촬영 (PLC 없을때)
         self.trigger_btn = tk.Button(self, bd=1, text="Trigger", command=None)
         self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)

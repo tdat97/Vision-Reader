@@ -1,0 +1,1703 @@
+2023-04-03 16:41:46,989 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:41:47,134 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:41:47,134 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:41:47,134 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:41:47,134 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:41:48,288 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:41:48,288 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:41:48,288 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:41:59,290 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:41:59,423 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:41:59,423 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:41:59,423 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:41:59,423 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:42:00,466 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:42:00,466 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:42:00,466 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:42:02,232 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:42:02,232 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:42:02,232 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:42:02,232 - root - INFO - 카메라 로드됨
+2023-04-03 16:42:02,692 - root - INFO - 판독자 로드됨
+2023-04-03 16:42:02,712 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:42:04,851 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:42:12,722 - root - INFO - Auto Update!
+2023-04-03 16:43:15,070 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:43:15,208 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:43:15,208 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:43:15,208 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:43:15,208 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:43:16,260 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:43:16,260 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:43:16,260 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:43:31,532 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:43:31,660 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:43:31,660 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:43:31,660 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:43:31,660 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:43:32,716 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:43:32,716 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:43:32,716 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:43:34,603 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:43:34,603 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:43:34,603 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:43:34,603 - root - INFO - 카메라 로드됨
+2023-04-03 16:43:35,043 - root - INFO - 판독자 로드됨
+2023-04-03 16:43:35,053 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:43:37,187 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:44:46,975 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:44:47,105 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:44:47,105 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:44:47,121 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:44:47,121 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:44:48,169 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:44:48,169 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:44:48,170 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:46:30,130 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:46:30,277 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:46:30,277 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:46:30,277 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:46:30,277 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:46:31,319 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:46:31,320 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:46:31,320 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:46:39,541 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:46:39,676 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:46:39,676 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:46:39,676 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:46:39,676 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:46:40,728 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:46:40,728 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:46:40,729 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:46:42,481 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:46:42,481 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:46:42,481 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:46:42,481 - root - INFO - 카메라 로드됨
+2023-04-03 16:46:42,931 - root - INFO - 판독자 로드됨
+2023-04-03 16:46:42,931 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:46:45,066 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:46:52,944 - root - INFO - Auto Update!
+2023-04-03 16:47:08,611 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:47:08,749 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:47:08,749 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:47:08,749 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:47:08,749 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:47:09,795 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:47:09,795 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:47:09,796 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:47:11,450 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:47:11,450 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:47:11,450 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:47:11,450 - root - INFO - 카메라 로드됨
+2023-04-03 16:47:11,905 - root - INFO - 판독자 로드됨
+2023-04-03 16:47:11,910 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:47:14,041 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:47:21,919 - root - INFO - Auto Update!
+2023-04-03 16:49:34,543 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:49:34,687 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:49:34,687 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:49:34,687 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:49:34,687 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:49:35,744 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:49:35,744 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:49:35,745 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:49:37,415 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:49:37,415 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:49:37,415 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:49:37,415 - root - INFO - 카메라 로드됨
+2023-04-03 16:49:37,857 - root - INFO - 판독자 로드됨
+2023-04-03 16:49:37,865 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:49:39,996 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:50:59,496 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:50:59,634 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:50:59,634 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:50:59,634 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:50:59,634 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:51:00,693 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:51:00,693 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:51:00,694 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:51:02,397 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:51:02,397 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:51:02,397 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:51:02,397 - root - INFO - 카메라 로드됨
+2023-04-03 16:51:02,832 - root - INFO - 판독자 로드됨
+2023-04-03 16:51:02,842 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:51:04,993 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:51:29,496 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:51:29,643 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:51:29,643 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:51:29,643 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:51:29,643 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:51:30,701 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:51:30,701 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:51:30,701 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:52:23,666 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:52:23,805 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:52:23,806 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:52:23,806 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:52:23,806 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:52:24,855 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:52:24,856 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:52:24,856 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:53:05,561 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:53:05,683 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:53:05,683 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:53:05,698 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:53:05,698 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:53:06,744 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:53:06,744 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:53:06,745 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:53:24,829 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:53:24,960 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:53:24,960 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:53:24,960 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:53:24,960 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:53:26,015 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:53:26,015 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:53:26,015 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:53:35,323 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:53:35,439 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:53:35,439 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:53:35,454 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:53:35,454 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:53:36,429 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:53:36,429 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:53:36,430 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 16:53:42,069 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 16:53:42,069 - root - INFO - Exposure Time : 25000.0
+2023-04-03 16:53:42,069 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 16:53:42,069 - root - INFO - 카메라 로드됨
+2023-04-03 16:53:42,516 - root - INFO - 판독자 로드됨
+2023-04-03 16:53:42,516 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 16:53:44,637 - root - INFO - Loaded OcrEngine.
+2023-04-03 16:53:52,537 - root - INFO - Auto Update!
+2023-04-03 16:54:10,947 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 16:54:11,085 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:54:11,085 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:54:11,085 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 16:54:11,085 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 16:54:12,152 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 16:54:12,152 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 16:54:12,152 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:01:24,491 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:01:24,792 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:01:24,792 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:01:24,792 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:01:24,792 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:01:26,864 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:01:26,864 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:01:26,864 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:01:33,058 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:01:33,198 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:01:33,198 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:01:33,198 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:01:33,198 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:01:34,256 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:01:34,256 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:01:34,257 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:01:35,947 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:01:35,947 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:01:35,947 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:01:35,947 - root - INFO - 카메라 로드됨
+2023-04-03 17:01:36,477 - root - INFO - 판독자 로드됨
+2023-04-03 17:01:36,477 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:01:38,620 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:01:46,485 - root - INFO - Auto Update!
+2023-04-03 17:02:52,098 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:02:52,236 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:02:52,236 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:02:52,236 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:02:52,236 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:02:53,306 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:02:53,306 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:02:53,307 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:05:09,570 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:05:09,701 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:05:09,701 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:05:09,701 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:05:09,717 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:05:10,779 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:05:10,779 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:05:10,779 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:05:12,347 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:05:12,347 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:05:12,347 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:05:12,347 - root - INFO - 카메라 로드됨
+2023-04-03 17:05:12,787 - root - INFO - 판독자 로드됨
+2023-04-03 17:05:12,797 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:05:14,948 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:05:40,855 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:05:41,001 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:05:41,001 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:05:41,001 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:05:41,001 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:05:42,055 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:05:42,055 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:05:42,056 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:05:43,601 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:05:43,601 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:05:43,601 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:05:43,601 - root - INFO - 카메라 로드됨
+2023-04-03 17:05:44,051 - root - INFO - 판독자 로드됨
+2023-04-03 17:05:44,056 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:05:46,213 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:05:54,057 - root - INFO - Auto Update!
+2023-04-03 17:06:35,621 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:06:35,753 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:06:35,753 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:06:35,753 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:06:35,753 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:06:36,822 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:06:36,823 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:06:36,823 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:06:38,607 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:06:38,607 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:06:38,607 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:06:38,607 - root - INFO - 카메라 로드됨
+2023-04-03 17:06:39,072 - root - INFO - 판독자 로드됨
+2023-04-03 17:06:39,077 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:06:41,227 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:06:48,891 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:06:49,025 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:06:49,025 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:06:49,025 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:06:49,025 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:06:50,091 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:06:50,091 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:06:50,091 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:06:51,816 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:06:51,826 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:06:51,826 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:06:51,826 - root - INFO - 카메라 로드됨
+2023-04-03 17:06:52,276 - root - INFO - 판독자 로드됨
+2023-04-03 17:06:52,286 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:06:54,492 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:07:02,293 - root - INFO - Auto Update!
+2023-04-03 17:08:26,307 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:08:26,454 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:08:26,454 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:08:26,454 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:08:26,454 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:08:27,500 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:08:27,500 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:08:27,500 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:08:29,079 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:08:29,079 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:08:29,079 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:08:29,079 - root - INFO - 카메라 로드됨
+2023-04-03 17:08:29,519 - root - INFO - 판독자 로드됨
+2023-04-03 17:08:29,529 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:08:31,701 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:11:43,065 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:11:43,197 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:11:43,197 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:11:43,197 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:11:43,197 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:11:44,262 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:11:44,262 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:11:44,263 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:11:46,279 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:11:46,279 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:11:46,279 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:11:46,279 - root - INFO - 카메라 로드됨
+2023-04-03 17:11:46,719 - root - INFO - 판독자 로드됨
+2023-04-03 17:11:46,729 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:11:48,873 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:11:56,736 - root - INFO - Auto Update!
+2023-04-03 17:12:40,137 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:12:40,271 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:12:40,271 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:12:40,271 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:12:40,271 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:12:41,327 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:12:41,327 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:12:41,328 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:12:42,961 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:12:42,971 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:12:42,971 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:12:42,971 - root - INFO - 카메라 로드됨
+2023-04-03 17:12:43,411 - root - INFO - 판독자 로드됨
+2023-04-03 17:12:43,416 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:12:45,544 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:14:09,985 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:14:10,132 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:14:10,132 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:14:10,132 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:14:10,138 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:14:11,215 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:14:11,215 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:14:11,216 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:14:12,761 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:14:12,761 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:14:12,761 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:14:12,761 - root - INFO - 카메라 로드됨
+2023-04-03 17:14:13,222 - root - INFO - 판독자 로드됨
+2023-04-03 17:14:13,232 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:14:15,351 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:14:23,233 - root - INFO - Auto Update!
+2023-04-03 17:14:33,569 - root - INFO - Auto Update!
+2023-04-03 17:14:45,922 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:14:46,054 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:14:46,054 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:14:46,062 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:14:46,062 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:14:47,123 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:14:47,123 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:14:47,124 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:14:48,679 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:14:48,679 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:14:48,679 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:14:48,679 - root - INFO - 카메라 로드됨
+2023-04-03 17:14:49,134 - root - INFO - 판독자 로드됨
+2023-04-03 17:14:49,139 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:14:51,281 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:14:57,654 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:14:57,781 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:14:57,781 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:14:57,781 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:14:57,781 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:14:58,839 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:14:58,839 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:14:58,839 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:15:00,443 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:15:00,443 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:15:00,443 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:15:00,443 - root - INFO - 카메라 로드됨
+2023-04-03 17:15:00,907 - root - INFO - 판독자 로드됨
+2023-04-03 17:15:00,912 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:15:03,041 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:15:09,288 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:15:09,427 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:15:09,427 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:15:09,427 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:15:09,427 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:15:10,497 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:15:10,498 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:15:10,498 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:15:11,961 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:15:11,961 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:15:11,961 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:15:11,961 - root - INFO - 카메라 로드됨
+2023-04-03 17:15:12,426 - root - INFO - 판독자 로드됨
+2023-04-03 17:15:12,431 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:15:14,557 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:15:35,206 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:15:35,337 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:15:35,337 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:15:35,337 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:15:35,337 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:15:36,400 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:15:36,400 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:15:36,400 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:15:37,906 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:15:37,906 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:15:37,906 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:15:37,906 - root - INFO - 카메라 로드됨
+2023-04-03 17:15:38,356 - root - INFO - 판독자 로드됨
+2023-04-03 17:15:38,366 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:15:40,512 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:15:55,176 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:15:55,311 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:15:55,311 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:15:55,312 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:15:55,312 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:15:56,356 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:15:56,356 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:15:56,357 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:15:58,340 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:15:58,340 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:15:58,340 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:15:58,340 - root - INFO - 카메라 로드됨
+2023-04-03 17:15:58,790 - root - INFO - 판독자 로드됨
+2023-04-03 17:15:58,800 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:16:00,929 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:16:08,816 - root - INFO - Auto Update!
+2023-04-03 17:16:19,149 - root - INFO - Auto Update!
+2023-04-03 17:17:14,732 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:17:14,875 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:17:14,875 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:17:14,876 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:17:14,876 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:17:15,954 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:17:15,954 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:17:15,955 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:17:17,208 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:17:17,208 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:17:17,208 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:17:17,208 - root - INFO - 카메라 로드됨
+2023-04-03 17:17:17,649 - root - INFO - 판독자 로드됨
+2023-04-03 17:17:17,649 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:17:42,940 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:17:43,081 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:17:43,081 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:17:43,082 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:17:43,082 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:17:44,140 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:17:44,141 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:17:44,141 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:17:45,884 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:17:45,884 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:17:45,884 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:17:45,884 - root - INFO - 카메라 로드됨
+2023-04-03 17:17:46,348 - root - INFO - 판독자 로드됨
+2023-04-03 17:17:46,355 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:17:48,519 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:18:19,378 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:18:19,509 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:18:19,509 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:18:19,509 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:18:19,509 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:18:20,568 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:18:20,568 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:18:20,569 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:18:22,119 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:18:22,119 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:18:22,119 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:18:22,119 - root - INFO - 카메라 로드됨
+2023-04-03 17:18:22,569 - root - INFO - 판독자 로드됨
+2023-04-03 17:18:22,579 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:18:24,713 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:18:49,114 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:18:49,246 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:18:49,246 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:18:49,246 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:18:49,246 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:18:50,302 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:18:50,302 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:18:50,303 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:18:51,817 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:18:51,817 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:18:51,817 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:18:51,817 - root - INFO - 카메라 로드됨
+2023-04-03 17:18:52,262 - root - INFO - 판독자 로드됨
+2023-04-03 17:18:52,267 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:18:54,394 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:19:02,277 - root - INFO - Auto Update!
+2023-04-03 17:19:12,612 - root - INFO - Auto Update!
+2023-04-03 17:19:22,951 - root - INFO - Auto Update!
+2023-04-03 17:19:33,283 - root - INFO - Auto Update!
+2023-04-03 17:19:43,618 - root - INFO - Auto Update!
+2023-04-03 17:19:53,954 - root - INFO - Auto Update!
+2023-04-03 17:20:04,303 - root - INFO - Auto Update!
+2023-04-03 17:20:14,634 - root - INFO - Auto Update!
+2023-04-03 17:20:24,975 - root - INFO - Auto Update!
+2023-04-03 17:20:29,347 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:20:29,485 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:20:29,485 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:20:29,485 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:20:29,485 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:20:30,536 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:20:30,536 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:20:30,537 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:20:32,260 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:20:32,260 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:20:32,260 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:20:32,260 - root - INFO - 카메라 로드됨
+2023-04-03 17:20:32,719 - root - INFO - 판독자 로드됨
+2023-04-03 17:20:32,725 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:20:34,837 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:20:42,736 - root - INFO - Auto Update!
+2023-04-03 17:22:22,513 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:22:22,653 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:22:22,653 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:22:22,653 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:22:22,653 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:22:23,717 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:22:23,717 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:22:23,717 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:22:25,410 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:22:25,410 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:22:25,410 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:22:25,410 - root - INFO - 카메라 로드됨
+2023-04-03 17:22:25,846 - root - INFO - 판독자 로드됨
+2023-04-03 17:22:25,851 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:22:27,957 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:22:35,867 - root - INFO - Auto Update!
+2023-04-03 17:23:06,231 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:23:06,372 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:23:06,372 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:23:06,372 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:23:06,372 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:23:07,425 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:23:07,425 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:23:07,425 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:23:08,915 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:23:08,915 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:23:08,915 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:23:08,915 - root - INFO - 카메라 로드됨
+2023-04-03 17:23:09,365 - root - INFO - 판독자 로드됨
+2023-04-03 17:23:09,375 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:23:11,495 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:23:19,381 - root - INFO - Auto Update!
+2023-04-03 17:23:29,721 - root - INFO - Auto Update!
+2023-04-03 17:23:40,057 - root - INFO - Auto Update!
+2023-04-03 17:23:50,389 - root - INFO - Auto Update!
+2023-04-03 17:24:00,731 - root - INFO - Auto Update!
+2023-04-03 17:24:11,062 - root - INFO - Auto Update!
+2023-04-03 17:24:21,403 - root - INFO - Auto Update!
+2023-04-03 17:24:31,747 - root - INFO - Auto Update!
+2023-04-03 17:24:42,077 - root - INFO - Auto Update!
+2023-04-03 17:24:52,409 - root - INFO - Auto Update!
+2023-04-03 17:25:02,740 - root - INFO - Auto Update!
+2023-04-03 17:25:09,904 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:25:10,035 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:25:10,051 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:25:10,051 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:25:10,051 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:25:11,105 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:25:11,105 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:25:11,105 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:25:13,076 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:25:13,076 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:25:13,076 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:25:13,076 - root - INFO - 카메라 로드됨
+2023-04-03 17:25:13,536 - root - INFO - 판독자 로드됨
+2023-04-03 17:25:13,536 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:25:15,687 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:26:45,717 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:26:45,855 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:26:45,855 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:26:45,855 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:26:45,855 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:26:46,924 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:26:46,924 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:26:46,924 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:26:48,559 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:26:48,559 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:26:48,559 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:26:48,559 - root - INFO - 카메라 로드됨
+2023-04-03 17:26:49,008 - root - INFO - 판독자 로드됨
+2023-04-03 17:26:49,018 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:26:51,178 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:27:47,922 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:27:48,053 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:27:48,053 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:27:48,053 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:27:48,053 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:27:49,124 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:27:49,124 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:27:49,124 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:27:50,580 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:27:50,580 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:27:50,580 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:27:50,580 - root - INFO - 카메라 로드됨
+2023-04-03 17:27:51,030 - root - INFO - 판독자 로드됨
+2023-04-03 17:27:51,030 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:27:53,168 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:28:01,039 - root - INFO - Auto Update!
+2023-04-03 17:28:11,379 - root - INFO - Auto Update!
+2023-04-03 17:28:21,708 - root - INFO - Auto Update!
+2023-04-03 17:28:45,804 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:28:45,945 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:28:45,946 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:28:45,946 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:28:45,946 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:28:47,014 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:28:47,014 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:28:47,015 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:28:48,561 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:28:48,561 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:28:48,561 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:28:48,561 - root - INFO - 카메라 로드됨
+2023-04-03 17:28:49,032 - root - INFO - 판독자 로드됨
+2023-04-03 17:28:49,032 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:28:51,151 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:28:59,049 - root - INFO - Auto Update!
+2023-04-03 17:29:09,389 - root - INFO - Auto Update!
+2023-04-03 17:29:19,731 - root - INFO - Auto Update!
+2023-04-03 17:29:30,068 - root - INFO - Auto Update!
+2023-04-03 17:31:21,948 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:31:22,078 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:31:22,078 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:31:22,078 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:31:22,078 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:31:23,166 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:31:23,166 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:31:23,167 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:31:24,653 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:31:24,653 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:31:24,653 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:31:24,653 - root - INFO - 카메라 로드됨
+2023-04-03 17:31:25,113 - root - INFO - 판독자 로드됨
+2023-04-03 17:31:25,118 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:31:27,245 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:48:30,099 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:48:30,237 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:48:30,238 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:48:30,238 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:48:30,238 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:48:31,310 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:48:31,310 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:48:31,311 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:48:33,356 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:48:33,357 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:48:33,357 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:48:33,357 - root - INFO - 카메라 로드됨
+2023-04-03 17:48:33,818 - root - INFO - 판독자 로드됨
+2023-04-03 17:48:33,843 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:48:35,988 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:49:21,655 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:49:21,795 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:49:21,795 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:49:21,795 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:49:21,796 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:49:22,870 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:49:22,870 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:49:22,871 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:49:24,648 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:49:24,648 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:49:24,649 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:49:24,649 - root - INFO - 카메라 로드됨
+2023-04-03 17:49:25,099 - root - INFO - 판독자 로드됨
+2023-04-03 17:49:25,105 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:49:27,248 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:49:41,694 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:49:41,831 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:49:41,831 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:49:41,832 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:49:41,832 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:49:42,887 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:49:42,888 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:49:42,888 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:49:44,419 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:49:44,419 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:49:44,420 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:49:44,420 - root - INFO - 카메라 로드됨
+2023-04-03 17:49:44,860 - root - INFO - 판독자 로드됨
+2023-04-03 17:49:44,867 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:49:47,036 - root - INFO - Loaded OcrEngine.
+2023-04-03 17:49:54,880 - root - INFO - Auto Update!
+2023-04-03 17:52:40,652 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:52:40,790 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:52:40,790 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:52:40,790 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:52:40,791 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:52:41,858 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:52:41,858 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:52:41,859 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:52:43,237 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:52:43,238 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:52:43,238 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:52:43,238 - root - INFO - 카메라 로드됨
+2023-04-03 17:52:43,688 - root - INFO - 판독자 로드됨
+2023-04-03 17:52:43,695 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:55:00,252 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-03 17:55:00,392 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:55:00,393 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:55:00,393 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-03 17:55:00,393 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-03 17:55:01,492 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-03 17:55:01,492 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-03 17:55:01,492 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-03 17:55:03,653 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-03 17:55:03,653 - root - INFO - Exposure Time : 25000.0
+2023-04-03 17:55:03,654 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-03 17:55:03,654 - root - INFO - 카메라 로드됨
+2023-04-03 17:55:04,093 - root - INFO - 판독자 로드됨
+2023-04-03 17:55:04,100 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-03 17:55:06,238 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:14:09,994 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:14:10,307 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:14:10,308 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:14:10,308 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:14:10,308 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:14:12,429 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:14:12,429 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:14:12,430 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:15:18,846 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:15:18,983 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:15:18,983 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:15:18,983 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:15:18,984 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:15:20,036 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:15:20,037 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:15:20,037 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:15:21,752 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:15:21,752 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:15:21,752 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:15:21,752 - root - INFO - 카메라 로드됨
+2023-04-04 09:15:22,232 - root - INFO - 판독자 로드됨
+2023-04-04 09:15:22,232 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:15:24,386 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:15:51,757 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:15:51,895 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:15:51,895 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:15:51,896 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:15:51,897 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:15:52,965 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:15:52,965 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:15:52,966 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:15:54,818 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:15:54,818 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:15:54,818 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:15:54,818 - root - INFO - 카메라 로드됨
+2023-04-04 09:15:55,258 - root - INFO - 판독자 로드됨
+2023-04-04 09:15:55,268 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:15:57,411 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:16:05,281 - root - INFO - Auto Update!
+2023-04-04 09:18:14,218 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:18:14,356 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:18:14,356 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:18:14,357 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:18:14,357 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:18:15,427 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:18:15,427 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:18:15,428 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:18:17,078 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:18:17,078 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:18:17,078 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:18:17,078 - root - INFO - 카메라 로드됨
+2023-04-04 09:18:17,517 - root - INFO - 판독자 로드됨
+2023-04-04 09:18:17,528 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:18:19,663 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:18:27,539 - root - INFO - Auto Update!
+2023-04-04 09:18:37,877 - root - INFO - Auto Update!
+2023-04-04 09:18:48,208 - root - INFO - Auto Update!
+2023-04-04 09:18:58,538 - root - INFO - Auto Update!
+2023-04-04 09:19:08,886 - root - INFO - Auto Update!
+2023-04-04 09:19:19,223 - root - INFO - Auto Update!
+2023-04-04 09:19:29,564 - root - INFO - Auto Update!
+2023-04-04 09:19:39,904 - root - INFO - Auto Update!
+2023-04-04 09:19:50,235 - root - INFO - Auto Update!
+2023-04-04 09:20:53,286 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:20:53,426 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:20:53,427 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:20:53,427 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:20:53,427 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:20:54,484 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:20:54,484 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:20:54,484 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:20:56,195 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:20:56,195 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:20:56,195 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:20:56,195 - root - INFO - 카메라 로드됨
+2023-04-04 09:20:56,635 - root - INFO - 판독자 로드됨
+2023-04-04 09:20:56,645 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:20:58,784 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:22:44,546 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:22:44,684 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:22:44,685 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:22:44,685 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:22:44,685 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:22:45,742 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:22:45,743 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:22:45,743 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:22:47,394 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:22:47,394 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:22:47,394 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:22:47,394 - root - INFO - 카메라 로드됨
+2023-04-04 09:22:47,849 - root - INFO - 판독자 로드됨
+2023-04-04 09:22:47,854 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:24:16,350 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:24:16,483 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:24:16,483 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:24:16,483 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:24:16,483 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:24:17,576 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:24:17,576 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:24:17,577 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:24:19,118 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:24:19,118 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:24:19,118 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:24:19,118 - root - INFO - 카메라 로드됨
+2023-04-04 09:24:19,563 - root - INFO - 판독자 로드됨
+2023-04-04 09:24:19,568 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:24:45,094 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:24:45,218 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:24:45,218 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:24:45,218 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:24:45,218 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:24:46,284 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:24:46,285 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:24:46,285 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:24:47,836 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:24:47,836 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:24:47,836 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:24:47,836 - root - INFO - 카메라 로드됨
+2023-04-04 09:24:48,276 - root - INFO - 판독자 로드됨
+2023-04-04 09:24:48,286 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:24:50,435 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:25:18,344 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:25:18,478 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:25:18,478 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:25:18,478 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:25:18,478 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:25:19,538 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:25:19,539 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:25:19,539 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:25:21,050 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:25:21,050 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:25:21,050 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:25:21,050 - root - INFO - 카메라 로드됨
+2023-04-04 09:25:21,490 - root - INFO - 판독자 로드됨
+2023-04-04 09:25:21,490 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:25:23,642 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:25:31,511 - root - INFO - Auto Update!
+2023-04-04 09:26:06,728 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:26:06,869 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:26:06,869 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:26:06,869 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:26:06,869 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:26:07,914 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:26:07,915 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:26:07,915 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:26:09,558 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:26:09,558 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:26:09,558 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:26:09,558 - root - INFO - 카메라 로드됨
+2023-04-04 09:26:10,008 - root - INFO - 판독자 로드됨
+2023-04-04 09:26:10,008 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:26:12,137 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:26:20,021 - root - INFO - Auto Update!
+2023-04-04 09:31:16,917 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:31:17,064 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:31:17,064 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:31:17,064 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:31:17,064 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:31:18,126 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:31:18,126 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:31:18,126 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:31:19,646 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:31:19,646 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:31:19,656 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:31:19,656 - root - INFO - 카메라 로드됨
+2023-04-04 09:31:20,096 - root - INFO - 판독자 로드됨
+2023-04-04 09:31:20,106 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:31:22,239 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:32:44,999 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:32:45,129 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:32:45,129 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:32:45,129 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:32:45,129 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:32:46,188 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:32:46,188 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:32:46,189 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:32:47,836 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:32:47,836 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:32:47,836 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:32:47,836 - root - INFO - 카메라 로드됨
+2023-04-04 09:32:48,285 - root - INFO - 판독자 로드됨
+2023-04-04 09:32:48,296 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:32:50,443 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:32:58,304 - root - INFO - Auto Update!
+2023-04-04 09:33:08,641 - root - INFO - Auto Update!
+2023-04-04 09:33:27,483 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:33:27,615 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:33:27,615 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:33:27,615 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:33:27,615 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:33:28,689 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:33:28,689 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:33:28,690 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:33:29,998 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:33:29,998 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:33:29,998 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:33:29,998 - root - INFO - 카메라 로드됨
+2023-04-04 09:33:30,436 - root - INFO - 판독자 로드됨
+2023-04-04 09:33:30,446 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:33:32,579 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:33:40,544 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:33:40,689 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:33:40,689 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:33:40,689 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:33:40,689 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:33:41,757 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:33:41,757 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:33:41,757 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:33:43,490 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:33:43,490 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:33:43,490 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:33:43,490 - root - INFO - 카메라 로드됨
+2023-04-04 09:33:43,920 - root - INFO - 판독자 로드됨
+2023-04-04 09:33:43,930 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:33:46,085 - root - INFO - Loaded OcrEngine.
+2023-04-04 09:33:53,933 - root - INFO - Auto Update!
+2023-04-04 09:34:04,274 - root - INFO - Auto Update!
+2023-04-04 09:34:14,608 - root - INFO - Auto Update!
+2023-04-04 09:34:24,939 - root - INFO - Auto Update!
+2023-04-04 09:34:35,280 - root - INFO - Auto Update!
+2023-04-04 09:34:45,612 - root - INFO - Auto Update!
+2023-04-04 09:34:55,943 - root - INFO - Auto Update!
+2023-04-04 09:35:41,062 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:35:41,195 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:35:41,195 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:35:41,195 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:35:41,195 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:35:42,259 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:35:42,259 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:35:42,260 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:35:43,832 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:35:43,832 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:35:43,832 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:35:43,832 - root - INFO - 카메라 로드됨
+2023-04-04 09:35:44,287 - root - INFO - 판독자 로드됨
+2023-04-04 09:35:44,292 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 09:36:22,740 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 09:36:22,884 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:36:22,884 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:36:22,885 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 09:36:22,885 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 09:36:23,939 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 09:36:23,939 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 09:36:23,940 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 09:36:25,416 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 09:36:25,416 - root - INFO - Exposure Time : 25000.0
+2023-04-04 09:36:25,416 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 09:36:25,416 - root - INFO - 카메라 로드됨
+2023-04-04 09:36:25,868 - root - INFO - 판독자 로드됨
+2023-04-04 09:36:25,868 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:14:02,343 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:14:02,475 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:14:02,475 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:14:02,475 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:14:02,475 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:14:03,565 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:14:03,566 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:14:03,566 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:14:05,266 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:14:05,266 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:14:05,266 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:14:05,266 - root - INFO - 카메라 로드됨
+2023-04-04 10:14:05,786 - root - INFO - 판독자 로드됨
+2023-04-04 10:14:05,791 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:14:07,931 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:15:58,000 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:15:58,132 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:15:58,132 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:15:58,132 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:15:58,132 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:15:59,192 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:15:59,192 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:15:59,193 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:16:01,265 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:16:01,266 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:16:01,266 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:16:01,267 - root - INFO - 카메라 로드됨
+2023-04-04 10:16:01,700 - root - INFO - 판독자 로드됨
+2023-04-04 10:16:01,710 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:16:03,862 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:16:11,724 - root - INFO - Auto Update!
+2023-04-04 10:39:16,787 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:39:16,918 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:39:16,918 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:39:16,918 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:39:16,918 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:39:18,009 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:39:18,009 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:39:18,010 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:39:19,673 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:39:19,673 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:39:19,673 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:39:19,673 - root - INFO - 카메라 로드됨
+2023-04-04 10:39:20,143 - root - INFO - 판독자 로드됨
+2023-04-04 10:39:20,153 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:39:22,327 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:39:30,161 - root - INFO - Auto Update!
+2023-04-04 10:40:56,547 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:40:56,686 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:40:56,687 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:40:56,687 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:40:56,687 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:40:57,743 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:40:57,744 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:40:57,744 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:40:59,399 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:40:59,399 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:40:59,399 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:40:59,399 - root - INFO - 카메라 로드됨
+2023-04-04 10:40:59,839 - root - INFO - 판독자 로드됨
+2023-04-04 10:40:59,844 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:41:01,970 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:41:09,849 - root - INFO - Auto Update!
+2023-04-04 10:41:20,184 - root - INFO - Auto Update!
+2023-04-04 10:44:16,039 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:44:16,170 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:44:16,170 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:44:16,170 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:44:16,170 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:44:17,236 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:44:17,236 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:44:17,237 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:44:19,417 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:44:19,417 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:44:19,417 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:44:19,417 - root - INFO - 카메라 로드됨
+2023-04-04 10:44:19,854 - root - INFO - 판독자 로드됨
+2023-04-04 10:44:19,869 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:44:21,990 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:48:55,535 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:48:55,674 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:48:55,674 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:48:55,674 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:48:55,674 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:48:56,741 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:48:56,741 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:48:56,742 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:48:59,168 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:48:59,178 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:48:59,178 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:48:59,178 - root - INFO - 카메라 로드됨
+2023-04-04 10:48:59,633 - root - INFO - 판독자 로드됨
+2023-04-04 10:48:59,633 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:49:01,752 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:56:32,092 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:56:32,234 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:56:32,234 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:56:32,234 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:56:32,235 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:56:33,311 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:56:33,311 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:56:33,311 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:57:22,246 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:57:22,384 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:57:22,384 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:57:22,385 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:57:22,385 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:57:23,458 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:57:23,458 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:57:23,458 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:57:47,035 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:57:47,175 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:57:47,175 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:57:47,175 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:57:47,176 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:57:48,244 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:57:48,244 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:57:48,245 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:57:50,288 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:57:50,288 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:57:50,288 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:57:50,288 - root - INFO - 카메라 로드됨
+2023-04-04 10:57:50,798 - root - INFO - 판독자 로드됨
+2023-04-04 10:57:50,808 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:57:52,949 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:58:00,819 - root - INFO - Auto Update!
+2023-04-04 10:59:13,710 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 10:59:14,018 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:59:14,018 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:59:14,018 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 10:59:14,018 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 10:59:16,129 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 10:59:16,129 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 10:59:16,129 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 10:59:18,326 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 10:59:18,326 - root - INFO - Exposure Time : 25000.0
+2023-04-04 10:59:18,326 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 10:59:18,326 - root - INFO - 카메라 로드됨
+2023-04-04 10:59:18,759 - root - INFO - 판독자 로드됨
+2023-04-04 10:59:18,775 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 10:59:20,896 - root - INFO - Loaded OcrEngine.
+2023-04-04 10:59:28,790 - root - INFO - Auto Update!
+2023-04-04 11:00:08,873 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:00:09,013 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:00:09,013 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:00:09,013 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:00:09,013 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:00:10,086 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:00:10,086 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:00:10,087 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:00:12,033 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:00:12,033 - root - INFO - Exposure Time : 25000.0
+2023-04-04 11:00:12,033 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:00:12,043 - root - INFO - 카메라 로드됨
+2023-04-04 11:00:12,493 - root - INFO - 판독자 로드됨
+2023-04-04 11:00:12,497 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:00:14,631 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:00:22,501 - root - INFO - Auto Update!
+2023-04-04 11:00:32,831 - root - INFO - Auto Update!
+2023-04-04 11:00:43,167 - root - INFO - Auto Update!
+2023-04-04 11:00:53,507 - root - INFO - Auto Update!
+2023-04-04 11:37:20,713 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:37:20,867 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:37:20,867 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:37:20,867 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:37:20,867 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:37:22,035 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:37:22,035 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:37:22,036 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:37:23,727 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:37:23,727 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:37:23,727 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:37:23,727 - root - INFO - 카메라 로드됨
+2023-04-04 11:37:24,195 - root - INFO - 판독자 로드됨
+2023-04-04 11:37:24,227 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:37:26,362 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:37:30,447 - root - INFO - read_mode button clicked.
+2023-04-04 11:37:34,235 - root - INFO - Auto Update!
+2023-04-04 11:37:35,765 - root - INFO - Stop button clicked.
+2023-04-04 11:37:40,199 - root - INFO - read_mode button clicked.
+2023-04-04 11:39:14,988 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:39:15,108 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:39:15,123 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:39:15,123 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:39:15,123 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:39:16,177 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:39:16,177 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:39:16,177 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:39:17,682 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:39:17,682 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:39:17,682 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:39:17,682 - root - INFO - 카메라 로드됨
+2023-04-04 11:39:18,142 - root - INFO - 판독자 로드됨
+2023-04-04 11:39:18,152 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:39:20,292 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:39:25,563 - root - INFO - read_mode button clicked.
+2023-04-04 11:39:28,154 - root - INFO - Auto Update!
+2023-04-04 11:39:38,501 - root - INFO - Auto Update!
+2023-04-04 11:39:39,123 - root - INFO - Stop button clicked.
+2023-04-04 11:40:14,641 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:40:14,775 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:40:14,775 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:40:14,775 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:40:14,775 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:40:15,846 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:40:15,846 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:40:15,846 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:40:17,153 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:40:17,153 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:40:17,153 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:40:17,153 - root - INFO - 카메라 로드됨
+2023-04-04 11:40:17,613 - root - INFO - 판독자 로드됨
+2023-04-04 11:40:17,613 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:40:19,746 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:40:20,476 - root - INFO - read_mode button clicked.
+2023-04-04 11:40:22,613 - root - INFO - Stop button clicked.
+2023-04-04 11:40:25,989 - root - INFO - read_mode button clicked.
+2023-04-04 11:40:27,630 - root - INFO - Auto Update!
+2023-04-04 11:40:43,408 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:40:43,548 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:40:43,548 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:40:43,548 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:40:43,550 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:40:44,597 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:40:44,597 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:40:44,597 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:41:59,022 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:41:59,163 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:41:59,163 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:41:59,163 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:41:59,163 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:42:00,228 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:42:00,228 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:42:00,229 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:42:01,871 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:42:01,871 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:42:01,871 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:42:01,871 - root - INFO - 카메라 로드됨
+2023-04-04 11:42:02,321 - root - INFO - 판독자 로드됨
+2023-04-04 11:42:02,321 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:42:04,464 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:42:05,900 - root - INFO - read_mode button clicked.
+2023-04-04 11:42:12,340 - root - INFO - Auto Update!
+2023-04-04 11:42:15,188 - root - INFO - Stop button clicked.
+2023-04-04 11:42:55,393 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:42:55,531 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:42:55,531 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:42:55,531 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:42:55,531 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:42:56,587 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:42:56,587 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:42:56,588 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:42:58,176 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:42:58,176 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:42:58,176 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:42:58,176 - root - INFO - 카메라 로드됨
+2023-04-04 11:42:58,626 - root - INFO - 판독자 로드됨
+2023-04-04 11:42:58,636 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:43:00,772 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:43:02,510 - root - INFO - read_mode button clicked.
+2023-04-04 11:43:08,650 - root - INFO - Auto Update!
+2023-04-04 11:43:11,886 - root - INFO - Stop button clicked.
+2023-04-04 11:52:25,909 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:52:26,056 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:52:26,056 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:52:26,056 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:52:26,056 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:52:27,108 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:52:27,108 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:52:27,109 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:52:29,050 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:52:29,050 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:52:29,050 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:52:29,050 - root - INFO - 카메라 로드됨
+2023-04-04 11:52:29,528 - root - INFO - 판독자 로드됨
+2023-04-04 11:52:29,528 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:52:58,611 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:52:58,758 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:52:58,758 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:52:58,758 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:52:58,758 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:52:59,841 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:52:59,842 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:52:59,842 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:53:01,380 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:53:01,380 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:53:01,380 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:53:01,380 - root - INFO - 카메라 로드됨
+2023-04-04 11:53:01,820 - root - INFO - 판독자 로드됨
+2023-04-04 11:53:01,831 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:53:03,985 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:53:05,348 - root - INFO - read_mode button clicked.
+2023-04-04 11:53:11,842 - root - INFO - Auto Update!
+2023-04-04 11:53:13,908 - root - INFO - Stop button clicked.
+2023-04-04 11:53:17,524 - root - INFO - read_mode button clicked.
+2023-04-04 11:53:19,124 - root - INFO - Stop button clicked.
+2023-04-04 11:53:20,300 - root - INFO - read_mode button clicked.
+2023-04-04 11:53:22,188 - root - INFO - Auto Update!
+2023-04-04 11:53:23,877 - root - INFO - Stop button clicked.
+2023-04-04 11:53:31,920 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 11:53:32,071 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:53:32,071 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:53:32,071 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 11:53:32,071 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 11:53:33,179 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 11:53:33,180 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 11:53:33,180 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 11:53:34,859 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 11:53:34,859 - root - INFO - Exposure Time : 2500.0
+2023-04-04 11:53:34,859 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 11:53:34,859 - root - INFO - 카메라 로드됨
+2023-04-04 11:53:35,329 - root - INFO - 판독자 로드됨
+2023-04-04 11:53:35,340 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 11:53:37,480 - root - INFO - Loaded OcrEngine.
+2023-04-04 11:53:38,429 - root - INFO - read_mode button clicked.
+2023-04-04 11:53:45,346 - root - INFO - Auto Update!
+2023-04-04 12:01:31,478 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:01:31,606 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:01:31,606 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:01:31,606 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:01:31,606 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:01:32,688 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:01:32,688 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:01:32,688 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:01:34,897 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:01:34,897 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:01:34,897 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:01:34,897 - root - INFO - 카메라 로드됨
+2023-04-04 12:01:35,430 - root - INFO - 판독자 로드됨
+2023-04-04 12:01:35,446 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:01:37,566 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:01:45,447 - root - INFO - Auto Update!
+2023-04-04 12:13:33,243 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:13:33,390 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:13:33,390 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:13:33,390 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:13:33,390 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:13:34,465 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:13:34,465 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:13:34,465 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:13:36,191 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:13:36,191 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:13:36,191 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:13:36,191 - root - INFO - 카메라 로드됨
+2023-04-04 12:13:36,711 - root - INFO - 판독자 로드됨
+2023-04-04 12:13:36,741 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:13:38,894 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:13:46,744 - root - INFO - Auto Update!
+2023-04-04 12:20:42,292 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:20:42,428 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:20:42,428 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:20:42,428 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:20:42,428 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:20:43,502 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:20:43,502 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:20:43,502 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:20:44,940 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:20:44,940 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:20:44,940 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:20:44,940 - root - INFO - 카메라 로드됨
+2023-04-04 12:20:45,390 - root - INFO - 판독자 로드됨
+2023-04-04 12:20:45,390 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:20:47,545 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:25:04,286 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:25:04,433 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:25:04,433 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:25:04,433 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:25:04,433 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:25:05,499 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:25:05,499 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:25:05,499 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:25:06,889 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:25:06,889 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:25:06,889 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:25:06,889 - root - INFO - 카메라 로드됨
+2023-04-04 12:25:07,337 - root - INFO - 판독자 로드됨
+2023-04-04 12:25:07,347 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:25:09,490 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:25:17,360 - root - INFO - Auto Update!
+2023-04-04 12:27:04,671 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:27:04,804 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:27:04,804 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:27:04,804 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:27:04,804 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:27:05,858 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:27:05,858 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:27:05,858 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:27:07,366 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:27:07,366 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:27:07,376 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:27:07,376 - root - INFO - 카메라 로드됨
+2023-04-04 12:27:07,826 - root - INFO - 판독자 로드됨
+2023-04-04 12:27:07,826 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:27:09,984 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:28:51,069 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:28:51,206 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:28:51,206 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:28:51,206 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:28:51,206 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:28:52,254 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:28:52,254 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:28:52,254 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:29:00,357 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:29:00,489 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:29:00,489 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:29:00,489 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:29:00,489 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:29:01,547 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:29:01,547 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:29:01,547 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:29:03,099 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:29:03,099 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:29:03,099 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:29:03,099 - root - INFO - 카메라 로드됨
+2023-04-04 12:29:03,557 - root - INFO - 판독자 로드됨
+2023-04-04 12:29:03,567 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:29:05,703 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:36:26,553 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 12:36:26,691 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:36:26,691 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:36:26,691 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 12:36:26,691 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 12:36:27,751 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 12:36:27,751 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 12:36:27,751 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 12:36:29,620 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 12:36:29,620 - root - INFO - Exposure Time : 2500.0
+2023-04-04 12:36:29,620 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 12:36:29,620 - root - INFO - 카메라 로드됨
+2023-04-04 12:36:30,086 - root - INFO - 판독자 로드됨
+2023-04-04 12:36:30,090 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 12:36:32,246 - root - INFO - Loaded OcrEngine.
+2023-04-04 12:36:40,097 - root - INFO - Auto Update!
+2023-04-04 12:36:50,435 - root - INFO - Auto Update!
+2023-04-04 12:37:00,770 - root - INFO - Auto Update!
+2023-04-04 14:12:28,893 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:12:29,223 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:12:29,223 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:12:29,224 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:12:29,224 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:12:31,313 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:12:31,313 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:12:31,313 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:12:33,897 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:12:33,897 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:12:33,897 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:12:33,897 - root - INFO - 카메라 로드됨
+2023-04-04 14:12:34,422 - root - INFO - 판독자 로드됨
+2023-04-04 14:12:34,422 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:12:36,627 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:12:44,445 - root - INFO - Auto Update!
+2023-04-04 14:25:44,199 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:25:44,348 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:25:44,348 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:25:44,349 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:25:44,349 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:25:45,515 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:25:45,515 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:25:45,515 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:25:47,315 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:25:47,315 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:25:47,315 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:25:47,315 - root - INFO - 카메라 로드됨
+2023-04-04 14:25:47,765 - root - INFO - 판독자 로드됨
+2023-04-04 14:25:47,785 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:25:49,937 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:25:57,787 - root - INFO - Auto Update!
+2023-04-04 14:26:50,187 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:26:50,325 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:26:50,325 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:26:50,326 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:26:50,326 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:26:51,397 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:26:51,397 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:26:51,397 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:26:52,920 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:26:52,920 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:26:52,920 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:26:52,920 - root - INFO - 카메라 로드됨
+2023-04-04 14:26:53,360 - root - INFO - 판독자 로드됨
+2023-04-04 14:26:53,369 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:26:55,520 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:27:03,378 - root - INFO - Auto Update!
+2023-04-04 14:27:13,710 - root - INFO - Auto Update!
+2023-04-04 14:27:24,046 - root - INFO - Auto Update!
+2023-04-04 14:27:34,391 - root - INFO - Auto Update!
+2023-04-04 14:27:44,717 - root - INFO - Auto Update!
+2023-04-04 14:27:55,056 - root - INFO - Auto Update!
+2023-04-04 14:28:05,382 - root - INFO - Auto Update!
+2023-04-04 14:28:15,717 - root - INFO - Auto Update!
+2023-04-04 14:28:26,050 - root - INFO - Auto Update!
+2023-04-04 14:28:36,401 - root - INFO - Auto Update!
+2023-04-04 14:28:44,189 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:28:44,329 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:28:44,330 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:28:44,330 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:28:44,330 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:28:45,402 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:28:45,402 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:28:45,403 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:28:47,162 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:28:47,162 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:28:47,162 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:28:47,162 - root - INFO - 카메라 로드됨
+2023-04-04 14:28:47,621 - root - INFO - 판독자 로드됨
+2023-04-04 14:28:47,626 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:28:49,782 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:28:50,615 - root - INFO - read_mode button clicked.
+2023-04-04 14:28:52,717 - root - DEBUG - Best Acc : 76.46% 	 Best_Obj : ObjInfo(33333)
+2023-04-04 14:28:52,717 - root - INFO - Detect Time : 0.052
+2023-04-04 14:28:59,878 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:29:00,018 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:29:00,018 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:29:00,019 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:29:00,019 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:29:01,096 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:29:01,097 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:29:01,097 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:29:02,762 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:29:02,762 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:29:02,762 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:29:02,762 - root - INFO - 카메라 로드됨
+2023-04-04 14:29:03,207 - root - INFO - 판독자 로드됨
+2023-04-04 14:29:03,212 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:29:05,347 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:29:13,213 - root - INFO - Auto Update!
+2023-04-04 14:29:23,558 - root - INFO - Auto Update!
+2023-04-04 14:40:06,627 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:40:06,758 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:40:06,758 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:40:06,758 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:40:06,758 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:40:07,845 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:40:07,845 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:40:07,845 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:40:09,514 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:40:09,514 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:40:09,514 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:40:09,514 - root - INFO - 카메라 로드됨
+2023-04-04 14:40:09,985 - root - INFO - 판독자 로드됨
+2023-04-04 14:40:09,994 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:40:12,131 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:44:11,938 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:44:12,085 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:44:12,085 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:44:12,085 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:44:12,085 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:44:13,150 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:44:13,151 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:44:13,151 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:44:16,572 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:44:16,572 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:44:16,572 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:44:16,572 - root - INFO - 카메라 로드됨
+2023-04-04 14:44:17,022 - root - INFO - 판독자 로드됨
+2023-04-04 14:44:17,030 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:44:19,171 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:44:27,030 - root - INFO - Auto Update!
+2023-04-04 14:44:37,369 - root - INFO - Auto Update!
+2023-04-04 14:44:47,708 - root - INFO - Auto Update!
+2023-04-04 14:44:58,040 - root - INFO - Auto Update!
+2023-04-04 14:45:08,376 - root - INFO - Auto Update!
+2023-04-04 14:45:18,709 - root - INFO - Auto Update!
+2023-04-04 14:45:29,043 - root - INFO - Auto Update!
+2023-04-04 14:45:39,376 - root - INFO - Auto Update!
+2023-04-04 14:45:49,713 - root - INFO - Auto Update!
+2023-04-04 14:46:00,052 - root - INFO - Auto Update!
+2023-04-04 14:46:10,390 - root - INFO - Auto Update!
+2023-04-04 14:46:20,718 - root - INFO - Auto Update!
+2023-04-04 14:46:31,052 - root - INFO - Auto Update!
+2023-04-04 14:46:41,398 - root - INFO - Auto Update!
+2023-04-04 14:46:51,729 - root - INFO - Auto Update!
+2023-04-04 14:47:02,061 - root - INFO - Auto Update!
+2023-04-04 14:47:12,393 - root - INFO - Auto Update!
+2023-04-04 14:47:22,733 - root - INFO - Auto Update!
+2023-04-04 14:47:33,069 - root - INFO - Auto Update!
+2023-04-04 14:47:35,145 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:47:35,267 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:47:35,267 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:47:35,283 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:47:35,283 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:47:36,341 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:47:36,342 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:47:36,342 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:47:38,418 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:47:38,418 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:47:38,418 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:47:38,418 - root - INFO - 카메라 로드됨
+2023-04-04 14:47:38,877 - root - INFO - 판독자 로드됨
+2023-04-04 14:47:38,877 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:47:41,024 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:48:47,557 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:48:47,700 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:48:47,700 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:48:47,700 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:48:47,701 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:48:48,749 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:48:48,750 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:48:48,750 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:48:50,096 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:48:50,096 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:48:50,098 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:48:50,098 - root - INFO - 카메라 로드됨
+2023-04-04 14:48:50,525 - root - INFO - 판독자 로드됨
+2023-04-04 14:48:50,541 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:48:52,675 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:49:50,774 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 14:49:50,921 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:49:50,921 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:49:50,921 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 14:49:50,921 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 14:49:51,971 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 14:49:51,971 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 14:49:51,978 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 14:49:53,643 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 14:49:53,643 - root - INFO - Exposure Time : 2500.0
+2023-04-04 14:49:53,643 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 14:49:53,643 - root - INFO - 카메라 로드됨
+2023-04-04 14:49:54,103 - root - INFO - 판독자 로드됨
+2023-04-04 14:49:54,113 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 14:49:56,310 - root - INFO - Loaded OcrEngine.
+2023-04-04 14:50:04,124 - root - INFO - Auto Update!
+2023-04-04 15:13:06,379 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:13:06,517 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:13:06,517 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:13:06,517 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:13:06,517 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:13:07,590 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:13:07,590 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:13:07,593 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:17:27,381 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:17:27,514 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:17:27,514 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:17:27,514 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:17:27,514 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:17:28,609 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:17:28,609 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:17:28,609 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:17:51,399 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:17:51,532 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:17:51,532 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:17:51,532 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:17:51,532 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:17:52,602 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:17:52,602 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:17:52,603 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:19:06,418 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:19:06,571 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:19:06,571 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:19:06,571 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:19:06,571 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:19:07,620 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:19:07,621 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:19:07,621 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:21:01,663 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:21:01,803 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:21:01,803 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:21:01,803 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:21:01,803 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:21:02,856 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:21:02,857 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:21:02,858 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:21:07,579 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 15:21:07,595 - root - INFO - Exposure Time : 2500.0
+2023-04-04 15:21:07,595 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 15:21:07,595 - root - INFO - 카메라 로드됨
+2023-04-04 15:21:08,043 - root - INFO - 판독자 로드됨
+2023-04-04 15:21:08,058 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 15:21:10,202 - root - INFO - Loaded OcrEngine.
+2023-04-04 15:21:18,064 - root - INFO - Auto Update!
+2023-04-04 15:21:28,406 - root - INFO - Auto Update!
+2023-04-04 15:21:38,740 - root - INFO - Auto Update!
+2023-04-04 15:21:49,071 - root - INFO - Auto Update!
+2023-04-04 15:21:59,409 - root - INFO - Auto Update!
+2023-04-04 15:22:09,747 - root - INFO - Auto Update!
+2023-04-04 15:22:20,078 - root - INFO - Auto Update!
+2023-04-04 15:22:30,425 - root - INFO - Auto Update!
+2023-04-04 15:23:40,177 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:23:40,305 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:23:40,305 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:23:40,305 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:23:40,305 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:23:41,376 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:23:41,376 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:23:41,377 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:23:43,068 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 15:23:43,068 - root - INFO - Exposure Time : 2500.0
+2023-04-04 15:23:43,076 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 15:23:43,076 - root - INFO - 카메라 로드됨
+2023-04-04 15:23:43,516 - root - INFO - 판독자 로드됨
+2023-04-04 15:23:43,526 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 15:23:45,676 - root - INFO - Loaded OcrEngine.
+2023-04-04 15:23:53,547 - root - INFO - Auto Update!
+2023-04-04 15:24:03,883 - root - INFO - Auto Update!
+2023-04-04 15:24:14,227 - root - INFO - Auto Update!
+2023-04-04 15:25:08,444 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:25:08,582 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:25:08,582 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:25:08,582 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:25:08,582 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:25:09,653 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:25:09,653 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:25:09,653 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:25:11,271 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 15:25:11,271 - root - INFO - Exposure Time : 2500.0
+2023-04-04 15:25:11,271 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 15:25:11,271 - root - INFO - 카메라 로드됨
+2023-04-04 15:25:11,726 - root - INFO - 판독자 로드됨
+2023-04-04 15:25:11,731 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 15:25:13,865 - root - INFO - Loaded OcrEngine.
+2023-04-04 15:25:23,865 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:25:24,006 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:25:24,006 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:25:24,006 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:25:24,006 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:25:25,116 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:25:25,116 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:25:25,117 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:25:26,961 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 15:25:26,961 - root - INFO - Exposure Time : 2500.0
+2023-04-04 15:25:26,971 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 15:25:26,971 - root - INFO - 카메라 로드됨
+2023-04-04 15:25:27,416 - root - INFO - 판독자 로드됨
+2023-04-04 15:25:27,421 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 15:25:29,608 - root - INFO - Loaded OcrEngine.
+2023-04-04 15:25:37,424 - root - INFO - Auto Update!
+2023-04-04 15:25:47,755 - root - INFO - Auto Update!
+2023-04-04 15:25:58,089 - root - INFO - Auto Update!
+2023-04-04 15:26:08,428 - root - INFO - Auto Update!
+2023-04-04 15:26:18,765 - root - INFO - Auto Update!
+2023-04-04 15:26:29,101 - root - INFO - Auto Update!
+2023-04-04 15:26:39,443 - root - INFO - Auto Update!
+2023-04-04 15:26:49,793 - root - INFO - Auto Update!
+2023-04-04 15:26:56,039 - root - INFO - read_mode button clicked.
+2023-04-04 15:26:58,655 - root - DEBUG - Best Acc : 76.54% 	 Best_Obj : ObjInfo(33333)
+2023-04-04 15:26:58,655 - root - INFO - Detect Time : 0.053
+2023-04-04 15:27:00,143 - root - INFO - Auto Update!
+2023-04-04 15:28:09,388 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-04 15:28:09,538 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:28:09,538 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:28:09,538 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-04 15:28:09,538 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-04 15:28:10,609 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-04 15:28:10,610 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-04 15:28:10,610 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-04 15:28:13,937 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-04 15:28:13,937 - root - INFO - Exposure Time : 2500.0
+2023-04-04 15:28:13,937 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-04 15:28:13,937 - root - INFO - 카메라 로드됨
+2023-04-04 15:28:14,383 - root - INFO - 판독자 로드됨
+2023-04-04 15:28:14,383 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-04 15:28:16,521 - root - INFO - Loaded OcrEngine.
+2023-04-04 15:28:24,401 - root - INFO - Auto Update!
+2023-04-04 15:28:34,748 - root - INFO - Auto Update!
+2023-04-04 15:28:45,082 - root - INFO - Auto Update!

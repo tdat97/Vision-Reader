@@ -12,6 +12,7 @@ FONT_PATH = "./resource/NanumGothic.ttf"
 IMG_DIR_PATH = "./source/image"
 JSON_DIR_PATH = "./source/json"
 SETTING_PATH = "./source/setting.json"
+DEFAULT_SETTING_PATH = "./source/default_setting.json"
 
 # DB
 DB_INFO_PATH = "../secret/db_info.txt"
@@ -48,7 +49,7 @@ BYTES_DIC = {"light_on"   : b'\x0500WSS0106%DW0140001\x04',
 
 DEFAULT_SETTING_DIC = {
     "alram" : False,
-    "use_solenoid" : False,
+    "use_solenoid" : True,
     
     "nodb_mode" : True,
     "hand_mode" : True,
@@ -61,7 +62,7 @@ DEFAULT_SETTING_DIC = {
     "trigger2_time_gap" : 3.0,
 
     "cam_exp_time" : 2500,
-    "cut_width" : [300,2300],
+    "cut_width" : [300,300],
 
     "serial_port" : "COM6",
     "on_off_time" : {"red":3, "yellow":2, "green":1, "sol":1, "sound":3},
