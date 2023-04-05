@@ -147,10 +147,10 @@ def snaper(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     hand_mode = self.setting_dic["hand_mode"] if "hand_mode" in self.setting_dic else False
     ExposureTime = self.setting_dic["cam_exp_time"] if "cam_exp_time" in self.setting_dic else 2500
-    cut_width = self.setting_dic["cut_width"] if "cut_width" in self.setting_dic else [0,2600]
+    cut_width = self.setting_dic["cut_width"] if "cut_width" in self.setting_dic else [0,0]
     
     x0, x1 = cut_width
-    x1 = x1 if x1 else None # x1이 0일 경우 
+    x1 = -x1 if x1 else None # x1이 0일 경우 
     if hand_mode: ExposureTime = 25000
     self.cam.set_exposure(ExposureTime)
     
@@ -166,7 +166,7 @@ def snaper(self):
         self.plc_mng.write("light_off")
         
         # 이미지 자르기
-        img = img[:, x0:-x1]
+        img = img[:, x0:x1]
         self.raw_Q.put(img)
         
 #######################################################################

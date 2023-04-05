@@ -71,5 +71,6 @@ DEFAULT_SETTING_DIC = {
     "font_size_factor" : 1080,
 
 
+    "n_features" : 2000,
     "brightness" : 80,
 }

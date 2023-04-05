@@ -135,8 +135,9 @@ class MainWindow(tk.Tk):
             
         
         # 판독자 로드
+        n_features = self.setting_dic["n_features"] if "n_features" in self.setting_dic else 2000
         self.poly_detector = MultiPolyDetector(IMG_DIR_PATH, JSON_DIR_PATH, logger=logger, 
-                                               pick_names=self.db_mng.code2name)
+                                               pick_names=self.db_mng.code2name, n_features=n_features)
         logger.info("판독자 로드됨")
         
         # code2 데이터 초기화
