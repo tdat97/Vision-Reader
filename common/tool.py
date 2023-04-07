@@ -3,6 +3,7 @@ import cv2
 import datetime
 import os
 import json
+from glob import glob
 
 ##########################################################################
 def get_poly_box_wh(poly_box): # (4,2)
@@ -62,7 +63,7 @@ def get_time_str(human_mode=False, day=False):
 ##########################################################################
 def manage_file_num(dir_path, max_size=500, num_remove=100):
     path = os.path.join(dir_path, "*.jpg")
-    img_paths = sorted(path)
+    img_paths = sorted(glob(path))
     if len(img_paths) < max_size: return
 
     for path in img_paths[:num_remove]:
@@ -188,7 +189,8 @@ def imread(path, mode=cv2.IMREAD_COLOR):
     return img
 
 def imwrite(path, img):
-    result, encoded_img = cv2.imencode('.jpg', img)
+    ext = '.' + path.split('.')[-1]
+    result, encoded_img = cv2.imencode(ext, img)
     if result:
         with open(path, 'w') as f:
             encoded_img.tofile(f)

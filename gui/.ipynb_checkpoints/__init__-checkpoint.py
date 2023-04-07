@@ -345,10 +345,6 @@ class MainWindow(tk.Tk):
         self.start_button.configure(text="▶시작", bg="#334B35", fg="#D9D9D9", command=self.read_mode)
         self.ok_label.configure(text='', bg="#181B34", anchor='center')
         
-        # 설정 활성화
-        self.snap_time_scale['state'] = 'normal'
-        self.reject_time_scale['state'] = 'normal'
-        
     #######################################################################
     def add_mode(self, event):
         logger.info("add_mode button clicked.")
@@ -645,7 +641,7 @@ class MainWindow(tk.Tk):
         # 상단프레임 - 좌측프레임 - 버튼들
         self.tf_btn1 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='판독\n영상')
         self.tf_btn1.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.5)
-        self.tf_btn2 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='집계')
+        self.tf_btn2 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='통계')
         self.tf_btn2.place(relx=0.5, rely=0.0, relwidth=0.5, relheight=0.5)
         self.tf_btn3 = tk.Label(self.tf_left_frame, bd=1, relief="solid", anchor='center', text='설정')
         self.tf_btn3.place(relx=0.0, rely=0.5, relwidth=0.5, relheight=0.5)

@@ -217,7 +217,8 @@ def policy_check(text, today):
     if len(text) < 6: return False
     
     # 22.22.22 꼴이 아니면 False
-    date = re.findall("[0-9]{2}[^0-9][0-9]{2}[^0-9][0-9]{2}", text)
+    # date = re.findall("[0-9]{2}[^0-9][0-9]{2}[^0-9][0-9]{2}", text)
+    date = re.findall("[237][0-9][^0-9][01][0-9][^0-9][0123][0-9]", text)
     if not date: return False
 
     # 현재 날짜보다 과거이면 False
