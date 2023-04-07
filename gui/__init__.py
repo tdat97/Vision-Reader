@@ -116,44 +116,36 @@ class MainWindow(tk.Tk):
             self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
         
         # DB 로드
-        if nodb: self.db_mng = NODBManager(NODB_PATH)
+        add_cols = ['OK', 'NG', 'exist']
+        add_init = [0, 0, 'X']
+        if nodb: self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
         else:
             try:
-                self.db_mng = DBManager(db_info_path=DB_INFO_PATH, key_path=KEY_PATH, sql_path=SQL_PATH)
+                self.db_mng = DBManager(db_info_path=DB_INFO_PATH, key_path=KEY_PATH, sql_dir_path=SQL_DIR_PATH, 
+                                        add_cols=add_cols, add_init=add_init)
                 logger.info("DB 로드됨")
             except JSONDecodeError:
                 logger.warn("DB 정보 복호화 실패")
                 mb.showwarning(title="", message="DB 정보 복호화 실패\n테스트버전으로 전환")
-                self.db_mng = NODBManager(NODB_PATH)
+                self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
                 logger.error(traceback.format_exc())
             except:
                 logger.error(traceback.format_exc())
                 logger.warn("DB 로드 실패")
                 mb.showwarning(title="", message="DB 로드 실패...\n테스트 DB로 전환.")
-                self.db_mng = NODBManager(NODB_PATH)
+                self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
                 logger.error(traceback.format_exc())
+            
+        temp = [self.listbox1, self.listbox2, self.listbox3, self.listbox4, self.listbox5, ]
+        self.lb_dic = dict(zip(self.db_mng.df.columns, temp))
             
         
         # 판독자 로드
         n_features = self.setting_dic["n_features"] if "n_features" in self.setting_dic else 2000
         self.poly_detector = MultiPolyDetector(IMG_DIR_PATH, JSON_DIR_PATH, logger=logger, 
-                                               pick_names=self.db_mng.code2name, n_features=n_features)
+                                               pick_names=self.db_mng.df['ITEM_CD'], n_features=n_features)
         logger.info("판독자 로드됨")
         
-        # code2 데이터 초기화
-        self.code2data = defaultdict(lambda:{"ALL":0, "OK":0, "NG":0, "exist":"X"})
-        for code in self.db_mng.code2name:
-            self.code2data[code]["exist"] = "O" if code in self.poly_detector.names else "X"
-        self.update_table()
-        print(self.db_mng.code2name)
-        print(self.poly_detector.names)
-        
-        
-        # self.label_win = LabelWindow("33333", self.db_mng.code2name["33333"], self.cam, self.plc_mng, 
-        #                              self.setting_dic, callback=self.complete_apply)################
-        # self.add_win = AddWindow("33333", self.db_mng.code2name["33333"], self.cam, self.plc_mng, 
-        #                              self.setting_dic, callback=self.complete_apply)################
-        # return
         # 오래걸리는 로딩
         self.ocr_engine = None
         self.load_check_stop = False
@@ -196,31 +188,26 @@ class MainWindow(tk.Tk):
         
     #######################################################################
     def update_table(self):
-        # 모든 리스트박스 청소
-        self.listbox1.delete(0, 'end') # 품목코드
-        self.listbox2.delete(0, 'end') # 품목이름
-        self.listbox3.delete(0, 'end') # 총 갯수
-        self.listbox4.delete(0, 'end') # OK 갯수
-        self.listbox5.delete(0, 'end') # NG 갯수
-        self.listbox6.delete(0, 'end') # 등록여부
-        
-        for i, code in enumerate(self.db_mng.code2name):
-            self.listbox1.insert(i, code) # 품목코드
-            self.listbox2.insert(i, self.db_mng.code2name[code]) # 품목이름
-            self.listbox3.insert(i, self.code2data[code]['ALL']) # 총 갯수
-            self.listbox4.insert(i, self.code2data[code]['OK']) # OK 갯수
-            self.listbox5.insert(i, self.code2data[code]['NG']) # NG 갯수
-            self.listbox6.insert(i, self.code2data[code]['exist']) # 등록여부
-        
-        self.listbox1.insert('end', "None") # 품목코드
-        self.listbox2.insert('end', "미분류") # 품목이름
-        self.listbox3.insert('end', self.code2data[None]['ALL']) # 총 갯수
-        self.listbox4.insert('end', "") # OK 갯수
-        self.listbox5.insert('end', "") # NG 갯수
-        self.listbox6.insert('end', "") # 등록여부
+        # 품목코드, 품목명, OK갯수, NG갯수, 등록여부
+        for col in self.db_mng.df.columns:
+            # 리스트박스 청소
+            self.lb_dic[col].delete(0, 'end')
+            # 각 리스트박스에 하나씩 넣기
+            for i in range(len(self.db_mng.df)):
+                self.lb_dic[col].insert(i, self.db_mng.df.loc[i, col])
             
     #######################################################################
     def auto_update(self):
+        # poly 존재여부 체크
+        for i in range(len(self.db_mng.df)):
+            if self.db_mng.df.loc[i, "ITEM_CD"] in self.poly_detector.names:
+                self.db_mng.df.loc[i, "exist"] = "O" 
+            else:
+                self.db_mng.df.loc[i, "exist"] = "X"
+                
+        # GUI 적용
+        self.update_table()
+        
         while True:
             if "update_cycle" in self.setting_dic: time.sleep(self.setting_dic["update_cycle"])
             else: time.sleep(10)
@@ -228,47 +215,24 @@ class MainWindow(tk.Tk):
             
             # DB, poly reload
             self.db_mng.update_order_today()
-            self.poly_detector.update(pick_names=self.db_mng.code2name)
+            self.poly_detector.update(pick_names=self.db_mng.df['ITEM_CD'])
             
             # 날짜 바뀜 체크
             today = tool.get_time_str(day=True)
             if self.today != today:
                 self.today = today
-                self.code2data = defaultdict(lambda:{"ALL":0, "OK":0, "NG":0, "exist":"X"})
+                self.db_mng.df[['OK', 'NG']] = 0
                 
             # poly 존재여부 체크
-            for code in self.db_mng.code2name:
-                self.code2data[code]["exist"] = "O" if code in self.poly_detector.names else "X"
+            for i in range(len(self.db_mng.df)):
+                if self.db_mng.df.loc[i, "ITEM_CD"] in self.poly_detector.names:
+                    self.db_mng.df.loc[i, "exist"] = "O" 
+                else:
+                    self.db_mng.df.loc[i, "exist"] = "X"
                 
             # GUI 적용
             self.update_table()
             
-    #######################################################################
-#     def select_code(self, event):
-#         Thread(target=self.select_code2, args=(), daemon=True).start()
-        
-#     def select_code2(self):
-#         time.sleep(0.01)
-#         tup = self.listbox1.curselection()
-#         code = None
-#         # 선택검사
-#         if not tup:
-#             self.selected_code = None
-#         else:
-#             idx = tup[0]
-#             name = self.listbox1.get(idx,idx)[0]
-#             code = self.db_mng.name2code[name]
-            
-#         # 실행 여부
-#         if not self.stop_signal:
-#             mb.showinfo(title="", message="이미 실행 중입니다.\n중지 후에 선택해주세요.")
-#             return
-        
-#         self.selected_code = code
-            
-#         # GUI 적용
-#         self.selected_label.configure(text=name if self.selected_code else "선택안됨")
-        
     #######################################################################
     def stop(self):
         logger.info("Stop button clicked.")
@@ -360,12 +324,12 @@ class MainWindow(tk.Tk):
             return
         
         # 코드 가져오기
-        tup = self.listbox6.curselection()
+        tup = event.widget.curselection()
         if not tup: return
         idx = tup[0]
-        code = self.listbox1.get(idx, idx)[0]
-        name = self.listbox2.get(idx, idx)[0]
-        if code == "None": return
+        code = self.lb_dic['ITEM_CD'].get(idx, idx)[0]
+        name = self.lb_dic['ITEM_NM'].get(idx, idx)[0]
+        if code == "NONE": return
         
         # 여부 묻기
         answer = mb.askquestion("등록하기", f"{name}\n\n해당 품목을 등록하시겠습니까?")
@@ -379,14 +343,23 @@ class MainWindow(tk.Tk):
     
     def complete_apply(self, code): # 등록하고 나올때
         # poly 판독자 업데이트
-        self.poly_detector.update(pick_names=self.db_mng.code2name)
+        self.poly_detector.update(pick_names=self.db_mng.df["ITEM_CD"])
+        
+        df = self.db_mng.df
         
         # poly 존재여부 체크
-        if code in self.db_mng.code2name:
-            self.code2data[code]["exist"] = "O" if code in self.poly_detector.names else "X"
+        if code in df['ITEM_CD'].values and code in self.poly_detector.names:
+            df.loc[df["ITEM_CD"]==code, "exist"] = "O"
+        else:
+            df.loc[df["ITEM_CD"]==code, "exist"] = "X"
         
         # GUI 적용
-        self.update_table()
+        idxs = df[df["ITEM_CD"] == code].index
+        for i in sorted(idxs):
+            self.lb_dic['exist'].delete(i)
+            self.lb_dic['exist'].insert(i, df.loc[i, "exist"])
+            
+        # self.update_table()
         
         logger.info(f"{code} 등록완료!")
     
@@ -402,12 +375,12 @@ class MainWindow(tk.Tk):
     
     #######################################################################
     def open_dir(self, event, ok=True):
-        tup = self.listbox4.curselection() if ok else self.listbox5.curselection()
+        tup = event.widget.curselection()
         if not tup: return
         
         # 코드 가져오기
         idx = tup[0]
-        code = self.listbox1.get(idx, idx)[0]
+        code = self.lb_dic["ITEM_CD"].get(idx, idx)[0]
         
         # 폴더 열기
         dir_path = SAVE_OK_IMG_DIR if ok else SAVE_NG_IMG_DIR
@@ -470,9 +443,9 @@ class MainWindow(tk.Tk):
         self.tf_btn3.bind("<Button-1>", lambda _:select(_, 2)) # 설정
         self.tf_btn4.bind("<Button-1>", lambda _:select(_, 3)) # 개발자설정
         
-        self.listbox4.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=True))
-        self.listbox5.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=False))
-        self.listbox6.bind("<Double-Button-1>", self.add_mode)
+        self.listbox3.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=True))
+        self.listbox4.bind("<Double-Button-1>", lambda x:self.open_dir(x, ok=False))
+        self.listbox5.bind("<Double-Button-1>", self.add_mode)
         
         self.trigger_btn.configure(command=lambda:self.trigger_Q.put(1))
         
@@ -779,10 +752,7 @@ class MainWindow(tk.Tk):
         self.temp.place(relx=0.0, rely=0.0, relwidth=0.15, relheight=1)
         self.temp = tk.Label(self.detail_col_frame, text="품목이름", bg="#565C8F", fg="#fff", relief="solid", bd=1)
         self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
-        self.temp.place(relx=0.15, rely=0.0, relwidth=0.45, relheight=1)
-        self.temp = tk.Label(self.detail_col_frame, text="총 개수", bg="#565C8F", fg="#fff", relief="solid", bd=1)
-        self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
-        self.temp.place(relx=0.60, rely=0.0, relwidth=0.10, relheight=1)
+        self.temp.place(relx=0.15, rely=0.0, relwidth=0.55, relheight=1)
         self.temp = tk.Label(self.detail_col_frame, text="OK 개수", bg="#565C8F", fg="#fff", relief="solid", bd=1)
         self.temp['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.temp.place(relx=0.70, rely=0.0, relwidth=0.10, relheight=1)
@@ -800,25 +770,22 @@ class MainWindow(tk.Tk):
         func = lambda x,y:(self.scrollbar.set(x,y),
                            self.listbox1.yview("moveto",x), self.listbox2.yview("moveto",x), 
                            self.listbox3.yview("moveto",x), self.listbox4.yview("moveto",x), 
-                           self.listbox5.yview("moveto",x), self.listbox6.yview("moveto",x), )
+                           self.listbox5.yview("moveto",x), )
         self.listbox1 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
         self.listbox1.place(relx=0.0, rely=0.0, relwidth=0.15, relheight=1.0)
         self.listbox1['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
         self.listbox2 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
-        self.listbox2.place(relx=0.15, rely=0.0, relwidth=0.45, relheight=1.0)
+        self.listbox2.place(relx=0.15, rely=0.0, relwidth=0.55, relheight=1.0)
         self.listbox2['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
         self.listbox3 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
-        self.listbox3.place(relx=0.60, rely=0.0, relwidth=0.10, relheight=1.0)
+        self.listbox3.place(relx=0.70, rely=0.0, relwidth=0.10, relheight=1.0)
         self.listbox3['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
         self.listbox4 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
-        self.listbox4.place(relx=0.70, rely=0.0, relwidth=0.10, relheight=1.0)
+        self.listbox4.place(relx=0.80, rely=0.0, relwidth=0.10, relheight=1.0)
         self.listbox4['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
         self.listbox5 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
-        self.listbox5.place(relx=0.80, rely=0.0, relwidth=0.10, relheight=1.0)
+        self.listbox5.place(relx=0.90, rely=0.0, relwidth=0.10, relheight=1.0)
         self.listbox5['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
-        self.listbox6 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
-        self.listbox6.place(relx=0.90, rely=0.0, relwidth=0.10, relheight=1.0)
-        self.listbox6['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
         
         
         # style = ttk.Style(self.list_frame)
@@ -835,14 +802,14 @@ class MainWindow(tk.Tk):
         
         func = lambda *args:(self.listbox1.yview(*args), self.listbox2.yview(*args), 
                              self.listbox3.yview(*args), self.listbox4.yview(*args), 
-                             self.listbox5.yview(*args), self.listbox6.yview(*args), )
+                             self.listbox5.yview(*args), )
         self.scrollbar.config(command=func)
         
         # test
-        for i in range(20):
-            self.listbox1.insert(tk.END, f"사과{i:02d}")
-            self.listbox2.insert(tk.END, f"{i:02d}")
-            self.listbox3.insert(tk.END, f"{i:02d}")
+        # for i in range(20):
+        #     self.listbox1.insert(tk.END, f"사과{i:02d}")
+        #     self.listbox2.insert(tk.END, f"{i:02d}")
+        #     self.listbox3.insert(tk.END, f"{i:02d}")
             # self.listbox4.insert(tk.END, f"{i:02d}")
             # self.listbox5.insert(tk.END, f"{i:02d}")
             

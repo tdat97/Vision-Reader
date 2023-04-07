@@ -18,7 +18,7 @@ DEFAULT_SETTING_PATH = "./source/default_setting.json"
 DB_INFO_PATH = "../secret/db_info.txt"
 KEY_PATH = "../secret/key.txt"
 NODB_PATH = "./source/nodb.json"
-SQL_PATH = "./source/sql.txt"
+SQL_DIR_PATH = "./source/sql"
 
 # recode
 SAVE_IMG_DIR = "./recode"

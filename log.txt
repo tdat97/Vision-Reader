@@ -1720,3 +1720,324 @@
 2023-04-04 16:27:40,434 - root - DEBUG - Best Acc : 79.21% 	 Best_Obj : ObjInfo(33333)
 2023-04-04 16:27:40,436 - root - INFO - Detect Time : 0.055
 2023-04-04 16:27:44,586 - root - INFO - Auto Update!
+2023-04-07 14:27:08,032 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 14:27:08,328 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 14:27:08,328 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 14:27:08,328 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 14:27:08,329 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 14:27:10,468 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 14:27:10,468 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 14:27:10,469 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 14:27:12,792 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 14:27:12,792 - root - INFO - Exposure Time : 2500.0
+2023-04-07 14:27:12,793 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 14:27:12,793 - root - INFO - 카메라 로드됨
+2023-04-07 14:28:11,091 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 14:28:11,229 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 14:28:11,229 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 14:28:11,230 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 14:28:11,230 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 14:28:12,304 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 14:28:12,304 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 14:28:12,304 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 14:28:14,323 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 14:28:14,324 - root - INFO - Exposure Time : 2500.0
+2023-04-07 14:28:14,325 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 14:28:14,325 - root - INFO - 카메라 로드됨
+2023-04-07 14:28:14,800 - root - INFO - 판독자 로드됨
+2023-04-07 14:28:14,828 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 14:28:17,031 - root - INFO - Loaded OcrEngine.
+2023-04-07 14:28:24,834 - root - INFO - Auto Update!
+2023-04-07 14:28:35,126 - root - INFO - Auto Update!
+2023-04-07 14:28:45,413 - root - INFO - Auto Update!
+2023-04-07 14:28:55,709 - root - INFO - Auto Update!
+2023-04-07 14:29:06,004 - root - INFO - Auto Update!
+2023-04-07 14:29:16,299 - root - INFO - Auto Update!
+2023-04-07 14:29:26,599 - root - INFO - Auto Update!
+2023-04-07 14:29:36,896 - root - INFO - Auto Update!
+2023-04-07 14:29:47,195 - root - INFO - Auto Update!
+2023-04-07 14:29:57,487 - root - INFO - Auto Update!
+2023-04-07 14:33:41,308 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 14:33:41,453 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 14:33:41,454 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 14:33:41,454 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 14:33:41,454 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 14:33:42,574 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 14:33:42,574 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 14:33:42,575 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 14:33:45,008 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 14:33:45,008 - root - INFO - Exposure Time : 2500.0
+2023-04-07 14:33:45,009 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 14:33:45,009 - root - INFO - 카메라 로드됨
+2023-04-07 14:33:45,527 - root - INFO - 판독자 로드됨
+2023-04-07 14:33:45,533 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 14:33:47,712 - root - INFO - Loaded OcrEngine.
+2023-04-07 14:33:48,313 - root - INFO - read_mode button clicked.
+2023-04-07 14:33:49,373 - root - DEBUG - Best Acc : 1.00% 	 Best_Obj : ObjInfo(4047)
+2023-04-07 14:33:49,374 - root - INFO - Detect Time : 0.058
+2023-04-07 14:33:51,505 - root - INFO - Stop button clicked.
+2023-04-07 15:35:41,840 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:35:41,978 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:35:41,978 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:35:41,978 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:35:41,978 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:36:04,856 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:36:04,994 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:36:04,994 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:36:04,994 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:36:04,995 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:36:06,089 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:36:06,089 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:36:06,090 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:36:08,563 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:36:08,564 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:36:08,565 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:36:08,565 - root - INFO - 카메라 로드됨
+2023-04-07 15:36:28,711 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:36:28,850 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:36:28,851 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:36:28,851 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:36:28,851 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:36:29,934 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:36:29,934 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:36:29,934 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:36:31,488 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:36:31,488 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:36:31,489 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:36:31,489 - root - INFO - 카메라 로드됨
+2023-04-07 15:37:45,864 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:37:46,002 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:37:46,002 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:37:46,002 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:37:46,003 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:37:47,075 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:37:47,076 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:37:47,076 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:37:48,665 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:37:48,666 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:37:48,667 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:37:48,667 - root - INFO - 카메라 로드됨
+2023-04-07 15:37:49,069 - root - INFO - 판독자 로드됨
+2023-04-07 15:37:49,072 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 15:37:51,248 - root - INFO - Loaded OcrEngine.
+2023-04-07 15:37:59,218 - root - INFO - Auto Update!
+2023-04-07 15:39:37,633 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:39:37,771 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:39:37,771 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:39:37,771 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:39:37,772 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:39:38,839 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:39:38,839 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:39:38,840 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:39:40,266 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:39:40,266 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:39:40,267 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:39:40,268 - root - INFO - 카메라 로드됨
+2023-04-07 15:39:40,646 - root - INFO - 판독자 로드됨
+2023-04-07 15:39:40,649 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 15:39:42,649 - root - INFO - add_mode button clicked.
+2023-04-07 15:39:42,867 - root - INFO - Loaded OcrEngine.
+2023-04-07 15:39:44,153 - root - INFO - add_mode button clicked.
+2023-04-07 15:39:45,337 - root - INFO - add_mode button clicked.
+2023-04-07 15:39:45,969 - root - INFO - add_mode button clicked.
+2023-04-07 15:39:47,729 - root - INFO - add_mode button clicked.
+2023-04-07 15:39:50,787 - root - INFO - Auto Update!
+2023-04-07 15:40:01,083 - root - INFO - Auto Update!
+2023-04-07 15:40:11,381 - root - INFO - Auto Update!
+2023-04-07 15:40:21,682 - root - INFO - Auto Update!
+2023-04-07 15:40:29,850 - root - INFO - read_mode button clicked.
+2023-04-07 15:40:30,898 - root - DEBUG - Best Acc : 92.36% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:40:30,900 - root - INFO - Detect Time : 0.047
+2023-04-07 15:40:31,018 - root - ERROR - an error in [draw]
+2023-04-07 15:40:31,019 - root - ERROR - Traceback (most recent call last):
+  File "C:\_MAIN\___SPACE2\Vision-Reader\utils\process.py", line 408, in draw
+    name = self.db_mng.code2name[code]
+AttributeError: 'NODBManager' object has no attribute 'code2name'
+
+2023-04-07 15:40:31,984 - root - INFO - Auto Update!
+2023-04-07 15:50:07,139 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:50:07,286 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:50:07,286 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:50:07,287 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:50:07,287 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:50:08,437 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:50:08,437 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:50:08,438 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:50:10,306 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:50:10,307 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:50:10,307 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:50:10,307 - root - INFO - 카메라 로드됨
+2023-04-07 15:50:10,747 - root - INFO - 판독자 로드됨
+2023-04-07 15:50:10,750 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 15:50:12,949 - root - INFO - Loaded OcrEngine.
+2023-04-07 15:50:13,703 - root - INFO - read_mode button clicked.
+2023-04-07 15:50:14,938 - root - DEBUG - Best Acc : 89.64% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:50:14,940 - root - INFO - Detect Time : 0.053
+2023-04-07 15:50:20,892 - root - INFO - Auto Update!
+2023-04-07 15:50:25,864 - root - INFO - Stop button clicked.
+2023-04-07 15:50:31,175 - root - INFO - Auto Update!
+2023-04-07 15:50:38,041 - root - INFO - add_mode button clicked.
+2023-04-07 15:50:41,451 - root - INFO - Auto Update!
+2023-04-07 15:50:51,751 - root - INFO - Auto Update!
+2023-04-07 15:51:02,053 - root - INFO - Auto Update!
+2023-04-07 15:51:12,350 - root - INFO - Auto Update!
+2023-04-07 15:51:22,656 - root - INFO - Auto Update!
+2023-04-07 15:52:55,554 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:52:55,692 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:52:55,692 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:52:55,692 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:52:55,692 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:52:56,768 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:52:56,768 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:52:56,768 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:52:58,493 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:52:58,494 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:52:58,495 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:52:58,495 - root - INFO - 카메라 로드됨
+2023-04-07 15:52:58,896 - root - INFO - 판독자 로드됨
+2023-04-07 15:52:58,899 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 15:53:01,093 - root - INFO - Loaded OcrEngine.
+2023-04-07 15:53:01,449 - root - INFO - add_mode button clicked.
+2023-04-07 15:53:02,656 - root - INFO - add_mode button clicked.
+2023-04-07 15:53:09,037 - root - INFO - Auto Update!
+2023-04-07 15:53:19,349 - root - INFO - Auto Update!
+2023-04-07 15:53:29,655 - root - INFO - Auto Update!
+2023-04-07 15:53:34,698 - root - INFO - read_mode button clicked.
+2023-04-07 15:53:36,063 - root - DEBUG - Best Acc : 92.63% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:53:36,065 - root - INFO - Detect Time : 0.055
+2023-04-07 15:53:39,965 - root - INFO - Auto Update!
+2023-04-07 15:53:50,273 - root - INFO - Auto Update!
+2023-04-07 15:54:00,556 - root - INFO - Auto Update!
+2023-04-07 15:54:10,845 - root - INFO - Auto Update!
+2023-04-07 15:54:21,134 - root - INFO - Auto Update!
+2023-04-07 15:54:31,431 - root - INFO - Auto Update!
+2023-04-07 15:54:41,720 - root - INFO - Auto Update!
+2023-04-07 15:54:52,009 - root - INFO - Auto Update!
+2023-04-07 15:55:09,036 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:55:09,175 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:55:09,176 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:55:09,176 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:55:09,176 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:55:10,268 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:55:10,268 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:55:10,269 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:55:13,733 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:55:13,733 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:55:13,734 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:55:13,734 - root - INFO - 카메라 로드됨
+2023-04-07 15:55:14,131 - root - INFO - 판독자 로드됨
+2023-04-07 15:55:14,135 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 15:55:16,286 - root - INFO - Loaded OcrEngine.
+2023-04-07 15:55:22,169 - root - INFO - add_mode button clicked.
+2023-04-07 15:55:24,273 - root - INFO - Auto Update!
+2023-04-07 15:55:34,592 - root - INFO - Auto Update!
+2023-04-07 15:55:44,909 - root - INFO - Auto Update!
+2023-04-07 15:55:55,225 - root - INFO - Auto Update!
+2023-04-07 15:56:05,533 - root - INFO - Auto Update!
+2023-04-07 15:56:15,844 - root - INFO - Auto Update!
+2023-04-07 15:56:26,165 - root - INFO - Auto Update!
+2023-04-07 15:56:36,483 - root - INFO - Auto Update!
+2023-04-07 15:56:46,806 - root - INFO - Auto Update!
+2023-04-07 15:56:55,409 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 15:56:55,549 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:56:55,550 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:56:55,550 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 15:56:55,550 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 15:56:56,654 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 15:56:56,654 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 15:56:56,655 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 15:56:58,817 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 15:56:58,817 - root - INFO - Exposure Time : 2500.0
+2023-04-07 15:56:58,818 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 15:56:58,818 - root - INFO - 카메라 로드됨
+2023-04-07 15:56:59,208 - root - INFO - 판독자 로드됨
+2023-04-07 15:56:59,212 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 15:57:01,443 - root - INFO - Loaded OcrEngine.
+2023-04-07 15:57:02,388 - root - INFO - add_mode button clicked.
+2023-04-07 15:57:09,367 - root - INFO - Auto Update!
+2023-04-07 15:57:19,676 - root - INFO - Auto Update!
+2023-04-07 15:57:25,940 - root - INFO - 33333 등록완료!
+2023-04-07 15:57:29,933 - root - INFO - read_mode button clicked.
+2023-04-07 15:57:29,988 - root - INFO - Auto Update!
+2023-04-07 15:57:31,608 - root - DEBUG - Best Acc : 86.93% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:57:31,610 - root - INFO - Detect Time : 0.048
+2023-04-07 15:57:35,544 - root - DEBUG - Best Acc : 77.82% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:57:35,546 - root - INFO - Detect Time : 0.048
+2023-04-07 15:57:40,280 - root - INFO - Auto Update!
+2023-04-07 15:57:45,318 - root - DEBUG - Best Acc : 82.06% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:57:45,320 - root - INFO - Detect Time : 0.048
+2023-04-07 15:57:47,332 - root - DEBUG - Best Acc : 77.64% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:57:47,334 - root - INFO - Detect Time : 0.051
+2023-04-07 15:57:50,568 - root - INFO - Auto Update!
+2023-04-07 15:58:00,862 - root - INFO - Auto Update!
+2023-04-07 15:58:11,144 - root - INFO - Auto Update!
+2023-04-07 15:58:21,440 - root - INFO - Auto Update!
+2023-04-07 15:58:29,605 - root - DEBUG - Best Acc : 67.86% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 15:58:29,606 - root - INFO - Detect Time : 0.048
+2023-04-07 15:58:31,743 - root - INFO - Auto Update!
+2023-04-07 15:58:42,032 - root - INFO - Auto Update!
+2023-04-07 15:58:52,335 - root - INFO - Auto Update!
+2023-04-07 15:59:02,623 - root - INFO - Auto Update!
+2023-04-07 15:59:12,911 - root - INFO - Auto Update!
+2023-04-07 15:59:23,204 - root - INFO - Auto Update!
+2023-04-07 15:59:31,118 - root - DEBUG - Best Acc : 9.30% 	 Best_Obj : ObjInfo(4500)
+2023-04-07 15:59:31,119 - root - INFO - Detect Time : 0.022
+2023-04-07 15:59:31,146 - root - INFO - 데이터 수정전 해당 품목코드가 사라짐.
+2023-04-07 15:59:33,497 - root - INFO - Auto Update!
+2023-04-07 15:59:43,807 - root - INFO - Auto Update!
+2023-04-07 15:59:54,118 - root - INFO - Auto Update!
+2023-04-07 16:00:04,443 - root - INFO - Auto Update!
+2023-04-07 16:00:14,747 - root - INFO - Auto Update!
+2023-04-07 16:00:25,060 - root - INFO - Auto Update!
+2023-04-07 16:00:35,375 - root - INFO - Auto Update!
+2023-04-07 16:00:45,683 - root - INFO - Auto Update!
+2023-04-07 16:00:55,996 - root - INFO - Auto Update!
+2023-04-07 16:01:06,315 - root - INFO - Auto Update!
+2023-04-07 16:01:16,638 - root - INFO - Auto Update!
+2023-04-07 16:01:26,960 - root - INFO - Auto Update!
+2023-04-07 16:01:37,277 - root - INFO - Auto Update!
+2023-04-07 16:01:47,592 - root - INFO - Auto Update!
+2023-04-07 16:01:57,903 - root - INFO - Auto Update!
+2023-04-07 16:02:08,226 - root - INFO - Auto Update!
+2023-04-07 16:02:18,541 - root - INFO - Auto Update!
+2023-04-07 16:02:28,865 - root - INFO - Auto Update!
+2023-04-07 16:02:39,185 - root - INFO - Auto Update!
+2023-04-07 16:02:49,501 - root - INFO - Auto Update!
+2023-04-07 16:02:59,819 - root - INFO - Auto Update!
+2023-04-07 16:03:10,140 - root - INFO - Auto Update!
+2023-04-07 16:03:20,460 - root - INFO - Auto Update!
+2023-04-07 16:03:30,775 - root - INFO - Auto Update!
+2023-04-07 16:03:41,085 - root - INFO - Auto Update!
+2023-04-07 16:03:51,936 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-04-07 16:03:52,073 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 16:03:52,074 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 16:03:52,075 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2023-04-07 16:03:52,075 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2023-04-07 16:03:53,159 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2023-04-07 16:03:53,159 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2023-04-07 16:03:53,159 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 7131
+2023-04-07 16:04:10,810 - root - INFO - Camera Name : a2A2600-64ucBAS
+2023-04-07 16:04:10,810 - root - INFO - Exposure Time : 2500.0
+2023-04-07 16:04:10,811 - root - INFO - DeviceLinkThroughputLimit : 360000000
+2023-04-07 16:04:10,811 - root - INFO - 카메라 로드됨
+2023-04-07 16:04:11,208 - root - INFO - 판독자 로드됨
+2023-04-07 16:04:11,212 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2023-04-07 16:04:13,460 - root - INFO - Loaded OcrEngine.
+2023-04-07 16:04:14,573 - root - INFO - read_mode button clicked.
+2023-04-07 16:04:15,522 - root - DEBUG - Best Acc : 3.88% 	 Best_Obj : ObjInfo(4047)
+2023-04-07 16:04:15,523 - root - INFO - Detect Time : 0.019
+2023-04-07 16:04:21,367 - root - INFO - Auto Update!
+2023-04-07 16:04:31,656 - root - INFO - Auto Update!
+2023-04-07 16:04:32,054 - root - INFO - add_mode button clicked.
+2023-04-07 16:04:35,734 - root - INFO - Stop button clicked.
+2023-04-07 16:04:36,758 - root - INFO - add_mode button clicked.
+2023-04-07 16:04:37,710 - root - INFO - add_mode button clicked.
+2023-04-07 16:04:41,971 - root - INFO - Auto Update!
+2023-04-07 16:04:48,766 - root - INFO - read_mode button clicked.
+2023-04-07 16:04:49,444 - root - DEBUG - Best Acc : 37.46% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 16:04:49,446 - root - INFO - Detect Time : 0.051
+2023-04-07 16:04:52,287 - root - INFO - Auto Update!
+2023-04-07 16:05:02,577 - root - INFO - Auto Update!
+2023-04-07 16:05:05,810 - root - DEBUG - Best Acc : 63.90% 	 Best_Obj : ObjInfo(33333)
+2023-04-07 16:05:05,812 - root - INFO - Detect Time : 0.047
+2023-04-07 16:05:12,884 - root - INFO - Auto Update!

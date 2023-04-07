@@ -134,7 +134,7 @@ class MultiPolyDetector():
         self.json_dir_path = json_dir_path
         
         # 초기 정보 가져오기
-        self.update()
+        self.update(pick_names=pick_names)
         
         # warm up
         temp = np.zeros((100,100,3), dtype=np.uint8)
@@ -186,7 +186,7 @@ class MultiPolyDetector():
         
         # 교집합
         names = img_names & json_names
-        if pick_names: names &= set(pick_names)
+        if len(pick_names): names &= set(pick_names)
         # if names == self.names: return
         self.names = names
     

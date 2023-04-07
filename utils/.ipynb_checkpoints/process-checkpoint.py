@@ -93,22 +93,38 @@ def data_eater(self):
         if self.data_Q.empty(): continue    
         code, isok, date = self.data_Q.get()
         
-        # 전체 데이터에 추가
-        self.code2data[code]["ALL"] += 1
-        if code is not None:
-            self.code2data[code]["OK"] += isok
-            self.code2data[code]["NG"] += not isok
+        # 품목코드의 idx 선택
+        code = "NONE" if code is None else code
+        idxs = self.db_mng.df[self.db_mng.df["ITEM_CD"] == code].index
+        if not len(idxs):
+            logger.info("데이터 수정전 해당 품목코드가 사라짐.")
+            self.stop_signal = True
+            break
+            
+        # 해당 지시코드의 데이터 수정
+        seletec_col = "OK" if isok else "NG"
+        self.db_mng.df.loc[idxs[0], seletec_col] += 1
         
         # 세부데이터 업데이트
-        self.value_label1.configure(text=self.db_mng.code2name[code] if code else "미탐지 또는 새로운 품목") # 판독품목
+        name = self.db_mng.df.loc[idxs[0], "ITEM_NM"]
+        ok_num = self.db_mng.df.loc[idxs[0], "OK"]
+        ng_num = self.db_mng.df.loc[idxs[0], "NG"]
+        sum_all = ok_num + ng_num
+        self.value_label1.configure(text=name if name else "미탐지 또는 새로운 품목") # 판독품목
         self.value_label2.configure(text=date if date else "") # 판독날짜
-        self.value_label3.configure(text=code if code else "None") # 품목코드
-        self.value_label4.configure(text=self.code2data[code]["ALL"]) # 총 개수
-        self.value_label5.configure(text=self.code2data[code]["OK"] if code else "") # OK 개수
-        self.value_label6.configure(text=self.code2data[code]["NG"] if code else "") # NG 개수
+        self.value_label3.configure(text=code) # 품목코드
+        self.value_label4.configure(text=sum_all) # 총 개수
+        self.value_label5.configure(text=ok_num) # OK 개수
+        self.value_label6.configure(text=ng_num) # NG 개수
         
-        # 테이블 업데이트
-        self.update_table()
+        # 해당 품목코드의 listbox 수정
+        self.lb_dic[seletec_col].delete(idxs[0])
+        self.lb_dic[seletec_col].insert(idxs[0], self.db_mng.df.loc[idxs[0], seletec_col])
+        
+        # DB 수정
+        # if not isok:
+        #     self.db_mng.insert(wlot)
+        #     self.db_mng.update(wlot)
 
         # OK, NG
         if isok: self.ok_label.configure(text='OK', bg="#181B34", fg="#00B050")
@@ -217,7 +233,8 @@ def policy_check(text, today):
     if len(text) < 6: return False
     
     # 22.22.22 꼴이 아니면 False
-    date = re.findall("[0-9]{2}[^0-9][0-9]{2}[^0-9][0-9]{2}", text)
+    # date = re.findall("[0-9]{2}[^0-9][0-9]{2}[^0-9][0-9]{2}", text)
+    date = re.findall("[237][0-9][^0-9][01][0-9][^0-9][0123][0-9]", text)
     if not date: return False
 
     # 현재 날짜보다 과거이면 False
@@ -372,12 +389,11 @@ def draw(self):
             dst_polys = dst_polys.astype(np.int32)
             obj_img, date_img = None, None
             
-            # draw all over
-            # draw poly
+            # 폴리곤 그리기
             color = color_dic[code]
             cv2.polylines(img, dst_polys, True, color, thickness=5)
             
-            # draw number
+            # 숫자 그리기
             for dst_poly in dst_polys:
                 cv2.putText(img, "1", dst_poly[0], font_cv, fontScale=3, thickness=10, color=(255,0,255))
                 cv2.putText(img, "2", dst_poly[1], font_cv, fontScale=3, thickness=10, color=(255,0,255))
@@ -388,8 +404,16 @@ def draw(self):
             img_pil = Image.fromarray(img)
             img_draw = ImageDraw.Draw(img_pil)
             
-            # draw anno1
-            name = self.db_mng.code2name[code]
+            # code로 name 가져오기
+            code = "NONE" if code is None else code
+            idxs = self.db_mng.df[self.db_mng.df["ITEM_CD"] == code].index
+            if not len(idxs):
+                logger.info("데이터 수정전 해당 품목코드가 사라짐.")
+                self.stop_signal = True
+                break
+            name = self.db_mng.df.loc[idxs[0], "ITEM_NM"]
+            
+            # name 그리기
             i = label2idx["object"]
             obj_img = crop_imgs[i]
             x, y = dst_polys[i, 0, 0], dst_polys[i, 0, 1]-40
@@ -467,7 +491,7 @@ def recode(self):
         img = img if img is not None else np.zeros((100,100), dtype=np.uint8)
         
         file_name = f"{tool.get_time_str()}.jpg"
-        if code is None: code = "None"
+        if code is None: code = "NONE"
         
         # dir 없으면 만들기
         dir_path = dir_dic[isok]
