@@ -114,8 +114,8 @@ class AddWindow(tk.Toplevel):
             mb.showwarning(title="", message="촬영되지 않았습니다.")
             return
         
-        answer = mb.askquestion("등록하기", f"해당 품목을 등록하시겠습니까?")
-        if answer == "no": return
+        # answer = mb.askquestion("등록하기", f"해당 품목을 등록하시겠습니까?")
+        # if answer == "no": return
             
         
         obj_poly = self.poly1

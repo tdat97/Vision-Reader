@@ -227,7 +227,7 @@ def policy_check(text, today):
     assert type(text) == str
     
     # 공백 제거
-    text = re.sub("\s", "", text)
+    # text = re.sub("\s", "", text)
     
     # 6글자 보다 작으면 NG
     if len(text) < 6: return False
@@ -509,6 +509,7 @@ def find_poly_thread(self):
     thread_cycle = self.setting_dic["thread_cycle"] if "thread_cycle" in self.setting_dic else 0.05
     brightness = self.setting_dic["brightness"] if "brightness" in self.setting_dic else 60
     kernel = np.ones((3,3))
+    temp_poly = np.array([[50,50], [100,50], [100,100], [50,100]])
     
     try:
         while not self.stop_signal:
@@ -527,8 +528,8 @@ def find_poly_thread(self):
             self.recode_Q.put([img_mask, 'debug', '']) # debug save
             polys = tool.find_polys_in_img(img_mask)
             
-            self.poly1 = np.array([[0,0], [50,0], [50,50], [0,50]]) if polys is None else polys[0]
-            self.poly2 = np.array([[0,0], [50,0], [50,50], [0,50]]) if self.poly2 is not None else None
+            self.poly1 = temp_poly.copy() if polys is None else tool.poly2clock(polys[0])
+            self.poly2 = temp_poly.copy() if self.poly2 is not None else None
             self.image1 = img
             self.image_update()
             

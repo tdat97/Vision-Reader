@@ -51,12 +51,12 @@ DEFAULT_SETTING_DIC = {
     "alram" : False,
     "use_solenoid" : True,
     
-    "nodb_mode" : True,
-    "hand_mode" : True,
-    "debug_mode" : True,
+    "nodb_mode" : False,
+    "hand_mode" : False,
+    "debug_mode" : False,
 
     "thread_cycle" : 0.05,
-    "update_cycle" : 10,
+    "update_cycle" : 60,
 
     "trigger1_time_gap" : 0.0,
     "trigger2_time_gap" : 3.0,
@@ -72,5 +72,5 @@ DEFAULT_SETTING_DIC = {
 
 
     "n_features" : 2000,
-    "brightness" : 80,
+    "brightness" : 60,
 }
