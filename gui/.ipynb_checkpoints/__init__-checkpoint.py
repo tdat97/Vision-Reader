@@ -46,9 +46,11 @@ class MainWindow(tk.Tk):
         
         # 화면 사이즈
         self.state("zoomed")
-        self.geometry(f"{self.winfo_screenwidth()//5*2}x{self.winfo_screenheight()//5*2}")
-        self.minsize(self.winfo_screenwidth()//5*2, self.winfo_screenheight()//5*2)
+        self.geometry(f'{self.winfo_screenwidth()}x{self.winfo_screenheight()}')
+        # self.geometry(f"{self.winfo_screenwidth()//5*2}x{self.winfo_screenheight()//5*2}")
+        # self.minsize(self.winfo_screenwidth()//5*2, self.winfo_screenheight()//5*2)
         self.resizable(False, False)
+        self.overrideredirect(True)
         
         # 셋팅값 가져오기
         self.setting_dic = deepcopy(DEFAULT_SETTING_DIC)
@@ -110,7 +112,7 @@ class MainWindow(tk.Tk):
         try:
             if hand:
                 self.plc_mng = DummyPLC()
-                self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
+                self.trigger_btn.place(relx=0.8, rely=0.0, relwidth=0.1, relheight=0.1)
             else:
                 self.plc_mng = PLCManager(port=port, cmd_dic=BYTES_DIC)
                 logger.info("PLC 로드됨")
@@ -119,7 +121,7 @@ class MainWindow(tk.Tk):
             logger.warn("PLC 로딩 실패")
             mb.showwarning(title="", message="PLC 로딩 실패...\n수동 트리거 버튼 생성")
             self.plc_mng= None
-            self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
+            self.trigger_btn.place(relx=0.8, rely=0.0, relwidth=0.1, relheight=0.1)
 
         
         # Table 로드
@@ -279,6 +281,18 @@ class MainWindow(tk.Tk):
             self.update_table()
             
     #######################################################################
+    def termination(self):
+        self.stop_signal = True
+        time.sleep(0.1)
+        self.destroy()
+
+    def on_closing(self):
+        answer = mb.askquestion("종료하기", "종료 하시겠습니까?")
+        if answer == "no": return
+        
+        Thread(target=self.termination, args=(), daemon=True).start()
+    
+    #######################################################################
     def stop(self):
         logger.info("Stop button clicked.")
         self.stop_signal = True
@@ -290,16 +304,8 @@ class MainWindow(tk.Tk):
             logger.error("로드 안됐는데 시작 버튼 눌림.")
             return
         
-        self.tf_btn1.configure(bg="#0153B0", fg="#FFFFFF")
-        self.tf_btn2.configure(bg="#393945", fg="#A6A6A6")
-        self.tf_btn3.configure(bg="#393945", fg="#A6A6A6")
-        self.tf_btn4.configure(bg="#393945", fg="#A6A6A6")
-        
-        self.bottom_frame1.place_forget()
-        self.bottom_frame2.place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
-        self.bottom_frame3.place_forget()
-        self.bottom_frame4.place_forget()
-        self.bottom_frame5.place_forget()
+        # 판독영상으로 이동
+        self.change_frame(0)
         
         # 시작
         self.stop_signal = False
@@ -662,6 +668,10 @@ class MainWindow(tk.Tk):
         self.logo_label = tk.Label(self, bd=0, relief="solid") # "solid"
         self.logo_label.place(relx=0.0, rely=0.0, relwidth=0.1, relheight=0.1)
         self.logo_label.configure(image=None, bg="#26262F")
+        self.back_btn = tk.Button(self, bd=1, text="종료\n하기", command=self.on_closing)
+        self.back_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
+        self.back_btn['font'] = font.Font(family='Helvetica', size=int(25*self.win_factor), weight='bold')
+        self.back_btn.configure(bg="#393945", fg="#A6A6A6", activebackground="#0153B0", activeforeground="#FFF")
         
         # 상단프레임
         self.top_frame = tk.Frame(self, bd=1, relief="solid", bg=bg_color)
@@ -1121,7 +1131,7 @@ class MainWindow(tk.Tk):
         
         # 수동 촬영 (PLC 없을때)
         self.trigger_btn = tk.Button(self, bd=1, text="Trigger", command=None)
-        self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
+        self.trigger_btn.place(relx=0.8, rely=0.0, relwidth=0.1, relheight=0.1)
         self.trigger_btn.place_forget()
         
 #         # debug 프레임

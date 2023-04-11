@@ -23,8 +23,9 @@ class LabelWindow(tk.Toplevel):
         self.win_factor = self.winfo_screenheight() / 1080
         self.geometry(f'{self.winfo_screenwidth()}x{self.winfo_screenheight()}')
         self.resizable(False, False)
+        self.overrideredirect(True)
         self.state("zoomed")
-        self.title("Sub Window")
+        self.title("세부조정 창")
         self.focus() # 창 선택해줌
         self.grab_set() # 다른창 못건드림
         
@@ -97,7 +98,7 @@ class LabelWindow(tk.Toplevel):
         self.back_btn = tk.Button(self, bd=1, text="뒤로\n가기", command=self.destroy)
         self.back_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
         self.back_btn['font'] = font.Font(family='Helvetica', size=int(25*self.win_factor), weight='bold')
-        self.back_btn.configure(bg="#393945", fg="#A6A6A6")
+        self.back_btn.configure(bg="#393945", fg="#A6A6A6", activebackground="#0153B0", activeforeground="#FFF")
         
         # Canvas
         self.canv = LabelCanvas(self, bg='gray', isrect=False)
