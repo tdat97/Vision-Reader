@@ -5,8 +5,8 @@ from Crypto.Random import get_random_bytes
 from base64 import b64encode, b64decode
 
 def encrypt(plain_str, key_str): # 문자열 들어옴
-    key_str = hash(key_str)
-    iv_str = hash(key_str)
+    key_str = hash_str(key_str)
+    iv_str = hash_str(key_str)
     
     data = pad(plain_str.encode('utf-8'), AES.block_size) # AES.block_size = 16
     key = pad(key_str.encode('utf-8'), AES.block_size)[:AES.key_size[-1]]
@@ -18,8 +18,8 @@ def encrypt(plain_str, key_str): # 문자열 들어옴
     return enc_str
 
 def decrypt(enc_str, key_str):
-    key_str = hash(key_str)
-    iv_str = hash(key_str)
+    key_str = hash_str(key_str)
+    iv_str = hash_str(key_str)
     
     enc = b64decode(enc_str) # base 64로 디코드
     key = pad(key_str.encode('utf-8'), AES.block_size)[:AES.key_size[-1]]
@@ -30,7 +30,7 @@ def decrypt(enc_str, key_str):
     dec_str = unpad(dec, AES.block_size).decode('utf-8') # 제로패딩 해제하고 바이트->문자열
     return dec_str
 
-def hash(plain_str):
+def hash_str(plain_str):
     data = plain_str.encode('utf-8')
     sha = SHA256.new(data=data)
     h = sha.digest()
@@ -45,6 +45,18 @@ def get_random_str():
     # r_str = str(int.from_bytes(r, byteorder="big"))
     # return r_str
     
+    
+import hashlib
+
+def get_hashed_string(input_string):
+    # 문자열을 바이트 문자열로 변환
+    byte_string = input_string.encode('utf-8')
+    
+    # SHA256 알고리즘으로 해싱
+    hashed_string = hashlib.sha256(byte_string).hexdigest()
+    
+    return hashed_string
+
     
 import os
 REPEAT_NUM = 16

@@ -1,0 +1,1 @@
+select * from tb_mes_user000 where USER_NM = '{0}' and USER_PS = '{1}';

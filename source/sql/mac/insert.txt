@@ -1,0 +1,1 @@
+insert into tb_mes_user100(COMPANY, USER_CD) values(1000, '{0}');

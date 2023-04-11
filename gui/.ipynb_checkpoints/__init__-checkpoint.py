@@ -4,13 +4,17 @@ from common import tool
 
 from utils.camera import BaslerCam
 from utils.ocr import OcrEngine
-from utils.db import DBManager, NODBManager
+# from utils.db import DBManager, NODBManager
+from utils.table import TableManager
 from utils.poly import MultiPolyDetector
 from utils.plc import PLCManager, DummyPLC
+from utils.crypto import glance
 from utils import process
 
 from gui.labelwin import LabelWindow
 from gui.addwin import AddWindow
+from gui.login import LoginWindow
+from gui.pin import PinWindow
 
 import tkinter as tk
 import tkinter.ttk as ttk
@@ -26,6 +30,7 @@ from queue import Queue
 from glob import glob
 import numpy as np
 import traceback
+import pymysql
 import serial
 import time
 import json
@@ -43,6 +48,7 @@ class MainWindow(tk.Tk):
         self.state("zoomed")
         self.geometry(f"{self.winfo_screenwidth()//5*2}x{self.winfo_screenheight()//5*2}")
         self.minsize(self.winfo_screenwidth()//5*2, self.winfo_screenheight()//5*2)
+        self.resizable(False, False)
         
         # 셋팅값 가져오기
         self.setting_dic = deepcopy(DEFAULT_SETTING_DIC)
@@ -114,36 +120,61 @@ class MainWindow(tk.Tk):
             mb.showwarning(title="", message="PLC 로딩 실패...\n수동 트리거 버튼 생성")
             self.plc_mng= None
             self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)
+
         
-        # DB 로드
+        # Table 로드
         add_cols = ['OK', 'NG', 'exist']
         add_init = [0, 0, 'X']
-        if nodb: self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
-        else:
-            try:
-                self.db_mng = DBManager(db_info_path=DB_INFO_PATH, key_path=KEY_PATH, sql_dir_path=SQL_DIR_PATH, 
-                                        add_cols=add_cols, add_init=add_init)
-                logger.info("DB 로드됨")
-            except JSONDecodeError:
-                logger.warn("DB 정보 복호화 실패")
-                mb.showwarning(title="", message="DB 정보 복호화 실패\n테스트버전으로 전환")
-                self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
-                logger.error(traceback.format_exc())
-            except:
-                logger.error(traceback.format_exc())
-                logger.warn("DB 로드 실패")
-                mb.showwarning(title="", message="DB 로드 실패...\n테스트 DB로 전환.")
-                self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
-                logger.error(traceback.format_exc())
+        # if nodb: self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
+        # else:
+        #     try:
+        #         self.db_mng = DBManager(db_info_path=DB_INFO_PATH, key_path=KEY_PATH, sql_dir_path=SQL_DIR_PATH, 
+        #                                 add_cols=add_cols, add_init=add_init)
+        #         logger.info("DB 로드됨")
+        #     except JSONDecodeError:
+        #         logger.warn("DB 정보 복호화 실패")
+        #         mb.showwarning(title="", message="DB 정보 복호화 실패\n테스트버전으로 전환")
+        #         self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
+        #         logger.error(traceback.format_exc())
+        #     except:
+        #         logger.error(traceback.format_exc())
+        #         logger.warn("DB 로드 실패")
+        #         mb.showwarning(title="", message="DB 로드 실패...\n테스트 DB로 전환.")
+        #         self.db_mng = NODBManager(add_cols=add_cols, add_init=add_init, nodb_path=NODB_PATH)
+        #         logger.error(traceback.format_exc())
+        self.db_con = None
+        db_info_dir = self.setting_dic["db_info_dir"] if "db_info_dir" in self.setting_dic else "../DB_pair/dev"
+        try:
+            if nodb: raise Exception("NoDB mode.")
+            # DB 정보 가져오기
+            db_info_path = os.path.join(db_info_dir, DB_INFO_FILE)
+            key_path = os.path.join(db_info_dir, KEY_FILE)
+            db_info_str = glance(db_info_path, key_path)
+            db_info_dic = json.loads(db_info_str)
+            self.db_con = pymysql.connect(**db_info_dic, charset='utf8', autocommit=True)
+            self.table_mng = TableManager(self.db_con, SQL_DIR_PATH, NODB_PATH, add_cols=add_cols,add_init=add_init)
+        except JSONDecodeError:
+            logger.warn("DB 정보 복호화 실패")
+            mb.showwarning(title="", message="DB 정보 복호화 실패\n테스트버전으로 전환")
+            self.table_mng = TableManager(None, SQL_DIR_PATH, NODB_PATH, add_cols=add_cols, add_init=add_init)
+            logger.error(traceback.format_exc())
+        except:
+            logger.warn("DB 로드 실패")
+            mb.showwarning(title="", message="DB 로드 실패...\n테스트 DB로 전환.")
+            self.table_mng = TableManager(None, SQL_DIR_PATH, NODB_PATH, add_cols=add_cols, add_init=add_init)
+            logger.error(traceback.format_exc())
+        
             
         temp = [self.listbox1, self.listbox2, self.listbox3, self.listbox4, self.listbox5, ]
-        self.lb_dic = dict(zip(self.db_mng.df.columns, temp))
-            
+        self.lb_dic = dict(zip(self.table_mng.df.columns, temp))
         
+        # 로그인 창
+        LoginWindow(self.db_con, SQL_DIR_PATH, callback=self.login_check, mac_pass=True)
+            
         # 판독자 로드
         n_features = self.setting_dic["n_features"] if "n_features" in self.setting_dic else 2000
         self.poly_detector = MultiPolyDetector(IMG_DIR_PATH, JSON_DIR_PATH, logger=logger, 
-                                               pick_names=self.db_mng.df['ITEM_CD'], n_features=n_features)
+                                               pick_names=self.table_mng.df['ITEM_CD'], n_features=n_features)
         logger.info("판독자 로드됨")
         
         # 오래걸리는 로딩
@@ -156,6 +187,20 @@ class MainWindow(tk.Tk):
         Thread(target=self.auto_update, args=(), daemon=True).start()
         Thread(target=self.attach_logo, args=(), daemon=True).start()
         
+        
+    #######################################################################
+    def login_check(self, certified, injection_attack=False):
+        if injection_attack:
+            mb.showwarning(title="", message="잘못된 접근입니다.")
+            logger.info("인젝션")
+            self.destroy()
+        elif certified:
+            logger.info("로그인 성공")
+        else:
+            mb.showwarning(title="", message="로그인 실패.")
+            logger.info("로그인 실패")
+            self.destroy()
+    
     #######################################################################
     def attach_logo(self):
         wh, ww = self.logo_label.winfo_height(), self.logo_label.winfo_width()
@@ -189,21 +234,21 @@ class MainWindow(tk.Tk):
     #######################################################################
     def update_table(self):
         # 품목코드, 품목명, OK갯수, NG갯수, 등록여부
-        for col in self.db_mng.df.columns:
+        for col in self.table_mng.df.columns:
             # 리스트박스 청소
             self.lb_dic[col].delete(0, 'end')
             # 각 리스트박스에 하나씩 넣기
-            for i in range(len(self.db_mng.df)):
-                self.lb_dic[col].insert(i, self.db_mng.df.loc[i, col])
+            for i in range(len(self.table_mng.df)):
+                self.lb_dic[col].insert(i, self.table_mng.df.loc[i, col])
             
     #######################################################################
     def auto_update(self):
         # poly 존재여부 체크
-        for i in range(len(self.db_mng.df)):
-            if self.db_mng.df.loc[i, "ITEM_CD"] in self.poly_detector.names:
-                self.db_mng.df.loc[i, "exist"] = "O" 
+        for i in range(len(self.table_mng.df)):
+            if self.table_mng.df.loc[i, "ITEM_CD"] in self.poly_detector.names:
+                self.table_mng.df.loc[i, "exist"] = "O" 
             else:
-                self.db_mng.df.loc[i, "exist"] = "X"
+                self.table_mng.df.loc[i, "exist"] = "X"
                 
         # GUI 적용
         self.update_table()
@@ -214,21 +259,21 @@ class MainWindow(tk.Tk):
             logger.info("Auto Update!")
             
             # DB, poly reload
-            self.db_mng.update_order_today()
-            self.poly_detector.update(pick_names=self.db_mng.df['ITEM_CD'])
+            self.table_mng.update_order_today()
+            self.poly_detector.update(pick_names=self.table_mng.df['ITEM_CD'])
             
             # 날짜 바뀜 체크
             today = tool.get_time_str(day=True)
             if self.today != today:
                 self.today = today
-                self.db_mng.df[['OK', 'NG']] = 0
+                self.table_mng.df[['OK', 'NG']] = 0
                 
             # poly 존재여부 체크
-            for i in range(len(self.db_mng.df)):
-                if self.db_mng.df.loc[i, "ITEM_CD"] in self.poly_detector.names:
-                    self.db_mng.df.loc[i, "exist"] = "O" 
+            for i in range(len(self.table_mng.df)):
+                if self.table_mng.df.loc[i, "ITEM_CD"] in self.poly_detector.names:
+                    self.table_mng.df.loc[i, "exist"] = "O" 
                 else:
-                    self.db_mng.df.loc[i, "exist"] = "X"
+                    self.table_mng.df.loc[i, "exist"] = "X"
                 
             # GUI 적용
             self.update_table()
@@ -343,9 +388,9 @@ class MainWindow(tk.Tk):
     
     def complete_apply(self, code): # 등록하고 나올때
         # poly 판독자 업데이트
-        self.poly_detector.update(pick_names=self.db_mng.df["ITEM_CD"])
+        self.poly_detector.update(pick_names=self.table_mng.df["ITEM_CD"])
         
-        df = self.db_mng.df
+        df = self.table_mng.df
         
         # poly 존재여부 체크
         if code in df['ITEM_CD'].values and code in self.poly_detector.names:
@@ -420,22 +465,37 @@ class MainWindow(tk.Tk):
         self.brt_thrs_label['text'] = f"현재값 : {self.setting_dic['brightness']}"
         
     #######################################################################
-    def set_bind(self):
+    def change_frame(self, i):
         btn_list = [self.tf_btn1, self.tf_btn2, self.tf_btn3, self.tf_btn4, ]
         frame_list = [self.bottom_frame2, self.bottom_frame3, self.bottom_frame4, self.bottom_frame5]
         
+        # 버튼 외관 변경
+        for btn in btn_list: btn.configure(bg="#393945", fg="#A6A6A6")
+        btn_list[i].configure(bg="#0153B0", fg="#FFFFFF")
+
+        # 현재 프레임 변경
+        for frame in frame_list: frame.place_forget()
+        frame_list[i].place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
+
+    #######################################################################
+    def pin_callback(self, pin_str):
+        pin_number = self.setting_dic["pin_number"] if "pin_number" in self.setting_dic else "9876"
+        if pin_str != pin_number:
+            mb.showwarning(title="", message="PIN번호가 일치하지 않습니다.")
+            self.change_frame(0)
+        
+    #######################################################################
+    def set_bind(self):
         def select(event, i):
             if not self.stop_signal and (i==2 or i==3):
                 mb.showinfo(title="", message="■중지 버튼을 먼저 눌러주세요.")
                 return
             
-            # 버튼 외관 변경
-            for btn in btn_list: btn.configure(bg="#393945", fg="#A6A6A6")
-            btn_list[i].configure(bg="#0153B0", fg="#FFFFFF")
+            if i==2 or i==3:
+                PinWindow(pin_len=4, callback=self.pin_callback)
             
-            # 현재 프레임 변경
-            for frame in frame_list: frame.place_forget()
-            frame_list[i].place(relx=0.0, rely=0.4, relwidth=1, relheight=0.6)
+            # 버튼과 프레임 변경
+            self.change_frame(i)
         
         # 선택 부여
         self.tf_btn1.bind("<Button-1>", lambda _:select(_, 0)) # 판독영상
@@ -638,17 +698,17 @@ class MainWindow(tk.Tk):
         
         # 상단프레임 - 우측프레임 - 라벨들
         self.name_label1 = tk.Label(self.tf_right_frame, anchor="center", text='판독품목', bg="#595959", fg="#FFF")
-        self.value_label1 = tk.Label(self.tf_right_frame, anchor="center", text='귤123', bg="#7F7F7F", fg="#FFF")
+        self.value_label1 = tk.Label(self.tf_right_frame, anchor="center", text='-', bg="#7F7F7F", fg="#FFF")
         self.name_label2 = tk.Label(self.tf_right_frame, anchor="center", text='판독날짜', bg="#595959", fg="#FFF")
-        self.value_label2 = tk.Label(self.tf_right_frame, anchor="center", text='12345', bg="#7F7F7F", fg="#FFF")
+        self.value_label2 = tk.Label(self.tf_right_frame, anchor="center", text='-', bg="#7F7F7F", fg="#FFF")
         self.name_label3 = tk.Label(self.tf_right_frame, anchor="center", text='품목코드', bg="#595959", fg="#FFF")
-        self.value_label3 = tk.Label(self.tf_right_frame, anchor="center", text='12345', bg="#7F7F7F", fg="#FFF")
+        self.value_label3 = tk.Label(self.tf_right_frame, anchor="center", text='-', bg="#7F7F7F", fg="#FFF")
         self.name_label4 = tk.Label(self.tf_right_frame, anchor="center", text='총 개수', bg="#595959", fg="#FFF")
-        self.value_label4 = tk.Label(self.tf_right_frame, anchor="center", text='12345', bg="#7F7F7F", fg="#FFF")
+        self.value_label4 = tk.Label(self.tf_right_frame, anchor="center", text='-', bg="#7F7F7F", fg="#FFF")
         self.name_label5 = tk.Label(self.tf_right_frame, anchor="center", text='OK 개수', bg="#595959", fg="#FFF")
-        self.value_label5 = tk.Label(self.tf_right_frame, anchor="center", text='12345', bg="#7F7F7F", fg="#FFF")
+        self.value_label5 = tk.Label(self.tf_right_frame, anchor="center", text='-', bg="#7F7F7F", fg="#FFF")
         self.name_label6 = tk.Label(self.tf_right_frame, anchor="center", text='NG 개수', bg="#595959", fg="#FFF")
-        self.value_label6 = tk.Label(self.tf_right_frame, anchor="center", text='12345', bg="#7F7F7F", fg="#FFF")
+        self.value_label6 = tk.Label(self.tf_right_frame, anchor="center", text='-', bg="#7F7F7F", fg="#FFF")
         
         self.name_label1.place(relx=0.0, rely=0.125*0, relwidth=1, relheight=0.125)
         self.value_label1.place(relx=0.0, rely=0.125*1, relwidth=1, relheight=0.125)
@@ -1059,9 +1119,6 @@ class MainWindow(tk.Tk):
         self.apply_setting_btn2['font'] = font.Font(family='Helvetica', size=int(35*self.win_factor), weight='bold')
         
         
-        
-        
-             
         # 수동 촬영 (PLC 없을때)
         self.trigger_btn = tk.Button(self, bd=1, text="Trigger", command=None)
         self.trigger_btn.place(relx=0.9, rely=0.0, relwidth=0.1, relheight=0.1)

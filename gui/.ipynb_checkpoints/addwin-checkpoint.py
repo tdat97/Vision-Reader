@@ -22,6 +22,7 @@ class AddWindow(tk.Toplevel):
         super().__init__(*args, **kwargs)
         self.win_factor = self.winfo_screenheight() / 1080
         self.geometry(f'{self.winfo_screenwidth()}x{self.winfo_screenheight()}')
+        self.resizable(False, False)
         self.state("zoomed")
         self.title("Sub Window")
         self.focus() # 창 선택해줌

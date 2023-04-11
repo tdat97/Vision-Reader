@@ -15,10 +15,16 @@ SETTING_PATH = "./source/setting.json"
 DEFAULT_SETTING_PATH = "./source/default_setting.json"
 
 # DB
-DB_INFO_PATH = "../secret/db_info.txt"
-KEY_PATH = "../secret/key.txt"
+# DB_INFO_PATH = "../secret/db_info.txt"
+# KEY_PATH = "../secret/key.txt"
+DB_INFO_FILE = "db_info.txt"
+KEY_FILE = "key.txt"
 NODB_PATH = "./source/nodb.json"
 SQL_DIR_PATH = "./source/sql"
+
+SUB_DB_INFO_PATH = "../secret/dev/db_info.txt"
+SUB_KEY_PATH = "../secret/dev/key.txt"
+SUB_SQL_DIR_PATH = "./source/sql2"
 
 # recode
 SAVE_IMG_DIR = "./recode"
@@ -73,4 +79,7 @@ DEFAULT_SETTING_DIC = {
 
     "n_features" : 2000,
     "brightness" : 60,
+    
+    "db_info_dir":"../DB_pair/dev",
+    "pin_number":"9876",
 }

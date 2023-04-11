@@ -95,7 +95,7 @@ def data_eater(self):
         
         # 품목코드의 idx 선택
         code = "NONE" if code is None else code
-        idxs = self.db_mng.df[self.db_mng.df["ITEM_CD"] == code].index
+        idxs = self.table_mng.df[self.table_mng.df["ITEM_CD"] == code].index
         if not len(idxs):
             logger.info("데이터 수정전 해당 품목코드가 사라짐.")
             self.stop_signal = True
@@ -103,12 +103,12 @@ def data_eater(self):
             
         # 해당 지시코드의 데이터 수정
         seletec_col = "OK" if isok else "NG"
-        self.db_mng.df.loc[idxs[0], seletec_col] += 1
+        self.table_mng.df.loc[idxs[0], seletec_col] += 1
         
         # 세부데이터 업데이트
-        name = self.db_mng.df.loc[idxs[0], "ITEM_NM"]
-        ok_num = self.db_mng.df.loc[idxs[0], "OK"]
-        ng_num = self.db_mng.df.loc[idxs[0], "NG"]
+        name = self.table_mng.df.loc[idxs[0], "ITEM_NM"]
+        ok_num = self.table_mng.df.loc[idxs[0], "OK"]
+        ng_num = self.table_mng.df.loc[idxs[0], "NG"]
         sum_all = ok_num + ng_num
         self.value_label1.configure(text=name if name else "미탐지 또는 새로운 품목") # 판독품목
         self.value_label2.configure(text=date if date else "") # 판독날짜
@@ -119,7 +119,7 @@ def data_eater(self):
         
         # 해당 품목코드의 listbox 수정
         self.lb_dic[seletec_col].delete(idxs[0])
-        self.lb_dic[seletec_col].insert(idxs[0], self.db_mng.df.loc[idxs[0], seletec_col])
+        self.lb_dic[seletec_col].insert(idxs[0], self.table_mng.df.loc[idxs[0], seletec_col])
         
         # DB 수정
         # if not isok:
@@ -406,12 +406,12 @@ def draw(self):
             
             # code로 name 가져오기
             code = "NONE" if code is None else code
-            idxs = self.db_mng.df[self.db_mng.df["ITEM_CD"] == code].index
+            idxs = self.table_mng.df[self.table_mng.df["ITEM_CD"] == code].index
             if not len(idxs):
                 logger.info("데이터 수정전 해당 품목코드가 사라짐.")
                 self.stop_signal = True
                 break
-            name = self.db_mng.df.loc[idxs[0], "ITEM_NM"]
+            name = self.table_mng.df.loc[idxs[0], "ITEM_NM"]
             
             # name 그리기
             i = label2idx["object"]

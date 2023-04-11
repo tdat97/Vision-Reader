@@ -23,4 +23,6 @@
 
   ,"n_features" : 2000
   ,"brightness" : 80
+  ,"db_info_dir" : "../DB_pair/dev"
+  ,"pin_number":"9876"
 }

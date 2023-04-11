@@ -1,7 +1,7 @@
 {
   "alram": false,
   "use_solenoid": true,
-  "nodb_mode": true,
+  "nodb_mode": false,
   "hand_mode": true,
   "debug_mode": true,
   "thread_cycle": 0.05,
@@ -24,5 +24,7 @@
   "max_recode_num": 500,
   "font_size_factor": 1080,
   "n_features" : 2000,
-  "brightness": 60
+  "brightness": 60,
+  "db_info_dir":"../DB_pair/dev",
+  "pin_number":"9876"
 }
