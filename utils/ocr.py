@@ -30,7 +30,7 @@ class OcrEngine():
         # warm up
         temp = tf.zeros((1, self.IMG_HEIGHT, self.IMG_WIDTH, 3), dtype=tf.float32)
         temp = tf.transpose(temp, perm=[0, 2, 1, 3])
-        _ = inference_model.predict(temp)
+        _ = inference_model.predict(temp, verbose=0)
         
         self.inference_model = inference_model
         

@@ -220,6 +220,7 @@ class MainWindow(tk.Tk):
         except:
             self.load_check_stop = True
             mb.showwarning(title="", message="OCR 모델 로딩 실패")
+            logger.error(traceback.format_exc())
     
     def load_check(self):
         while True:
@@ -443,8 +444,11 @@ class MainWindow(tk.Tk):
     def reset_setting(self):
         answer = mb.askquestion("설정초기화", "모든 설정을 기본값으로\n초기화 하시겠습니까?")
         if answer == "no": return
+    
+        with open(DEFAULT_SETTING_PATH, "r", encoding='utf-8') as f:
+            self.setting_dic = json.load(f)
         
-        self.setting_dic = deepcopy(DEFAULT_SETTING_DIC)
+        # self.setting_dic = deepcopy(DEFAULT_SETTING_DIC)
         
         self.red_time_scale.set(self.setting_dic["on_off_time"]['red'])
         self.yel_time_scale.set(self.setting_dic["on_off_time"]['yellow'])
