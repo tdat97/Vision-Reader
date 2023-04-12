@@ -5,4 +5,4 @@ FROM
   tb_mes_item000 i 
   INNER JOIN tb_mes_wo100 w ON i.ITEM_CD = w.ITEM_CD 
 WHERE 
-  w.ORD_DT = '2023-02-20' AND w.COMPANY = 1000;
+  w.ORD_DT = '2025-01-01' AND w.COMPANY = 1000;

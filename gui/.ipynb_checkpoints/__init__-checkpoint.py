@@ -352,7 +352,7 @@ class MainWindow(tk.Tk):
         self.plc_mng.write("green_off")
         self.plc_mng.write("light_off")
         self.plc_mng.write("sol_off")
-        # self.plc_mng.write("sound_off")
+        self.plc_mng.write("sound_off")
             
         # GUI 초기화
         self.start_button.configure(text="...", command=lambda:time.sleep(0.1))
@@ -843,19 +843,19 @@ class MainWindow(tk.Tk):
                            self.listbox5.yview("moveto",x), )
         self.listbox1 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
         self.listbox1.place(relx=0.0, rely=0.0, relwidth=0.15, relheight=1.0)
-        self.listbox1['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
+        self.listbox1['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.listbox2 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
         self.listbox2.place(relx=0.15, rely=0.0, relwidth=0.55, relheight=1.0)
-        self.listbox2['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
+        self.listbox2['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.listbox3 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
         self.listbox3.place(relx=0.70, rely=0.0, relwidth=0.10, relheight=1.0)
-        self.listbox3['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
+        self.listbox3['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.listbox4 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
         self.listbox4.place(relx=0.80, rely=0.0, relwidth=0.10, relheight=1.0)
-        self.listbox4['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
+        self.listbox4['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         self.listbox5 = tk.Listbox(self.list_frame, yscrollcommand=func, bg="#2F324E", fg="#FFF")
         self.listbox5.place(relx=0.90, rely=0.0, relwidth=0.10, relheight=1.0)
-        self.listbox5['font'] = font.Font(family='Helvetica', size=int(40*self.win_factor), weight='bold')
+        self.listbox5['font'] = font.Font(family='Helvetica', size=int(30*self.win_factor), weight='bold')
         
         
         # style = ttk.Style(self.list_frame)

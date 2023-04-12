@@ -277,7 +277,7 @@ def analysis(self):
             else:
                 self.control_Q.put("red")
                 if use_alram:
-                    # self.control_Q.put("sound")
+                    self.control_Q.put("sound")
                     pass
             
             code = best_obj.name if best_obj else None

@@ -71,7 +71,7 @@ DEFAULT_SETTING_DIC = {
     "cut_width" : [300,300],
 
     "serial_port" : "COM6",
-    "on_off_time" : {"red":3, "yellow":2, "green":1, "sol":1, "sound":3},
+    "on_off_time" : {"red":3, "yellow":2, "green":1, "sol":1, "sound":1},
 
     "max_recode_num" : 500,
     "font_size_factor" : 1080,
