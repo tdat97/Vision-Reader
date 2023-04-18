@@ -120,7 +120,7 @@ class MainWindow(tk.Tk):
             logger.error(traceback.format_exc())
             logger.warn("PLC 로딩 실패")
             mb.showwarning(title="", message="PLC 로딩 실패...\n수동 트리거 버튼 생성")
-            self.plc_mng= None
+            self.plc_mng = DummyPLC()
             self.trigger_btn.place(relx=0.8, rely=0.0, relwidth=0.1, relheight=0.1)
 
         
@@ -1003,7 +1003,7 @@ class MainWindow(tk.Tk):
         # 하단프레임4(설정) - 리젝터동작시간
         self.dev_set4_frame = tk.Frame(self.bottom_frame5, bd=0, relief="solid", bg=bg_color)
         self.dev_set4_frame.place(relx=0.0, rely=0.6, relwidth=0.33, relheight=0.2)
-        self.temp = tk.Label(self.dev_set4_frame, text="리젝터동작시간", bg="#2B2A38", fg="#fff")
+        self.temp = tk.Label(self.dev_set4_frame, text="리젝터지속시간", bg="#2B2A38", fg="#fff")
         self.temp['font'] = font.Font(family='Helvetica', size=int(20*self.win_factor), weight='bold')
         self.temp.place(relx=0.0, rely=0.0, relwidth=0.5, relheight=0.33)
         self.rej_time_label = tk.Label(self.dev_set4_frame, text="..", bg=bg_color, fg="#fff", anchor='w')
