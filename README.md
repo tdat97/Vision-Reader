@@ -41,29 +41,21 @@ python run.py
 
 ---
 
-### Main Screen
+### Example
 
-##### a reading image
-![image](https://user-images.githubusercontent.com/48349693/233228806-878d0de8-f738-464b-9a54-895f5718b756.png)
-
-##### Statistics screen
-![image](https://user-images.githubusercontent.com/48349693/233228906-bb48ad37-f01b-4f24-a2a2-dfa980b88bf3.png)
-
-##### Setting screen
-![image](https://user-images.githubusercontent.com/48349693/233228943-4ed608e1-67cb-4e04-80f3-a016e71c52e2.png)
-![image](https://user-images.githubusercontent.com/48349693/233228946-60f04dcb-640b-476c-a6a5-0bfafb8753f8.png)
+![image](https://user-images.githubusercontent.com/48349693/233229259-6b09333e-1dec-4e75-a564-5043aec24d08.png)
+![image](https://user-images.githubusercontent.com/48349693/233229490-9c0b9c1f-dcaf-48dc-a6ce-f8f4ab0a46cf.png)
+![image](https://user-images.githubusercontent.com/48349693/233229560-cd237767-da36-4733-a312-3d24dc220158.png)
+![image](https://user-images.githubusercontent.com/48349693/233229576-f6401832-727c-45ad-9e3d-90a467be372b.png)
+![image](https://user-images.githubusercontent.com/48349693/233229588-31dae8a9-30cf-44aa-9c28-8b70a2b846d5.png)
+![image](https://user-images.githubusercontent.com/48349693/233229608-c4ed9dc2-ff3b-4d71-9c4d-0d250d5a5b29.png)
 
 ---
 
-### Example
+### DFD
+![image](https://user-images.githubusercontent.com/48349693/233229645-c7cc12de-e955-454e-a409-c0bd0bcc3d36.png)
+![image](https://user-images.githubusercontent.com/48349693/233229649-13b93948-32b6-49b8-83a8-cfa79fa6ebe2.png)
 
-![image](https://user-images.githubusercontent.com/48349693/233229044-cfc02948-bd72-4fdd-9514-f87c9e616c0e.png)
-![image](https://user-images.githubusercontent.com/48349693/233229054-91ad6510-5efb-439d-82f9-8a8d65cc2087.png)
-![image](https://user-images.githubusercontent.com/48349693/233229058-609b9493-4d40-4399-a181-0bb5e701db57.png)
-![image](https://user-images.githubusercontent.com/48349693/233229063-57da5a08-fb72-48b9-9ae9-5884a217523a.png)
-![image](https://user-images.githubusercontent.com/48349693/233229099-8903f41a-1b75-430d-b55c-90604f7f960d.png)
-![image](https://user-images.githubusercontent.com/48349693/233229109-dd9a9826-da69-47bb-86f3-23eefe8208f5.png)
-![image](https://user-images.githubusercontent.com/48349693/233229122-3bda8906-58c8-4b32-8c90-db84156e9c30.png)
 
 
 
