@@ -59,7 +59,8 @@ python run.py
 ---
 
 ### GIF
-![aa_out (1)](https://github.com/tdat97/Vision-Reader/assets/48349693/120ebd7d-7671-4d8a-932c-14cca7e67045)
+![aa_out (2)](https://github.com/tdat97/Vision-Reader/assets/48349693/9aab1d3a-374f-48ef-ba35-a0d636f15036)
+
 
 
 
