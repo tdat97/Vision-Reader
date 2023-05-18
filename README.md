@@ -56,7 +56,10 @@ python run.py
 ![image](https://user-images.githubusercontent.com/48349693/233229645-c7cc12de-e955-454e-a409-c0bd0bcc3d36.png)
 ![image](https://user-images.githubusercontent.com/48349693/233229649-13b93948-32b6-49b8-83a8-cfa79fa6ebe2.png)
 
+---
 
+### PROTO TYPE Video
+![프로토타입](https://github.com/tdat97/Vision-Reader/assets/48349693/7b49bb5e-6aac-4f75-9ef2-3eae15a25ff2)
 
 
 
