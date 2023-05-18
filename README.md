@@ -58,8 +58,9 @@ python run.py
 
 ---
 
-### PROTO TYPE Video
-![프로토타입](https://github.com/tdat97/Vision-Reader/assets/48349693/7b49bb5e-6aac-4f75-9ef2-3eae15a25ff2)
+### GIF
+![aa_out (1)](https://github.com/tdat97/Vision-Reader/assets/48349693/120ebd7d-7671-4d8a-932c-14cca7e67045)
+
 
 
 
